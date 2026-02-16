@@ -1,9 +1,6 @@
 using Game.Logging;
 using UnityEngine;
 
-using Game.Logging;
-using UnityEngine;
-
 public class CardRewards : MonoBehaviour
 {
     [Header("Card Loot")]
@@ -13,11 +10,11 @@ public class CardRewards : MonoBehaviour
     [SerializeField] private RectTransform rewardsContainer;
     [SerializeField] private MultiSelectionGroup selectionGroup;
 
-
-    public void Start()
+    private void Start()
     {
         CreateRewardViewsUI();
     }
+
     public void CreateRewardViewsUI()
     {
         if (CardViewCreator.Instance == null)
@@ -36,7 +33,8 @@ public class CardRewards : MonoBehaviour
             return;
         }
 
-        selectionGroup.Clear();
+        // defensive: falls nochmal aufgebaut wird
+        ConsumeRewardsUI();
 
         for (int i = 0; i < cardLoot.Length; i++)
         {
@@ -48,16 +46,25 @@ public class CardRewards : MonoBehaviour
             }
 
             var card = new Card(entry.Card);
-
-    
             var view = CardViewCreator.Instance.CreateCardViewUI(card, rewardsContainer);
             if (view != null)
-            {
                 selectionGroup.Register(view);
-            }
+        }
+    }
+
+    public void ConsumeRewardsUI()
+    {
+        selectionGroup?.Clear();
+
+        if (rewardsContainer == null) return;
+
+        for (int i = rewardsContainer.childCount - 1; i >= 0; i--)
+        {
+            Destroy(rewardsContainer.GetChild(i).gameObject);
         }
     }
 }
+
 
 
 [System.Serializable]

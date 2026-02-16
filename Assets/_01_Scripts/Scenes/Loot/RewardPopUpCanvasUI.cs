@@ -1,18 +1,19 @@
 ﻿using UnityEngine;
 
-using UnityEngine;
 
-internal class RewardPopUpCanvasUI : MonoBehaviour
+public class RewardPopUpCanvasUI : MonoBehaviour
 {
-    [SerializeField] private GameObject RewardPopUpCanvas;
+    [SerializeField] private GameObject rewardPopUpCanvas;
 
     public void ShowRewardPopUpCanvas()
     {
-        RewardPopUpCanvas.SetActive(true);
+        if (rewardPopUpCanvas != null)
+            rewardPopUpCanvas.SetActive(true);
     }
 
     public void CloseRewardPopUpCanvas()
     {
-        RewardPopUpCanvas.SetActive(false);
+        if (rewardPopUpCanvas != null)
+            rewardPopUpCanvas.SetActive(false);
     }
 }

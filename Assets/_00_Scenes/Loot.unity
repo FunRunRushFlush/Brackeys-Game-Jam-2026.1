@@ -416,9 +416,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1710338171}
-        m_TargetAssemblyTypeName: CardRewardCanvasUI, Assembly-CSharp
-        m_MethodName: ShowCardRewardCanvas
+      - m_Target: {fileID: 2105591825}
+        m_TargetAssemblyTypeName: LootSceneManager, Assembly-CSharp
+        m_MethodName: LeaveLootScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -757,37 +757,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!1 &544682836
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 544682837}
-  m_Layer: 0
-  m_Name: RewardsManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &544682837
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 544682836}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2087376211}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &726507179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,6 +1468,7 @@ GameObject:
   - component: {fileID: 1198587293}
   - component: {fileID: 1198587292}
   - component: {fileID: 1198587291}
+  - component: {fileID: 1198587294}
   m_Layer: 5
   m_Name: ShowGoldReward
   m_TagString: Untagged
@@ -1570,9 +1540,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1868162168}
-        m_TargetAssemblyTypeName: RewardPopUpCanvasUI, Assembly-CSharp
-        m_MethodName: ShowRewardPopUpCanvas
+      - m_Target: {fileID: 1198587294}
+        m_TargetAssemblyTypeName: RewardEntryUI, Assembly-CSharp
+        m_MethodName: Open
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1620,6 +1590,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198587289}
   m_CullTransparentMesh: 1
+--- !u!114 &1198587294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198587289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b211a7cb87f92549afacceaf3f4ea9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RewardEntryUI
+  popup: {fileID: 1868162168}
+  rootToRemove: {fileID: 1198587289}
 --- !u!1 &1202051779
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,10 +1670,9 @@ RectTransform:
   m_Children:
   - {fileID: 1296598173}
   - {fileID: 520238901}
-  - {fileID: 164934090}
-  - {fileID: 1564351119}
   - {fileID: 1710338170}
   - {fileID: 1868162167}
+  - {fileID: 164934090}
   m_Father: {fileID: 1890467404}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1853,7 +1836,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: skip...
+  m_text: Continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2320,15 +2303,15 @@ RectTransform:
   m_GameObject: {fileID: 1564351118}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0038952, y: 1.0038952, z: 0.7027258}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2115059409}
-  m_Father: {fileID: 1285314336}
+  m_Father: {fileID: 1710338170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -450}
+  m_AnchoredPosition: {x: 0, y: -451.7528}
   m_SizeDelta: {x: 400, y: 96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1564351120
@@ -2375,9 +2358,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1710338171}
-        m_TargetAssemblyTypeName: CardRewardCanvasUI, Assembly-CSharp
-        m_MethodName: ShowCardRewardCanvas
+      - m_Target: {fileID: 2105591826}
+        m_TargetAssemblyTypeName: CardRewardClaim, Assembly-CSharp
+        m_MethodName: ClaimCardReward
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2578,17 +2561,18 @@ RectTransform:
   m_GameObject: {fileID: 1710338169}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99612, y: 0.99612, z: 1.42303}
+  m_LocalScale: {x: 0.9961199, y: 0.9961199, z: 1.42303}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 51439682}
   - {fileID: 2068061303}
   - {fileID: 1371707479}
+  - {fileID: 1564351119}
   m_Father: {fileID: 1285314336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.000015258789}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1710338171
@@ -2602,8 +2586,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: deab962b8f9be784da2984d39b832e9c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CardRewardCanvasUI
-  RewardPopUpCanvas: {fileID: 1710338169}
+  m_EditorClassIdentifier: Assembly-CSharp::RewardPopUpCanvasUI
+  rewardPopUpCanvas: {fileID: 1710338169}
 --- !u!1 &1820201090
 GameObject:
   m_ObjectHideFlags: 0
@@ -2616,6 +2600,7 @@ GameObject:
   - component: {fileID: 1820201094}
   - component: {fileID: 1820201093}
   - component: {fileID: 1820201092}
+  - component: {fileID: 1820201095}
   m_Layer: 5
   m_Name: ShowCardReward
   m_TagString: Untagged
@@ -2687,9 +2672,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1710338171}
-        m_TargetAssemblyTypeName: RewardPopUpCanvasUI, Assembly-CSharp
-        m_MethodName: ShowRewardPopUpCanvas
+      - m_Target: {fileID: 1820201095}
+        m_TargetAssemblyTypeName: RewardEntryUI, Assembly-CSharp
+        m_MethodName: Open
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2737,6 +2722,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820201090}
   m_CullTransparentMesh: 1
+--- !u!114 &1820201095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820201090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b211a7cb87f92549afacceaf3f4ea9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RewardEntryUI
+  popup: {fileID: 1710338171}
+  rootToRemove: {fileID: 1820201090}
 --- !u!1 &1866128612
 GameObject:
   m_ObjectHideFlags: 0
@@ -2900,7 +2899,7 @@ RectTransform:
   m_GameObject: {fileID: 1868162166}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99612, y: 0.99612, z: 1.42303}
+  m_LocalScale: {x: 0.9961199, y: 0.9961199, z: 1.42303}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1455284154}
@@ -2910,7 +2909,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.000015258789}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1868162168
@@ -2925,7 +2924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deab962b8f9be784da2984d39b832e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardRewardCanvasUI
-  RewardPopUpCanvas: {fileID: 1868162166}
+  rewardPopUpCanvas: {fileID: 1868162166}
 --- !u!1 &1890467403
 GameObject:
   m_ObjectHideFlags: 0
@@ -3487,7 +3486,7 @@ GameObject:
   - component: {fileID: 2076232101}
   - component: {fileID: 2076232100}
   m_Layer: 5
-  m_Name: ShowGoldReward
+  m_Name: PickGoldReward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3556,7 +3555,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2076232101}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2105591827}
+        m_TargetAssemblyTypeName: GoldRewardClaim, Assembly-CSharp
+        m_MethodName: ClaimGoldReward
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2076232101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3626,7 +3637,6 @@ Transform:
   m_Children:
   - {fileID: 2105591824}
   - {fileID: 858964051}
-  - {fileID: 544682837}
   - {fileID: 2100717924}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3686,6 +3696,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2105591824}
   - component: {fileID: 2105591825}
+  - component: {fileID: 2105591827}
+  - component: {fileID: 2105591826}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -3720,8 +3732,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb4c3c5e010e63b47962589d656f541a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LootManager
+--- !u!114 &2105591826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105591823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b78a844b289d149925b1464bdd749d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardRewardClaim
   selectionGroup: {fileID: 2100717925}
   pickCount: 1
+  confirmButton: {fileID: 1564351120}
+  popupUI: {fileID: 1710338171}
+  entryUI: {fileID: 1820201095}
+  cardRewards: {fileID: 858964052}
+--- !u!114 &2105591827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105591823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61edd097a45430f42b0df02613867f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GoldRewardClaim
+  minGold: 10
+  maxGold: 30
+  popupUI: {fileID: 1868162168}
+  claimButton: {fileID: 2076232100}
+  claimButtonLabel: {fileID: 2111406681}
+  goldRewardEntry: {fileID: 1198587294}
 --- !u!1 &2111406679
 GameObject:
   m_ObjectHideFlags: 0
