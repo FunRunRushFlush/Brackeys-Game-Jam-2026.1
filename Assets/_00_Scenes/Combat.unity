@@ -6556,6 +6556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardViewCreator
   cardViewPrefab: {fileID: 7190822987604780376, guid: 6604b35a2ebf5a7449d1ff0cffcaf71f, type: 3}
+  cardViewUiPrefab: {fileID: 0}
 --- !u!1 &1238165676
 GameObject:
   m_ObjectHideFlags: 0
@@ -9842,7 +9843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc211d20f2838345bda3638e93dc39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MatchSetupSystem
-  perkData: {fileID: 11400000, guid: 8590943e8819c64499eb57abed9e9e50, type: 2}
+  perkData: {fileID: 0}
   enemyDatas:
   - {fileID: 11400000, guid: 5e9182f433ee0e34c9b9cbfd0664cd1a, type: 2}
   - {fileID: 11400000, guid: 5e9182f433ee0e34c9b9cbfd0664cd1a, type: 2}

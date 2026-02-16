@@ -1,3 +1,4 @@
+using Game.Scenes.Core;
 using System;
 using UnityEngine;
 
@@ -37,6 +38,10 @@ public class RunState : MonoBehaviour
         GoldChanged?.Invoke(Gold);
     }
 
+    public void QuitRun()
+    {
+        GameFlowController.Current.BackToMainMenu();
+    }
 
     public float GetRunTimeSeconds() => Time.unscaledTime - RunStartTime;
 

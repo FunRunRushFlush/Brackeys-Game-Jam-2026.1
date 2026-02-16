@@ -1,3 +1,4 @@
+using Game.Scenes.Core;
 using System.Collections;
 using UnityEngine;
 
@@ -32,6 +33,10 @@ public class DamageSystem : Singleton<DamageSystem>
                 {
                     KillEnemyGA killEnemyGA = new(enemyView);
                     ActionSystem.Instance.AddReaction(killEnemyGA);
+                }
+                else if (target is HeroView heroView)
+                {
+                    GameFlowController.Current.CombatLost();
                 }
                 else
                 {

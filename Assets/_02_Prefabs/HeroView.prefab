@@ -49,6 +49,8 @@ MonoBehaviour:
   healthBar: {fileID: 7527079152356642031}
   spriteRenderer: {fileID: 6871079350546043425}
   statusEffectsManagerUI: {fileID: 5690260654122672732}
+  blockRoot: {fileID: 0}
+  blockText: {fileID: 0}
   animatorBehaviour: {fileID: 7285995426133499983}
 --- !u!65 &8067986458051674465
 BoxCollider:

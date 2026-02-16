@@ -11,11 +11,20 @@ public class EnemySystem : Singleton<EnemySystem>
 
     public event Action AllEnemiesDefeated;
 
+    private IDisposable enemyTurnPostSub;
+
     void OnEnable()
     {
         ActionSystem.AttachPerformer<EnemyTurnGA>(EnemyTurnPerformer);
         ActionSystem.AttachPerformer<AttackHeroGA>(AttackHeroPerformer);
         ActionSystem.AttachPerformer<KillEnemyGA>(KillEnemyPerformer);
+
+        // Nach dem EnemyTurn: nächsten Intent wählen (damit Spieler ihn im nächsten PlayerTurn sieht)
+        enemyTurnPostSub = ActionSystem.SubscribeReaction<EnemyTurnGA>(_ =>
+        {
+            foreach (var enemy in enemyBoardView.EnemyViews)
+                enemy.ChooseNextIntent();
+        }, ReactionTiming.POST);
     }
 
 
@@ -24,12 +33,24 @@ public class EnemySystem : Singleton<EnemySystem>
         ActionSystem.DetachPerformer<EnemyTurnGA>();
         ActionSystem.DetachPerformer<AttackHeroGA>();
         ActionSystem.DetachPerformer<KillEnemyGA>();
+
+        enemyTurnPostSub?.Dispose();
+        enemyTurnPostSub = null;
     }
     public void Setup(List<EnemyData> enemyDatas)
     {
         foreach (EnemyData data in enemyDatas)
         {
             enemyBoardView.AddEnemy(data);
+        }
+
+
+        // TODO:
+        // Optional: falls AddEnemy/Setup nicht schon ChooseNextIntent macht,
+        // hier nochmal sicherstellen, dass jeder Enemy einen Intent hat.
+        foreach (var enemy in enemyBoardView.EnemyViews)
+        { 
+            enemy.ChooseNextIntent();
         }
     }
 
@@ -46,11 +67,17 @@ public class EnemySystem : Singleton<EnemySystem>
                 ApplyBurnGA applyBurnGa = new(burnStacks, enemy);
                 ActionSystem.Instance.AddReaction(applyBurnGa);
             }
-            AttackHeroGA attackHeroGA = new(enemy);
-            ActionSystem.Instance.AddReaction(attackHeroGA);
+
+            // Statt hardcoded Attack: aktuelle Intent-Actions ausführen
+            var actions = enemy.BuildActionsFromCurrentIntent();
+            foreach (var ga in actions)
+            {
+                ActionSystem.Instance.AddReaction(ga);
+            }
         }
         yield return null;
     }
+
     private IEnumerator AttackHeroPerformer(AttackHeroGA attackHeroGA)
     {
         EnemyView attacker = attackHeroGA.Attacker;

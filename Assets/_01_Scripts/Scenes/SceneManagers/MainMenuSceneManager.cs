@@ -14,8 +14,13 @@ public class MainMenuSceneManager : MonoBehaviour
             .Perform();
     }
 
-    public void StartDebugCombatSession()
+    public void Options()
     {
-        GameFlowController.Current.StartDebugCombatSession();
+        // ???
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

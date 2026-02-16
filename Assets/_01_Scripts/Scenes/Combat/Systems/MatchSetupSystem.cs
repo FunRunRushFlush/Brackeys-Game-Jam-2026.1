@@ -16,7 +16,10 @@ public class MatchSetupSystem : MonoBehaviour
         HeroSystem.Instance.Setup(session.Hero.Data);
         EnemySystem.Instance.Setup(enemyDatas);
         CardSystem.Instance.Setup(session.Hero.CreateCombatSnapshot());
-        PerkSystem.Instance.AddPerk(new Perk(perkData));
+        if(perkData != null)
+        {
+            PerkSystem.Instance.AddPerk(new Perk(perkData));
+        }
 
         DrawCardsGA drawStartingHand = new DrawCardsGA(session.Hero.Data.HandSize);
         ActionSystem.Instance.Perform(drawStartingHand);
