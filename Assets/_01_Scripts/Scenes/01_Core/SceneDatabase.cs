@@ -6,7 +6,11 @@ namespace Game.Scenes.Core
         {
             public const string Menu = "Menu";
             public const string Session = "Session";
-            public const string SessionContent = "SessionContent";
+            //public const string SessionContent = "SessionContent";
+            public const string SessionView = "SessionView";
+
+            public const string EncounterSystems = "EncounterSystems"; 
+            public const string EncounterLevel = "EncounterLevel";   
         }
 
         public static class Scenes
@@ -20,6 +24,9 @@ namespace Game.Scenes.Core
             public const string Map = "Map";
             public const string Combat = "Combat";
             public const string CombatV2 = "CombatV2";
+
+            public const string Arena_Forest_01 = "Arena_Forest_01";
+            public const string Arena_Cave_01 = "Arena_Cave_01";
 
             public const string Shop = "Shop";
             public const string Event = "Event";

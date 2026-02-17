@@ -23,7 +23,9 @@ public class EnemySystem : Singleton<EnemySystem>
         enemyTurnPostSub = ActionSystem.SubscribeReaction<EnemyTurnGA>(_ =>
         {
             foreach (var enemy in enemyBoardView.EnemyViews)
+            {
                 enemy.ChooseNextIntent();
+            }
         }, ReactionTiming.POST);
     }
 
@@ -69,7 +71,9 @@ public class EnemySystem : Singleton<EnemySystem>
             }
 
             // Statt hardcoded Attack: aktuelle Intent-Actions ausführen
+            Debug.Log($"EXEC {enemy.name}: {enemy.AIState?.CurrentMove?.name} | intentUI={enemy.Intent}");
             var actions = enemy.BuildActionsFromCurrentIntent();
+            Debug.Log($" -> Actions: {string.Join(", ", actions.ConvertAll(a => a.GetType().Name))}");
             foreach (var ga in actions)
             {
                 ActionSystem.Instance.AddReaction(ga);
@@ -85,7 +89,7 @@ public class EnemySystem : Singleton<EnemySystem>
         yield return tween.WaitForCompletion();
         attacker.transform.DOMoveX(attacker.transform.position.x + 1f, 0.25f);
 
-        DealDamageGA dealDamageGA = new(attacker.AttackPower, new() { HeroSystem.Instance.HeroView }, attackHeroGA.Caster);
+        DealDamageGA dealDamageGA = new(attacker.AttackValue, new() { HeroSystem.Instance.HeroView }, attackHeroGA.Caster);
         ActionSystem.Instance.AddReaction(dealDamageGA);
     }
 

@@ -10,6 +10,9 @@ namespace Game.Scenes.Core
         [SerializeField] private int maxNodeIndex = 7;
         [SerializeField] private int startingGold = 0;
 
+        // Optional: Default Arena, wenn du noch keine Node->Arena Logik hast
+        [SerializeField] private string defaultEncounterLevelScene = SceneDatabase.Scenes.Arena_Forest_01;
+
         private RunState run;
         private LootService lootService;
 
@@ -31,14 +34,11 @@ namespace Game.Scenes.Core
             StartCoroutine(StartNewRunRoutine());
         }
 
-        public void StartDebugCombatSession()
-        {
-            StartCoroutine(StartNewDebugRunRoutine());
-        }
+
 
         public void ChooseCombat() => StartCoroutine(GoToEncounterRoutine(SceneDatabase.Scenes.Combat));
-        public void ChooseShop() => StartCoroutine(GoToEncounterRoutine(SceneDatabase.Scenes.Shop));
-        public void ChooseEvent() => StartCoroutine(GoToEncounterRoutine(SceneDatabase.Scenes.Event));
+        public void ChooseShop() => StartCoroutine(GoToSessionViewRoutine(SceneDatabase.Scenes.Shop));
+        public void ChooseEvent() => StartCoroutine(GoToSessionViewRoutine(SceneDatabase.Scenes.Event));
 
         public void CombatWon() => StartCoroutine(GoToLootRoutine());
         public void CombatLost() => StartCoroutine(GoToGameOverRoutine());
@@ -58,6 +58,7 @@ namespace Game.Scenes.Core
         }
 
         public void BossWon() => StartCoroutine(GoToGameOverRoutine());
+
         public void BackToMainMenu()
         {
             StartCoroutine(BackToMainMenuRoutine());
@@ -67,11 +68,11 @@ namespace Game.Scenes.Core
 
         private IEnumerator StartNewRunRoutine()
         {
-            // Load Session + Map, unload Menu
+            // Load Session + Map (SessionView), unload Menu
             yield return SceneController.Current
                 .NewTransition()
                 .Load(SceneDatabase.Slots.Session, SceneDatabase.Scenes.Session)
-                .Load(SceneDatabase.Slots.SessionContent, SceneDatabase.Scenes.Map, setActive: true)
+                .Load(SceneDatabase.Slots.SessionView, SceneDatabase.Scenes.Map, setActive: true)
                 .Unload(SceneDatabase.Slots.Menu)
                 .WithOverlay()
                 .Perform();
@@ -80,32 +81,24 @@ namespace Game.Scenes.Core
             run.StartNewRun(startingGold, maxNodeIndex);
         }
 
-        private IEnumerator StartNewDebugRunRoutine()
-        {
-            // Load Session + Map, unload Menu
-            yield return SceneController.Current
-                .NewTransition()
-                .Load(SceneDatabase.Slots.Session, SceneDatabase.Scenes.Session)
-                .Load(SceneDatabase.Slots.SessionContent, SceneDatabase.Scenes.CombatV2, setActive: true)
-                .Unload(SceneDatabase.Slots.Menu)
-                .WithOverlay()
-                .Perform();
-
-            CacheSessionRefs();
-            run.StartNewRun(startingGold, maxNodeIndex);
-        }
 
         private IEnumerator GoToEncounterRoutine(string encounterScene)
         {
             CacheSessionRefs();
             if (run == null) yield break;
 
-            // Wenn wir auf Boss-Node sind, zwingen wir Boss-Scene
-            var target = run.IsBossNode ? SceneDatabase.Scenes.Boss : encounterScene;
+            // Wenn wir auf Boss-Node sind, zwingen wir Boss-Scene (Systems)
+            var systemsScene = run.IsBossNode ? SceneDatabase.Scenes.Boss : encounterScene;
+
+            // TODO: hier später sauber über Node/Seed auswählen
+            var levelScene = defaultEncounterLevelScene;
 
             yield return SceneController.Current
                 .NewTransition()
-                .Load(SceneDatabase.Slots.SessionContent, target, setActive: true)
+                // Session UI ausblenden/entladen, wenn du es nicht parallel willst
+                .Unload(SceneDatabase.Slots.SessionView)
+                .Load(SceneDatabase.Slots.EncounterSystems, systemsScene)
+                .Load(SceneDatabase.Slots.EncounterLevel, levelScene, setActive: true)
                 .WithOverlay()
                 .Perform();
         }
@@ -117,9 +110,12 @@ namespace Game.Scenes.Core
 
             run.PendingLoot = lootService.Generate3Options();
 
+            // Encounter entladen, Loot in SessionView anzeigen
             yield return SceneController.Current
                 .NewTransition()
-                .Load(SceneDatabase.Slots.SessionContent, SceneDatabase.Scenes.Loot, setActive: true)
+                .Unload(SceneDatabase.Slots.EncounterSystems)
+                .Unload(SceneDatabase.Slots.EncounterLevel)
+                .Load(SceneDatabase.Slots.SessionView, SceneDatabase.Scenes.Loot, setActive: true)
                 .WithOverlay()
                 .Perform();
         }
@@ -131,18 +127,35 @@ namespace Game.Scenes.Core
 
             run.AdvanceNode();
 
+            // Encounter sicher entladen (falls noch geladen), Map in SessionView
             yield return SceneController.Current
                 .NewTransition()
-                .Load(SceneDatabase.Slots.SessionContent, SceneDatabase.Scenes.Map, setActive: true)
+                .Unload(SceneDatabase.Slots.EncounterSystems)
+                .Unload(SceneDatabase.Slots.EncounterLevel)
+                .Load(SceneDatabase.Slots.SessionView, SceneDatabase.Scenes.Map, setActive: true)
                 .WithOverlay()
                 .Perform();
         }
 
         private IEnumerator GoToGameOverRoutine()
         {
+            // Encounter entladen, GameOver in SessionView
             yield return SceneController.Current
                 .NewTransition()
-                .Load(SceneDatabase.Slots.SessionContent, SceneDatabase.Scenes.GameOver, setActive: true)
+                .Unload(SceneDatabase.Slots.EncounterSystems)
+                .Unload(SceneDatabase.Slots.EncounterLevel)
+                .Load(SceneDatabase.Slots.SessionView, SceneDatabase.Scenes.GameOver, setActive: true)
+                .Perform();
+        }
+
+        private IEnumerator GoToSessionViewRoutine(string scene)
+        {
+            // z.B. Shop/Event in SessionView laden, Encounter sicher entladen
+            yield return SceneController.Current
+                .NewTransition()
+                .Unload(SceneDatabase.Slots.EncounterSystems)
+                .Unload(SceneDatabase.Slots.EncounterLevel)
+                .Load(SceneDatabase.Slots.SessionView, scene, setActive: true)
                 .WithOverlay()
                 .Perform();
         }
@@ -152,7 +165,9 @@ namespace Game.Scenes.Core
             yield return SceneController.Current
                 .NewTransition()
                 .Load(SceneDatabase.Slots.Menu, SceneDatabase.Scenes.MainMenu, setActive: true)
-                .Unload(SceneDatabase.Slots.SessionContent)
+                .Unload(SceneDatabase.Slots.SessionView)
+                .Unload(SceneDatabase.Slots.EncounterSystems)
+                .Unload(SceneDatabase.Slots.EncounterLevel)
                 .Unload(SceneDatabase.Slots.Session)
                 .WithClearUnusedAssets()
                 .WithOverlay()
@@ -166,7 +181,6 @@ namespace Game.Scenes.Core
         {
             if (run != null && lootService != null) return;
 
-            // Für Dummy absolut okay: 1-2x pro Transition finden.
             run = FindFirstObjectByType<RunState>();
             lootService = FindFirstObjectByType<LootService>();
         }

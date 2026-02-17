@@ -7,16 +7,22 @@ public class EnemyView : CombatantView
     [SerializeField] private TMP_Text attackText;
 
     [Header("Intent UI")]
-    [SerializeField] private TMP_Text intentText;
+    [SerializeField] private SpriteRenderer intentIconImage;
+    [SerializeField] private TMP_Text intentValueText;
 
     [Header("Animation")]
     [SerializeField] private MonoBehaviour animatorBehaviour; // must implement ICombatantAnimator
     public ICombatantAnimator Anim { get; private set; }
 
-    public int AttackPower { get; set; }
+    public int AttackValue { get; set; }
+    public int BlockValue { get; private set; }
+    public int BurnValue { get; private set; } = 2;
+    public int StrengthValue { get; private set; } = 1;
+    public int WeakValue { get; private set; } = 1;
 
     public EnemyBehaviourSO Behaviour { get; private set; }
     public EnemyAIState AIState { get; private set; }
+    public string Intent => intentValueText.text;
 
     private void Awake()
     {
@@ -28,8 +34,13 @@ public class EnemyView : CombatantView
 
     public void Setup(EnemyData enemyData)
     {
-        AttackPower = enemyData.AttackPower;
-        UpdateAttackText();
+        AttackValue = enemyData.AttackValue;
+        BlockValue = enemyData.BlockValue;
+        BurnValue = enemyData.BurnValue;
+        StrengthValue = enemyData.StrengthValue;
+        WeakValue = enemyData.WeakValue;
+
+
 
         Behaviour = enemyData.Behaviour;
         AIState = new EnemyAIState(GetInstanceID()); // einfache stabile Seed-Quelle
@@ -44,13 +55,15 @@ public class EnemyView : CombatantView
     {
         if (Behaviour == null || AIState == null)
         {
-            SetIntentText(string.Empty);
+            SetIntentUI(default);
             return;
         }
 
         var move = Behaviour.PickNextMove(AIState, this);
         AIState.SetMove(move);
-        SetIntentText(move != null ? move.IntentText : string.Empty);
+
+        var intent = move != null ? move.GetIntent(this) : default;
+        SetIntentUI(intent);
     }
 
     public List<GameAction> BuildActionsFromCurrentIntent()
@@ -60,15 +73,27 @@ public class EnemyView : CombatantView
         return move.BuildActions(this) ?? new List<GameAction>();
     }
 
-    private void SetIntentText(string text)
+    private void SetIntentUI(IntentData intent)
     {
-        if (intentText != null)
-            intentText.text = text;
-    }
+        if (intentIconImage != null)
+        {
+            intentIconImage.sprite = intent.Icon;
+            intentIconImage.enabled = intent.Icon != null;
+        }
 
-    private void UpdateAttackText()
-    {
-        attackText.text = "ATK: " + AttackPower;
+        if (intentValueText != null)
+        {
+            if (intent.ShowValue)
+            {
+                intentValueText.gameObject.SetActive(true);
+                intentValueText.text = intent.Value.ToString();
+            }
+            else
+            {
+                intentValueText.gameObject.SetActive(false);
+                intentValueText.text = string.Empty;
+            }
+        }
     }
 }
 
