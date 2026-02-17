@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4d2975631c7f9438b3305f3f985e03, type: 3}
   m_Name: Generic Enemy Block Self Move SO
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBlockSelfMoveSO
-  intentIcon: {fileID: 21300000, guid: 3f7716b40e8758e418806120a45524be, type: 3}
-  amount: 6
+  intentIcon: {fileID: 275167302, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}

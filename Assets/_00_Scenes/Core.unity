@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d3b2be65bc52cc419f880dbcbc9edd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyViewCreator
-  enemyViewPrefab: {fileID: 8559063038491080694, guid: c56d3a3b54d15f8478811b493b0b7927, type: 3}
+  defaultEnemyViewPrefab: {fileID: 0}
 --- !u!1 &521191620
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,6 +409,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameFlowController
   maxNodeIndex: 7
   startingGold: 17
+  biomeDb: {fileID: 11400000, guid: a4e80074930328444aeb85ca6c5de3dc, type: 2}
+  defaultEncounterLevelScene: Arena_Forest_01
 --- !u!1 &1136301528
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,7 +966,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1985554459}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd94f59124500b84aaeef19154e5c90a, type: 3}
   m_Name: 

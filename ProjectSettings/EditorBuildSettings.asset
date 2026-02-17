@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_00_Scenes/Shop.unity
     guid: baccbf2ac67d60e46a09f9a2b6ad8390
-  - enabled: 1
+  - enabled: 0
     path: Assets/_00_Scenes/CombatV2.unity
     guid: b9173894d738c014daf6218b49062648
   - enabled: 1
@@ -36,14 +36,38 @@ EditorBuildSettings:
     path: Assets/_00_Scenes/GameOver.unity
     guid: 0f476104bdf066b4092cd5fdd8927c85
   - enabled: 1
-    path: Assets/_00_Scenes/Boss.unity
-    guid: 5fdd1afb2716f7e48acf769c5f9d8e52
-  - enabled: 1
     path: Assets/_00_Scenes/HeroSelection.unity
     guid: 37cbec3e72c2e1f4c959ac5d75000adb
   - enabled: 1
-    path: Assets/_00_Scenes/Arena_Forest_01.unity
+    path: Assets/_00_Scenes/Forest/Arena_Forest_01.unity
     guid: 448bea7ee191d3e41bdcac768ead45d6
+  - enabled: 1
+    path: Assets/_00_Scenes/Forest/Arena_Forest_02.unity
+    guid: 37df2aefe630f9847b3d2c8d74bd3646
+  - enabled: 1
+    path: Assets/_00_Scenes/Forest/Arena_Forest_Boss.unity
+    guid: 0ffa10b5abd5b3a42abc5bc41da7e6ea
+  - enabled: 1
+    path: Assets/_00_Scenes/Fire/Arena_Fire_01.unity
+    guid: f4abb6dcc91050e40a0901cf43f9aaee
+  - enabled: 1
+    path: Assets/_00_Scenes/Ice/Arena_Ice_01.unity
+    guid: 83e90d872a9bfab4da0ebe9c9540e67c
+  - enabled: 1
+    path: Assets/_00_Scenes/Fire/Arena_Fire_03.unity
+    guid: 24539fa30e6fa15469ef33093fb14e49
+  - enabled: 1
+    path: Assets/_00_Scenes/Fire/Arena_Fire_02.unity
+    guid: 50db987eab39dfd468b5b3baea713d99
+  - enabled: 1
+    path: Assets/_00_Scenes/Forest/Arena_Forest_03.unity
+    guid: 9e1be37aec0b3f5478a13ef9d6efa98d
+  - enabled: 1
+    path: Assets/_00_Scenes/Ice/Arena_Ice_03.unity
+    guid: a883112025e5912499a5429582d805ca
+  - enabled: 1
+    path: Assets/_00_Scenes/Ice/Arena_Ice_02.unity
+    guid: 1b3fb07b2480c72468f769188b71a00b
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 37e6ebb870a7d9843a941b8abac99c55, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
