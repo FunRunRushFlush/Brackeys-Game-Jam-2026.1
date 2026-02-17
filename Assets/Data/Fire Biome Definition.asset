@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8e42c46496eb9084e83bea3a008f141f, type: 2}
   - {fileID: 11400000, guid: 8e42c46496eb9084e83bea3a008f141f, type: 2}
   - {fileID: 11400000, guid: 8e42c46496eb9084e83bea3a008f141f, type: 2}
-  bossEncounter: {fileID: 11400000, guid: 6ac6a533446f9aa4b8c2ae2958d0fb83, type: 2}
+  bossEncounter: {fileID: 11400000, guid: 3c57e2501721890458d464c21a83cbfb, type: 2}
   normalArenaScenes:
   - Arena_Fire_01
   - Arena_Fire_02
