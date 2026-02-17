@@ -14,6 +14,9 @@ public class EnemyData : ScriptableObject
     [field: SerializeField] public int WeakValue { get; private set; } = 1;
 
 
+    [Header("View")]
+    [field: SerializeField] public EnemyView ViewPrefab { get; private set; }
+
     [Header("AI")]
     [field: SerializeField] public EnemyBehaviourSO Behaviour { get; private set; }
 
