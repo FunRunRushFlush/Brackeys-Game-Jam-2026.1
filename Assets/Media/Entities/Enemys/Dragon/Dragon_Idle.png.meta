@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5441903236ee6ae47aeab529b9ea45ce
+guid: 9fe37fd1976076f4f8245f2e2e09a346
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 15
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,133 +97,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ufo-Sheet_0
+      name: Dragon_Idle_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 6
         width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a20fbb80d3d410e4394e430d0d2460de
-      internalID: 1975581776
+      spriteID: cf8ca03e930717a4f992f1bac465d2e2
+      internalID: -1153227558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ufo-Sheet_1
+      name: Dragon_Idle_1
       rect:
         serializedVersion: 2
         x: 64
-        y: 0
+        y: 6
         width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7081ac343cd73354bb021ed1452b72cc
-      internalID: 1557320051
+      spriteID: 4f709f1f45f43624b8f4276af3712248
+      internalID: -1664439552
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ufo-Sheet_2
+      name: Dragon_Idle_2
       rect:
         serializedVersion: 2
         x: 128
-        y: 0
+        y: 6
         width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75fe530a406608049afacf33db638a81
-      internalID: 2055903039
+      spriteID: e05c7ab9c49a6e04fbb31f0c7f482f96
+      internalID: -1414874658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ufo-Sheet_3
+      name: Dragon_Idle_3
       rect:
         serializedVersion: 2
         x: 192
-        y: 0
+        y: 6
         width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ff2ca0077348a348b6fd31579c80577
-      internalID: -257409538
+      spriteID: c6a6ca5cbb378ed40ae2ccffb29fab7d
+      internalID: -1822819756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ufo-Sheet_4
+      name: Dragon_Idle_4
       rect:
         serializedVersion: 2
         x: 256
-        y: 0
+        y: 6
         width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d511d7bd65a2be41bb7d8d07d16c14a
-      internalID: 961121882
+      spriteID: 276227f424c3d724d858ec78e8202e97
+      internalID: 17109807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ufo-Sheet_5
+      name: Dragon_Idle_5
       rect:
         serializedVersion: 2
         x: 320
-        y: 0
+        y: 6
         width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: daa15b95d2465304f95963285ba55da4
-      internalID: -2061478598
+      spriteID: acabb2c09fcd5ec43bf9f2a107d2d56e
+      internalID: 244162988
       vertices: []
       indices: 
       edges: []
@@ -232,7 +232,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 7050b29687e59ff45b39347829ee9dc8
     internalID: 0
     vertices: []
     indices: 
@@ -242,14 +242,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":58.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Ufo-Sheet_0: 1975581776
-      Ufo-Sheet_1: 1557320051
-      Ufo-Sheet_2: 2055903039
-      Ufo-Sheet_3: -257409538
-      Ufo-Sheet_4: 961121882
-      Ufo-Sheet_5: -2061478598
+      Dragon_Idle_0: -1153227558
+      Dragon_Idle_1: -1664439552
+      Dragon_Idle_2: -1414874658
+      Dragon_Idle_3: -1822819756
+      Dragon_Idle_4: 17109807
+      Dragon_Idle_5: 244162988
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
