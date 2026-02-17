@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 25
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,133 +97,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ufo-Sheet_0
+      name: Ufo_Idle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a20fbb80d3d410e4394e430d0d2460de
-      internalID: 1975581776
+      spriteID: e2c4869c4b7f17d4a90dd9db924239c5
+      internalID: 1822130505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ufo-Sheet_1
+      name: Ufo_Idle_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7081ac343cd73354bb021ed1452b72cc
-      internalID: 1557320051
+      spriteID: d673637ab157984418d674a168a967d9
+      internalID: 1985100905
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ufo-Sheet_2
+      name: Ufo_Idle_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75fe530a406608049afacf33db638a81
-      internalID: 2055903039
+      spriteID: bd2f4993c4550bc4ebbc4e1df35bee4b
+      internalID: 333749578
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ufo-Sheet_3
+      name: Ufo_Idle_3
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ff2ca0077348a348b6fd31579c80577
-      internalID: -257409538
+      spriteID: 57c9478ac0687ce44be211d426a4b04f
+      internalID: 413194603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ufo-Sheet_4
+      name: Ufo_Idle_4
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d511d7bd65a2be41bb7d8d07d16c14a
-      internalID: 961121882
+      spriteID: ba23b7deab06d5b4d9322f44ded0ad71
+      internalID: -2006360079
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ufo-Sheet_5
+      name: Ufo_Idle_5
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: daa15b95d2465304f95963285ba55da4
-      internalID: -2061478598
+      spriteID: 070c0cb5e3be33e48a8747b69cd8017b
+      internalID: -127724849
       vertices: []
       indices: 
       edges: []
@@ -242,14 +242,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Ufo-Sheet_0: 1975581776
-      Ufo-Sheet_1: 1557320051
-      Ufo-Sheet_2: 2055903039
-      Ufo-Sheet_3: -257409538
-      Ufo-Sheet_4: 961121882
-      Ufo-Sheet_5: -2061478598
+      Ufo_Idle_0: 1822130505
+      Ufo_Idle_1: 1985100905
+      Ufo_Idle_2: 333749578
+      Ufo_Idle_3: 413194603
+      Ufo_Idle_4: -2006360079
+      Ufo_Idle_5: -127724849
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
