@@ -207,7 +207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_5
+      name: Icons_Treasure
       rect:
         serializedVersion: 2
         x: 320
@@ -16025,7 +16025,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_724
+      name: Icons_Claws
       rect:
         serializedVersion: 2
         x: 256
@@ -21657,7 +21657,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_980
+      name: Icons_SparkingStrike
       rect:
         serializedVersion: 2
         x: 256
@@ -21745,7 +21745,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_984
+      name: Icons_Spark
       rect:
         serializedVersion: 2
         x: 512
@@ -22031,7 +22031,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_997
+      name: Icons_Flames
       rect:
         serializedVersion: 2
         x: 320
@@ -22119,7 +22119,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_1001
+      name: Icons_fire
       rect:
         serializedVersion: 2
         x: 576
@@ -22141,7 +22141,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_1002
+      name: Icons_fireslash
       rect:
         serializedVersion: 2
         x: 640
@@ -22207,7 +22207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_1005
+      name: Icons_Firestrike
       rect:
         serializedVersion: 2
         x: 832
@@ -22229,7 +22229,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_1006
+      name: Icons_Firestorm
       rect:
         serializedVersion: 2
         x: 896
@@ -32723,7 +32723,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_1483
+      name: Icons_BowShot
       rect:
         serializedVersion: 2
         x: 704
@@ -48341,12 +48341,8 @@ TextureImporter:
       Icons_10: -1047166611
       Icons_100: 207471644
       Icons_1000: 464149471
-      Icons_1001: -1161984547
-      Icons_1002: 961534101
       Icons_1003: -2051350880
       Icons_1004: -1091159536
-      Icons_1005: 2047651849
-      Icons_1006: -527411974
       Icons_1007: 1244001384
       Icons_1008: -1459908481
       Icons_1009: -1219685164
@@ -48874,7 +48870,6 @@ TextureImporter:
       Icons_1480: -1505693266
       Icons_1481: -1976447618
       Icons_1482: -350278658
-      Icons_1483: 176558359
       Icons_1484: 865331805
       Icons_1485: 1025163441
       Icons_1486: 1000748499
@@ -49967,7 +49962,6 @@ TextureImporter:
       Icons_497: 1380954882
       Icons_498: 1795175513
       Icons_499: 692985167
-      Icons_5: 576810202
       Icons_50: 3019056
       Icons_500: -1598488226
       Icons_501: 1824777495
@@ -50217,7 +50211,6 @@ TextureImporter:
       Icons_721: -199860320
       Icons_722: -1572332381
       Icons_723: -271416304
-      Icons_724: -442770290
       Icons_725: 443630390
       Icons_726: -1576235892
       Icons_727: 881141213
@@ -50501,11 +50494,9 @@ TextureImporter:
       Icons_978: 858663217
       Icons_979: 1052680389
       Icons_98: 25257430
-      Icons_980: 539447770
       Icons_981: -1294665728
       Icons_982: 1890947960
       Icons_983: -866286149
-      Icons_984: 1493836590
       Icons_985: 1436384276
       Icons_986: 1884186910
       Icons_987: -284832587
@@ -50517,17 +50508,26 @@ TextureImporter:
       Icons_993: -222971555
       Icons_994: 395615244
       Icons_995: 274486598
-      Icons_997: 1418751897
       Icons_998: -1378791382
       Icons_999: -469934633
       Icons_Attack: -159943946
       Icons_Attack02: 57011731
+      Icons_BowShot: 176558359
       Icons_Burn01: -1211305605
       Icons_Burn02: -1289553049
       Icons_BurnAttack01: 1297590212
+      Icons_Claws: -442770290
+      Icons_Firestorm: -527411974
+      Icons_Firestrike: 2047651849
+      Icons_Flames: 1418751897
       Icons_ShieldBlue01: 275167302
       Icons_ShieldGrey01: 1219099209
       Icons_ShieldGrey02: 1201276158
+      Icons_Spark: 1493836590
+      Icons_SparkingStrike: 539447770
+      Icons_Treasure: 576810202
+      Icons_fire: -1161984547
+      Icons_fireslash: 961534101
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
