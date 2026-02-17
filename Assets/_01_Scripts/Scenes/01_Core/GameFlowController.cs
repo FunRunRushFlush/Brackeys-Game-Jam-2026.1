@@ -7,8 +7,10 @@ namespace Game.Scenes.Core
     {
         public static GameFlowController Current { get; private set; }
 
-        [SerializeField] private int maxNodeIndex = 7;
+        [SerializeField] private int maxNodeIndex = 4;
         [SerializeField] private int startingGold = 0;
+
+        [SerializeField] private BiomeDatabase biomeDb;
 
         // Optional: Default Arena, wenn du noch keine Node->Arena Logik hast
         [SerializeField] private string defaultEncounterLevelScene = SceneDatabase.Scenes.Arena_Forest_01;
@@ -78,7 +80,7 @@ namespace Game.Scenes.Core
                 .Perform();
 
             CacheSessionRefs();
-            run.StartNewRun(startingGold, maxNodeIndex);
+            run.StartNewRun(startingGold);
         }
 
 
@@ -88,19 +90,19 @@ namespace Game.Scenes.Core
             if (run == null) yield break;
 
             // Wenn wir auf Boss-Node sind, zwingen wir Boss-Scene (Systems)
-            var systemsScene = run.IsBossNode ? SceneDatabase.Scenes.Boss : encounterScene;
+            var systemsScene =  encounterScene;
 
             // TODO: hier später sauber über Node/Seed auswählen
-            var levelScene = defaultEncounterLevelScene;
+            var levelScene = GetArenaSceneForCurrentNode(run);
 
             yield return SceneController.Current
                 .NewTransition()
-                // Session UI ausblenden/entladen, wenn du es nicht parallel willst
                 .Unload(SceneDatabase.Slots.SessionView)
-                .Load(SceneDatabase.Slots.EncounterSystems, systemsScene)
                 .Load(SceneDatabase.Slots.EncounterLevel, levelScene, setActive: true)
+                .Load(SceneDatabase.Slots.EncounterSystems, systemsScene)
                 .WithOverlay()
                 .Perform();
+
         }
 
         private IEnumerator GoToLootRoutine()
@@ -184,5 +186,47 @@ namespace Game.Scenes.Core
             run = FindFirstObjectByType<RunState>();
             lootService = FindFirstObjectByType<LootService>();
         }
+
+        private string GetArenaSceneForCurrentNode(RunState run)
+        {
+            var biomeDef = biomeDb.Get(run.CurrentBiome);
+            if (biomeDef == null)
+            {
+                Debug.LogError($"No BiomeDefinition found for biome {run.CurrentBiome}. Falling back to default.");
+                return defaultEncounterLevelScene;
+            }
+
+            if (run.IsBossNode)
+            {
+                if (string.IsNullOrWhiteSpace(biomeDef.bossArenaScene))
+                {
+                    Debug.LogError($"Biome '{run.CurrentBiome}' is missing bossArenaScene. Falling back to default.");
+                    return defaultEncounterLevelScene;
+                }
+                return biomeDef.bossArenaScene;
+            }
+
+            if (biomeDef.normalArenaScenes == null || biomeDef.normalArenaScenes.Length == 0)
+            {
+                Debug.LogError($"Biome '{run.CurrentBiome}' has no normalArenaScenes configured. Falling back to default.");
+                return defaultEncounterLevelScene;
+            }
+
+            // deterministische Auswahl pro Node
+            int seed = (run.BiomeIndex * 100000) + (run.NodeIndexInBiome * 10007) + 4242;
+            var rng = new System.Random(seed);
+            int idx = rng.Next(0, biomeDef.normalArenaScenes.Length);
+
+            var scene = biomeDef.normalArenaScenes[idx];
+            if (string.IsNullOrWhiteSpace(scene))
+            {
+                Debug.LogError($"Biome '{run.CurrentBiome}' normalArenaScenes[{idx}] is empty. Falling back to default.");
+                return defaultEncounterLevelScene;
+            }
+
+            return scene;
+        }
+
+
     }
 }

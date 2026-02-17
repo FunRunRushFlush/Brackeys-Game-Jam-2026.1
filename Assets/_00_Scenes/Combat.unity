@@ -5962,6 +5962,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5690260654122672732, guid: 2f08eba5c16762c4aae552dbae3ac9f0, type: 3}
+      propertyPath: burnSprite
+      value: 
+      objectReference: {fileID: -1289553049, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
     - target: {fileID: 7258702713061962496, guid: 2f08eba5c16762c4aae552dbae3ac9f0, type: 3}
       propertyPath: m_Name
       value: HeroView
@@ -6581,7 +6585,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226721434}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd94f59124500b84aaeef19154e5c90a, type: 3}
   m_Name: 
@@ -7862,7 +7866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d3b2be65bc52cc419f880dbcbc9edd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyViewCreator
-  enemyViewPrefab: {fileID: 8559063038491080694, guid: c56d3a3b54d15f8478811b493b0b7927, type: 3}
+  defaultEnemyViewPrefab: {fileID: 0}
 --- !u!1 &1563810350
 GameObject:
   m_ObjectHideFlags: 0
@@ -9874,11 +9878,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc211d20f2838345bda3638e93dc39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MatchSetupSystem
+  biomeDb: {fileID: 11400000, guid: a4e80074930328444aeb85ca6c5de3dc, type: 2}
   perkData: {fileID: 0}
-  enemyDatas:
-  - {fileID: 11400000, guid: 5e9182f433ee0e34c9b9cbfd0664cd1a, type: 2}
-  - {fileID: 11400000, guid: 5e9182f433ee0e34c9b9cbfd0664cd1a, type: 2}
-  - {fileID: 11400000, guid: 7620c10dbe596324888ac5fb18b61c5b, type: 2}
 --- !u!1 &2085086637
 GameObject:
   m_ObjectHideFlags: 0

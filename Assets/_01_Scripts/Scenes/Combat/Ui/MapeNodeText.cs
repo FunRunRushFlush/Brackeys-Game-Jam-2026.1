@@ -8,6 +8,6 @@ public class MapeNodeText : MonoBehaviour
 
     void Update()
     {
-        _text.text = $"Node: {CoreManager.Instance.Session.Run.NodeIndex}";
+        _text.text = $"Node: {CoreManager.Instance.Session.Run.NodeIndexInBiome}";
     }
 }

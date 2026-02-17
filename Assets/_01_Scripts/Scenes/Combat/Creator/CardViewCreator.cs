@@ -13,6 +13,9 @@ public class CardViewCreator : Singleton<CardViewCreator>
     {
         CardView cardView = Instantiate(cardViewPrefab, position, rotation);
         cardView.Setup(card);
+        Debug.Log($"CreateCardView activeScene={UnityEngine.SceneManagement.SceneManager.GetActiveScene().name} " +
+             $"spawnedScene={cardView.gameObject.scene.name}");
+
         return cardView;
     }
 
