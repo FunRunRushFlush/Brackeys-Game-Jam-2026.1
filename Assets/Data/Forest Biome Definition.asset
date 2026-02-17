@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b23fc5530a77f894cab9219bddbfc2bc, type: 2}
   - {fileID: 11400000, guid: b23fc5530a77f894cab9219bddbfc2bc, type: 2}
   - {fileID: 11400000, guid: b23fc5530a77f894cab9219bddbfc2bc, type: 2}
-  bossEncounter: {fileID: 11400000, guid: 6ac6a533446f9aa4b8c2ae2958d0fb83, type: 2}
+  bossEncounter: {fileID: 11400000, guid: 3c57e2501721890458d464c21a83cbfb, type: 2}
   normalArenaScenes:
   - Arena_Forest_01
   - Arena_Forest_02
