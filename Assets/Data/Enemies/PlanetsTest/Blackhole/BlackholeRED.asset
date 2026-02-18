@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f4d2f2e8b4d51c4495011c79c932022, type: 3}
   m_Name: BlackholeRED
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
-  <Image>k__BackingField: {fileID: 423061964, guid: 92fa174f98efc7d4b8400396ab9e9234, type: 3}
+  <Image>k__BackingField: {fileID: 652455558, guid: 174ad815ed8dd51448fbf167b0e36e85, type: 3}
   <Health>k__BackingField: 200
   <AttackValue>k__BackingField: 25
   <BlockValue>k__BackingField: 12
   <BurnValue>k__BackingField: 2
   <StrengthValue>k__BackingField: 1
   <WeakValue>k__BackingField: 1
-  <ViewPrefab>k__BackingField: {fileID: 0}
+  <ViewPrefab>k__BackingField: {fileID: 4777720535224127667, guid: 840cc613aa339044e8c48c3336e6bcea, type: 3}
   <Behaviour>k__BackingField: {fileID: 11400000, guid: b10688c01f38cdd4fa539eb3961648de, type: 2}

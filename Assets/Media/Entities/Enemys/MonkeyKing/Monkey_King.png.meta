@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 92fa174f98efc7d4b8400396ab9e9234
+guid: 2b02e6e11c2759947a058ffa8e54336d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,23 +97,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: REDblaCKHOLE_0
+      name: Monkey_King_animation-Sheet_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 61
-        width: 73
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 16
+        y: 16
+        width: 32
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 349bc06b771783f4d9c75d22528198ec
-      internalID: 423061964
+      spriteID: e4cad54d3493758498d7567a20c57683
+      internalID: -556450086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey_King_animation-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 16
+        width: 35
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4204bd45a2d0c40a64d62d584a4e0d
+      internalID: 1934743135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey_King_animation-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 16
+        width: 36
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c4e61d2d0669594482ddb91bdbc1ee8
+      internalID: -2121708171
       vertices: []
       indices: 
       edges: []
@@ -122,7 +166,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4d3563492f090864c81eb554ca417243
+    spriteID: e62efbf96a90d394ebaa961e3e7f3f5a
     internalID: 0
     vertices: []
     indices: 
@@ -130,9 +174,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      REDblaCKHOLE_0: 423061964
+      Monkey_King_animation-Sheet_0: -556450086
+      Monkey_King_animation-Sheet_1: 1934743135
+      Monkey_King_animation-Sheet_2: -2121708171
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

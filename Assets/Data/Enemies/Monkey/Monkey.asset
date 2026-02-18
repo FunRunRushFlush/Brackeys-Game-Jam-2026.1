@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f4d2f2e8b4d51c4495011c79c932022, type: 3}
-  m_Name: PlanetEarth
+  m_Name: Monkey
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
-  <Image>k__BackingField: {fileID: 112675822, guid: 2606cf27e206774479f84acc03f4017d, type: 3}
-  <Health>k__BackingField: 150
-  <AttackValue>k__BackingField: 16
-  <BlockValue>k__BackingField: 12
+  <Image>k__BackingField: {fileID: 529134489, guid: 1812330d2bfb8dd4f96a65b4aac44214, type: 3}
+  <Health>k__BackingField: 50
+  <AttackValue>k__BackingField: 6
+  <BlockValue>k__BackingField: 6
   <BurnValue>k__BackingField: 2
   <StrengthValue>k__BackingField: 1
   <WeakValue>k__BackingField: 1
-  <ViewPrefab>k__BackingField: {fileID: 4777720535224127667, guid: cf3091e967dda304fabb9f8c4e50a88f, type: 3}
-  <Behaviour>k__BackingField: {fileID: 11400000, guid: 02702d11a1b193249883900d04f8ebd0, type: 2}
+  <ViewPrefab>k__BackingField: {fileID: 0}
+  <Behaviour>k__BackingField: {fileID: 0}

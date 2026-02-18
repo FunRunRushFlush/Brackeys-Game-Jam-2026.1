@@ -10,12 +10,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 648071426189672976, guid: c56d3a3b54d15f8478811b493b0b7927, type: 3}
       propertyPath: m_Name
-      value: EnemyView_PlanetLava
+      value: EnemyView_BlackHoleRed
       objectReference: {fileID: 0}
     - target: {fileID: 3700607161799596371, guid: c56d3a3b54d15f8478811b493b0b7927, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 180826896, guid: 5918c5ea896bc054ca68c2e5f9265cf8, type: 3}
+      objectReference: {fileID: 652455558, guid: 174ad815ed8dd51448fbf167b0e36e85, type: 3}
     - target: {fileID: 5247831808876397678, guid: c56d3a3b54d15f8478811b493b0b7927, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -27,7 +27,7 @@ PrefabInstance:
     - target: {fileID: 7629025664737546283, guid: c56d3a3b54d15f8478811b493b0b7927, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: faafa120a08582546b8e5a217fca825b, type: 2}
+      objectReference: {fileID: 9100000, guid: ce5e6ca8023af00488bbe452a59c273e, type: 2}
     - target: {fileID: 8473798259931743259, guid: c56d3a3b54d15f8478811b493b0b7927, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

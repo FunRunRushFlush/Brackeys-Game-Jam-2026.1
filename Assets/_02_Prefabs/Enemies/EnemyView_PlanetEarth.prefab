@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyView_PlanetEarth
       objectReference: {fileID: 0}
+    - target: {fileID: 3700607161799596371, guid: c56d3a3b54d15f8478811b493b0b7927, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 112675822, guid: 2606cf27e206774479f84acc03f4017d, type: 3}
     - target: {fileID: 5247831808876397678, guid: c56d3a3b54d15f8478811b493b0b7927, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -20,6 +24,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7629025664737546283, guid: c56d3a3b54d15f8478811b493b0b7927, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 09bae4d52c231cc43adff3e9786288cf, type: 2}
     - target: {fileID: 8473798259931743259, guid: c56d3a3b54d15f8478811b493b0b7927, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

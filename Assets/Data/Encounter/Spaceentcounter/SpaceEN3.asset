@@ -16,8 +16,8 @@ MonoBehaviour:
   maxEnemies: 1
   pool:
   - data: {fileID: 11400000, guid: b11b950058c7e4b4d8b35ac2f2581723, type: 2}
-    weight: 0
+    weight: 1
   - data: {fileID: 11400000, guid: 79d1705e7c2789c418301123fde5190c, type: 2}
-    weight: 0
+    weight: 1
   - data: {fileID: 11400000, guid: 4ed46b082b23c8041951fa10c03151b0, type: 2}
-    weight: 0
+    weight: 1
