@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BiomeDefinition
   Biome: 3
   nodeEncounters:
-  - {fileID: 11400000, guid: 8e42c46496eb9084e83bea3a008f141f, type: 2}
-  - {fileID: 11400000, guid: 9eca3974c9a941f429c19d0a4115b86d, type: 2}
-  - {fileID: 11400000, guid: 6ac6a533446f9aa4b8c2ae2958d0fb83, type: 2}
-  - {fileID: 11400000, guid: 8e42c46496eb9084e83bea3a008f141f, type: 2}
-  bossEncounter: {fileID: 11400000, guid: 6ac6a533446f9aa4b8c2ae2958d0fb83, type: 2}
-  normalArenaScenes: []
-  bossArenaScene: 
+  - {fileID: 11400000, guid: 28a86979079cb4d4e91f29c40c634af5, type: 2}
+  - {fileID: 11400000, guid: 28a86979079cb4d4e91f29c40c634af5, type: 2}
+  - {fileID: 11400000, guid: 28a86979079cb4d4e91f29c40c634af5, type: 2}
+  - {fileID: 11400000, guid: 28a86979079cb4d4e91f29c40c634af5, type: 2}
+  bossEncounter: {fileID: 11400000, guid: 28a86979079cb4d4e91f29c40c634af5, type: 2}
+  normalArenaScenes:
+  - Arena_Galaxy_Test
+  bossArenaScene: Arena_Galaxy_Test

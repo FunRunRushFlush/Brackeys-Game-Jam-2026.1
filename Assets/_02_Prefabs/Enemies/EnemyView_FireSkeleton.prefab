@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1575902358615272922
+--- !u!1001 &1782301778939217917
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,44 +10,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 648071426189672976, guid: c56d3a3b54d15f8478811b493b0b7927, type: 3}
       propertyPath: m_Name
-      value: EnemyView_Ufo
-      objectReference: {fileID: 0}
-    - target: {fileID: 3700607161799596371, guid: c56d3a3b54d15f8478811b493b0b7927, type: 3}
-      propertyPath: m_Size.x
-      value: 2.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 3700607161799596371, guid: c56d3a3b54d15f8478811b493b0b7927, type: 3}
-      propertyPath: m_Size.y
-      value: 2.56
+      value: EnemyView_FireSkeleton
       objectReference: {fileID: 0}
     - target: {fileID: 3700607161799596371, guid: c56d3a3b54d15f8478811b493b0b7927, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1822130505, guid: 5441903236ee6ae47aeab529b9ea45ce, type: 3}
-    - target: {fileID: 3700607161799596371, guid: c56d3a3b54d15f8478811b493b0b7927, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5176275647688698272, guid: c56d3a3b54d15f8478811b493b0b7927, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 5247831808876397678, guid: c56d3a3b54d15f8478811b493b0b7927, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5247831808876397678, guid: c56d3a3b54d15f8478811b493b0b7927, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6069981016794087887, guid: c56d3a3b54d15f8478811b493b0b7927, type: 3}
-      propertyPath: m_Size.y
-      value: 3
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 728994716, guid: ce37a417ba6225243bfda43169bc8724, type: 3}
     - target: {fileID: 7629025664737546283, guid: c56d3a3b54d15f8478811b493b0b7927, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: f405b8b2cc592304da21621e66add945, type: 2}
+      objectReference: {fileID: 9100000, guid: 3255614cb2f31934089f8608e1207ff8, type: 2}
     - target: {fileID: 8473798259931743259, guid: c56d3a3b54d15f8478811b493b0b7927, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
