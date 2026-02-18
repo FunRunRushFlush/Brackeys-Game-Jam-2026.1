@@ -15,9 +15,9 @@ MonoBehaviour:
   Biome: 3
   nodeEncounters:
   - {fileID: 11400000, guid: 28a86979079cb4d4e91f29c40c634af5, type: 2}
+  - {fileID: 11400000, guid: 1355a2a31300656478c2c23c0cd8e816, type: 2}
   - {fileID: 11400000, guid: 28a86979079cb4d4e91f29c40c634af5, type: 2}
-  - {fileID: 11400000, guid: 28a86979079cb4d4e91f29c40c634af5, type: 2}
-  - {fileID: 11400000, guid: 28a86979079cb4d4e91f29c40c634af5, type: 2}
+  - {fileID: 11400000, guid: 1355a2a31300656478c2c23c0cd8e816, type: 2}
   bossEncounter: {fileID: 11400000, guid: 28a86979079cb4d4e91f29c40c634af5, type: 2}
   normalArenaScenes:
   - Arena_Galaxy_Test

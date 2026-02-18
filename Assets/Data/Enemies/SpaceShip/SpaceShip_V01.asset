@@ -19,5 +19,5 @@ MonoBehaviour:
   <BurnValue>k__BackingField: 2
   <StrengthValue>k__BackingField: 1
   <WeakValue>k__BackingField: 1
-  <ViewPrefab>k__BackingField: {fileID: 3227157653262435112, guid: 7d8f0e60af6a6604ba459ae383ee7238, type: 3}
+  <ViewPrefab>k__BackingField: {fileID: 8198021539490046465, guid: d2b18b1bc282cdb4caa76e8062620d57, type: 3}
   <Behaviour>k__BackingField: {fileID: 11400000, guid: a70c7f01433cc6a4e9dc0e2e7e8f950f, type: 2}
