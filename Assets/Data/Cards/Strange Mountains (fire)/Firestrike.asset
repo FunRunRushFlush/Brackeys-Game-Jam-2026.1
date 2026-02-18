@@ -12,18 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
   m_Name: Firestrike
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  Id: 
-  DisplayName: 
-  <Description>k__BackingField: 
-  <Mana>k__BackingField: 0
-  <Image>k__BackingField: {fileID: 0}
-  <Tags>k__BackingField: 
+  Id: fire-strike
+  DisplayName: 'Fire Strike '
+  <Description>k__BackingField: 'deal 7 Damage apply Burn 2 '
+  <Mana>k__BackingField: 1
+  <Image>k__BackingField: {fileID: 2047651849, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  <Tags>k__BackingField: 0000000001000000
   <ManualTargetEffect>k__BackingField:
-    rid: -2
-  <OtherEffects>k__BackingField: []
+    rid: 792979202384330845
+  <OtherEffects>k__BackingField:
+  - rid: 792979202384330846
   <PlayConditions>k__BackingField: []
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
+    - rid: 792979202384330845
+      type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        damageAmount: 7
+    - rid: 792979202384330846
+      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetMode>k__BackingField:
+          rid: 792979202384330847
+        <Effect>k__BackingField:
+          rid: 792979202384330848
+    - rid: 792979202384330847
+      type: {class: RandomEnemyTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 792979202384330848
+      type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
+      data:
+        statusEffectType: 1
+        stackCount: 2

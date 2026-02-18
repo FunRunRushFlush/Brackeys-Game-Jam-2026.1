@@ -14,16 +14,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: 
   DisplayName: 
-  <Description>k__BackingField: 
-  <Mana>k__BackingField: 0
+  <Description>k__BackingField: Deal 20 Damage apply burn 5 to all enemies draw a
+    card
+  <Mana>k__BackingField: 2
   <Image>k__BackingField: {fileID: 0}
-  <Tags>k__BackingField: 
+  <Tags>k__BackingField: 02000000
   <ManualTargetEffect>k__BackingField:
-    rid: -2
-  <OtherEffects>k__BackingField: []
+    rid: 792979202384330864
+  <OtherEffects>k__BackingField:
+  - rid: 792979202384330865
+  - rid: 792979202384330868
   <PlayConditions>k__BackingField: []
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
+    - rid: 792979202384330864
+      type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        damageAmount: 20
+    - rid: 792979202384330865
+      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetMode>k__BackingField:
+          rid: 792979202384330866
+        <Effect>k__BackingField:
+          rid: 792979202384330867
+    - rid: 792979202384330866
+      type: {class: AllEnemiesTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 792979202384330867
+      type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
+      data:
+        statusEffectType: 1
+        stackCount: 5
+    - rid: 792979202384330868
+      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetMode>k__BackingField:
+          rid: 792979202384330869
+        <Effect>k__BackingField:
+          rid: 792979202384330870
+    - rid: 792979202384330869
+      type: {class: HeroTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 792979202384330870
+      type: {class: DrawCardsEffect, ns: , asm: Assembly-CSharp}
+      data:
+        drawAmount: 1

@@ -12,18 +12,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
   m_Name: Flames
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  Id: 
-  DisplayName: 
-  <Description>k__BackingField: 
-  <Mana>k__BackingField: 0
-  <Image>k__BackingField: {fileID: 0}
-  <Tags>k__BackingField: 
+  Id: flames
+  DisplayName: Flames
+  <Description>k__BackingField: 12 Damge apply 2 burn to random enemy get 1 weakness
+  <Mana>k__BackingField: 2
+  <Image>k__BackingField: {fileID: 1418751897, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  <Tags>k__BackingField: 0000000001000000
   <ManualTargetEffect>k__BackingField:
-    rid: -2
-  <OtherEffects>k__BackingField: []
+    rid: 792979202384330849
+  <OtherEffects>k__BackingField:
+  - rid: 792979202384330850
+  - rid: 792979202384330853
   <PlayConditions>k__BackingField: []
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
+    - rid: 792979202384330849
+      type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        damageAmount: 12
+    - rid: 792979202384330850
+      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetMode>k__BackingField:
+          rid: 792979202384330851
+        <Effect>k__BackingField:
+          rid: 792979202384330852
+    - rid: 792979202384330851
+      type: {class: RandomEnemyTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 792979202384330852
+      type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
+      data:
+        statusEffectType: 1
+        stackCount: 2
+    - rid: 792979202384330853
+      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetMode>k__BackingField:
+          rid: 792979202384330854
+        <Effect>k__BackingField:
+          rid: 792979202384330855
+    - rid: 792979202384330854
+      type: {class: HeroTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 792979202384330855
+      type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
+      data:
+        statusEffectType: 4
+        stackCount: 1
