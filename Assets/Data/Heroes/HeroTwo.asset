@@ -18,12 +18,12 @@ MonoBehaviour:
   <HandSize>k__BackingField: 6
   <Mana>k__BackingField: 4
   <Deck>k__BackingField:
-  - {fileID: 11400000, guid: e8ee693408315314d9229715e5d5a87e, type: 2}
-  - {fileID: 11400000, guid: e8ee693408315314d9229715e5d5a87e, type: 2}
-  - {fileID: 11400000, guid: e8ee693408315314d9229715e5d5a87e, type: 2}
-  - {fileID: 11400000, guid: 00d9a7cd111bb284ebff89ec5aa38431, type: 2}
-  - {fileID: 11400000, guid: 00d9a7cd111bb284ebff89ec5aa38431, type: 2}
-  - {fileID: 11400000, guid: 00d9a7cd111bb284ebff89ec5aa38431, type: 2}
-  - {fileID: 11400000, guid: 00d9a7cd111bb284ebff89ec5aa38431, type: 2}
-  - {fileID: 11400000, guid: ca153b58ae684c4439cf2e0f475f6194, type: 2}
-  - {fileID: 11400000, guid: ca153b58ae684c4439cf2e0f475f6194, type: 2}
+  - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
+  - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
+  - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
+  - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
+  - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
+  - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
+  - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
+  - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
+  - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}

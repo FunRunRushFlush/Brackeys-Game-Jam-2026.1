@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Goblin Encounter_02
   m_EditorClassIdentifier: Assembly-CSharp::EncounterDefinition
   minEnemies: 2
-  maxEnemies: 2
+  maxEnemies: 3
   pool:
   - data: {fileID: 11400000, guid: 7620c10dbe596324888ac5fb18b61c5b, type: 2}
+    weight: 1
+  - data: {fileID: 11400000, guid: 7620c10dbe596324888ac5fb18b61c5b, type: 2}
+    weight: 1
+  - data: {fileID: 11400000, guid: 5e9182f433ee0e34c9b9cbfd0664cd1a, type: 2}
     weight: 1

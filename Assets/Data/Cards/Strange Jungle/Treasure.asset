@@ -19,13 +19,26 @@ MonoBehaviour:
   <Image>k__BackingField: {fileID: 576810202, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   <Tags>k__BackingField: 00000000
   <ManualTargetEffect>k__BackingField:
-    rid: 792979202384330891
-  <OtherEffects>k__BackingField: []
+    rid: -2
+  <OtherEffects>k__BackingField:
+  - rid: 792979202384330918
   <PlayConditions>k__BackingField: []
   references:
     version: 2
     RefIds:
-    - rid: 792979202384330891
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 792979202384330918
+      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetMode>k__BackingField:
+          rid: 792979202384330919
+        <Effect>k__BackingField:
+          rid: 792979202384330920
+    - rid: 792979202384330919
+      type: {class: HeroTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 792979202384330920
       type: {class: DrawCardsEffect, ns: , asm: Assembly-CSharp}
       data:
         drawAmount: 1
