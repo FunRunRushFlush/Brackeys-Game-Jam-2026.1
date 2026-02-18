@@ -1,10 +1,12 @@
 using Game.Logging;
+using Game.Scenes.Core;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CardRewards : MonoBehaviour
 {
-    [Header("Card Loot")]
-    [SerializeField] private CardLootEntry[] cardLoot;
+    //[Header("Card Loot")]
+    //[SerializeField] private CardLootEntry[] cardLoot;
 
     [Header("UI")]
     [SerializeField] private RectTransform rewardsContainer;
@@ -12,10 +14,23 @@ public class CardRewards : MonoBehaviour
 
     private void Start()
     {
-        CreateRewardViewsUI();
+        var session = CoreManager.Instance?.Session;
+        var rng = session.Run.CreateNodeRng(salt: 9001);
+        var ctx = session.Run.CurrentRewardContext;
+
+        var choices = CardRewardGenerator.GenerateChoices(
+            session.CardDatabase.AllCards,
+            session.Hero.Deck,
+            ctx,
+            rng,
+            choiceCount: 3);
+
+
+
+        CreateRewardViewsUI(choices);
     }
 
-    public void CreateRewardViewsUI()
+    public void CreateRewardViewsUI(List<CardData> cards)
     {
         if (CardViewCreator.Instance == null)
         {
@@ -36,16 +51,19 @@ public class CardRewards : MonoBehaviour
         // defensive: falls nochmal aufgebaut wird
         ConsumeRewardsUI();
 
-        for (int i = 0; i < cardLoot.Length; i++)
-        {
-            var entry = cardLoot[i];
-            if (entry.Card == null)
-            {
-                Log.Warn(LogCat.UI, () => $"CardLootEntry[{i}] has no CardData assigned.", this);
-                continue;
-            }
 
-            var card = new Card(entry.Card);
+        if (cards == null || cards.Count == 0)
+        {
+            Log.Warn(LogCat.UI, () => "No cards provided for rewards UI.", this);
+            return;
+        }
+
+        for (int i = 0; i < cards.Count; i++)
+        {
+            var data = cards[i];
+            if (data == null) continue;
+
+            var card = new Card(data);
             var view = CardViewCreator.Instance.CreateCardViewUI(card, rewardsContainer);
             if (view != null)
                 selectionGroup.Register(view);

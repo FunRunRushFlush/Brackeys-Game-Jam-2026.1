@@ -16,7 +16,9 @@ MonoBehaviour:
   DisplayName: All In
   <Description>k__BackingField: Everyone increases Strength by 10
   <Mana>k__BackingField: 0
-  <Image>k__BackingField: {fileID: 0}
+  <Image>k__BackingField: {fileID: -252327746, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  Rarity: 2
+  PreferredBiomes: 
   <Tags>k__BackingField: 
   <ManualTargetEffect>k__BackingField:
     rid: -2

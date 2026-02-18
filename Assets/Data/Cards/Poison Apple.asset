@@ -16,7 +16,9 @@ MonoBehaviour:
   DisplayName: Poison Apple
   <Description>k__BackingField: Poison 2 the Player and Posion 5 the Enemys
   <Mana>k__BackingField: 2
-  <Image>k__BackingField: {fileID: 0}
+  <Image>k__BackingField: {fileID: -521032350, guid: 762faa91e709b9348bf7b148318d5475, type: 3}
+  Rarity: 0
+  PreferredBiomes: 
   <Tags>k__BackingField: 01000000
   <ManualTargetEffect>k__BackingField:
     rid: -2

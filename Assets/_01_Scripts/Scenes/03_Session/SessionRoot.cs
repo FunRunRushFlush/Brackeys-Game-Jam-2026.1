@@ -4,11 +4,11 @@ using UnityEngine;
 public class SessionRoot : MonoBehaviour, ISession
 {
     [field: SerializeField] public RunState Run { get; private set; }
-    [field: SerializeField] public LootService Loot { get; private set; }
     [field: SerializeField] public RunDeck Deck { get; private set; }
     [field: SerializeField] public RunPerks Perks { get; private set; }
     [field: SerializeField] public RunTimer RunTimer { get; private set; }
     [field: SerializeField] public RunHeroData Hero { get; private set; }
+    [field: SerializeField] public CardDatabase CardDatabase { get; private set; }
 
 
     void Awake()

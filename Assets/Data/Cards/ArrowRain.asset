@@ -17,6 +17,8 @@ MonoBehaviour:
   <Description>k__BackingField: Deal 20 damage to all enemies
   <Mana>k__BackingField: 1
   <Image>k__BackingField: {fileID: 21300000, guid: 90563110d2c898047bb472c9a9f359da, type: 3}
+  Rarity: 2
+  PreferredBiomes: 
   <Tags>k__BackingField: 00000000
   <ManualTargetEffect>k__BackingField:
     rid: -2

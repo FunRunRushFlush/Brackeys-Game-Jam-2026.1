@@ -17,6 +17,8 @@ MonoBehaviour:
   <Description>k__BackingField: Deal 20 dmaga to all enemies and Burn 5
   <Mana>k__BackingField: 3
   <Image>k__BackingField: {fileID: -527411974, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  Rarity: 0
+  PreferredBiomes: 01000000
   <Tags>k__BackingField: 0000000001000000
   <ManualTargetEffect>k__BackingField:
     rid: 792979202384330762

@@ -19,6 +19,8 @@ public class RunState : MonoBehaviour
     public int Gold { get; private set; }
     public float RunStartTime { get; private set; }
 
+    public RewardContext CurrentRewardContext { get; private set; }
+
     public RewardOption[] PendingLoot { get; set; }
 
     public event Action<int> GoldChanged;
@@ -26,12 +28,14 @@ public class RunState : MonoBehaviour
 
     public BiomeType CurrentBiome => BiomesInRun[Mathf.Clamp(BiomeIndex, 0, BiomesInRun.Length - 1)];
 
-    public bool IsBossNode => NodeIndexInBiome >= NormalNodesPerBiome;
+    //public bool IsBossNode => NodeIndexInBiome >= NormalNodesPerBiome;
     public bool IsFinalBiome => BiomeIndex >= BiomesInRun.Length - 1;
     public bool IsFinalBossNode => IsFinalBiome && IsBossNode;
 
     public void StartNewRun(int startingGold = 0)
     {
+        RunSeed = UnityEngine.Random.Range(int.MinValue, int.MaxValue);
+
         Gold = startingGold;
         RunStartTime = Time.unscaledTime;
 
@@ -41,6 +45,8 @@ public class RunState : MonoBehaviour
         NodeIndexInBiome = 0;
         GlobalNodeIndex = 0;
 
+        HasRewardContext = false;
+
         GoldChanged?.Invoke(Gold);
         NodeChanged?.Invoke(GlobalNodeIndex);
     }
@@ -48,37 +54,39 @@ public class RunState : MonoBehaviour
     private void BuildRunPlan()
     {
 
-        var pool = new[] { BiomeType.Forest, BiomeType.Fire,BiomeType.Ice };
+        //var pool = new[] { BiomeType.Forest, BiomeType.Fire,BiomeType.Ice };
 
-        int a = UnityEngine.Random.Range(0, pool.Length);
-        int b = UnityEngine.Random.Range(0, pool.Length - 1);
-        if (b >= a)
-        {
-            // no duplicate
-            b++; 
-        }
+        //int a = UnityEngine.Random.Range(0, pool.Length);
+        //int b = UnityEngine.Random.Range(0, pool.Length - 1);
+        //if (b >= a)
+        //{
+        //    // no duplicate
+        //    b++; 
+        //}
+        //BiomesInRun[0] = pool[a];
+        //BiomesInRun[1] = pool[b];
 
-        BiomesInRun[0] = pool[a];
-        BiomesInRun[1] = pool[b];
+        BiomesInRun[0] = BiomeType.Forest;
+        BiomesInRun[1] = BiomeType.Fire;
         BiomesInRun[2] = BiomeType.Galaxy;
     }
 
-    public void AdvanceNode()
-    {
-        NodeIndexInBiome++;
-        GlobalNodeIndex++;
+    //public void AdvanceNode()
+    //{
+    //    NodeIndexInBiome++;
+    //    GlobalNodeIndex++;
 
-        // TODO: bisschen naja...
-        if (NodeIndexInBiome > NormalNodesPerBiome)
-        {
-            // (NormalNodesPerBiome=4) -> Boss ist 4
-            // Nach Boss-Win weiter, daher ">" statt ">="
-            NodeIndexInBiome = 0;
-            BiomeIndex++;
-        }
+    //    // TODO: bisschen naja...
+    //    if (NodeIndexInBiome > NormalNodesPerBiome)
+    //    {
+    //        // (NormalNodesPerBiome=4) -> Boss ist 4
+    //        // Nach Boss-Win weiter, daher ">" statt ">="
+    //        NodeIndexInBiome = 0;
+    //        BiomeIndex++;
+    //    }
 
-        NodeChanged?.Invoke(GlobalNodeIndex);
-    }
+    //    NodeChanged?.Invoke(GlobalNodeIndex);
+    //}
 
     public void ChangeAmountOfGold(int amount)
     {
@@ -90,6 +98,54 @@ public class RunState : MonoBehaviour
     {
         GameFlowController.Current.BackToMainMenu();
     }
+    public int RunSeed { get; private set; }
 
+    public enum NodeType { Normal, Boss }
+
+    public NodeType CurrentNodeType =>
+        NodeIndexInBiome < NormalNodesPerBiome ? NodeType.Normal : NodeType.Boss;
+
+    public bool IsBossNode => CurrentNodeType == NodeType.Boss;
+
+    public void SetNormalNodesPerBiome(int normalNodes)
+    {
+        NormalNodesPerBiome = Mathf.Max(0, normalNodes);
+    }
+
+    public int GetNodeSeed(int salt = 1337)
+    {
+        unchecked
+        {
+            return RunSeed ^ (BiomeIndex * 1_000_003) ^ (NodeIndexInBiome * 9_173) ^ salt;
+        }
+    }
+
+    public System.Random CreateNodeRng(int salt = 1337) => new System.Random(GetNodeSeed(salt));
+
+    public void AdvanceNode()
+    {
+        GlobalNodeIndex++;
+
+        if (CurrentNodeType == NodeType.Boss)
+        {
+            NodeIndexInBiome = 0;
+            BiomeIndex++;
+        }
+        else
+        {
+            NodeIndexInBiome++;
+        }
+
+        NodeChanged?.Invoke(GlobalNodeIndex);
+    }
+
+
+    public bool HasRewardContext { get; private set; }
+
+    public void SetRewardContext(RewardContext ctx)
+    {
+        CurrentRewardContext = ctx;
+        HasRewardContext = true;
+    }
     public float GetRunTimeSeconds() => Time.unscaledTime - RunStartTime;
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 public class CardDatabase : MonoBehaviour
 {
     [SerializeField] private List<CardData> allCards;
+    public IReadOnlyList<CardData> AllCards => allCards;
+
 
     private Dictionary<string, CardData> byId;
 

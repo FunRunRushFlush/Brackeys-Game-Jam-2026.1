@@ -16,7 +16,7 @@ namespace Game.Scenes.Core
         [SerializeField] private string defaultEncounterLevelScene = SceneDatabase.Scenes.Arena_Forest_01;
 
         private RunState run;
-        private LootService lootService;
+        //private LootService lootService;
 
         private void Awake()
         {
@@ -50,12 +50,8 @@ namespace Game.Scenes.Core
 
         public void LootPicked(int optionIndex)
         {
-            if (run == null || lootService == null) return;
-            if (run.PendingLoot == null || run.PendingLoot.Length <= optionIndex) return;
-
-            lootService.Apply(run, run.PendingLoot[optionIndex]);
-            run.PendingLoot = null;
-
+            if (run == null) return;
+  
             StartCoroutine(BackToMapAdvanceNodeRoutine());
         }
 
@@ -108,9 +104,8 @@ namespace Game.Scenes.Core
         private IEnumerator GoToLootRoutine()
         {
             CacheSessionRefs();
-            if (run == null || lootService == null) yield break;
+            if (run == null ) yield break;
 
-            run.PendingLoot = lootService.Generate3Options();
 
             // Encounter entladen, Loot in SessionView anzeigen
             yield return SceneController.Current
@@ -176,15 +171,13 @@ namespace Game.Scenes.Core
                 .Perform();
 
             run = null;
-            lootService = null;
         }
 
         private void CacheSessionRefs()
         {
-            if (run != null && lootService != null) return;
+            if (run != null) return;
 
             run = FindFirstObjectByType<RunState>();
-            lootService = FindFirstObjectByType<LootService>();
         }
 
         private string GetArenaSceneForCurrentNode(RunState run)
@@ -195,6 +188,10 @@ namespace Game.Scenes.Core
                 Debug.LogError($"No BiomeDefinition found for biome {run.CurrentBiome}. Falling back to default.");
                 return defaultEncounterLevelScene;
             }
+
+            // IMPORTANT: set normal node count BEFORE checking boss state
+            int normalCount = biomeDef.nodeEncounters != null ? biomeDef.nodeEncounters.Length : 0;
+            run.SetNormalNodesPerBiome(normalCount);
 
             if (run.IsBossNode)
             {
@@ -212,9 +209,8 @@ namespace Game.Scenes.Core
                 return defaultEncounterLevelScene;
             }
 
-            // deterministische Auswahl pro Node
-            int seed = (run.BiomeIndex * 100000) + (run.NodeIndexInBiome * 10007) + 4242;
-            var rng = new System.Random(seed);
+            // deterministic selection per run + node
+            var rng = run.CreateNodeRng(salt: 4242);
             int idx = rng.Next(0, biomeDef.normalArenaScenes.Length);
 
             var scene = biomeDef.normalArenaScenes[idx];
@@ -226,6 +222,7 @@ namespace Game.Scenes.Core
 
             return scene;
         }
+
 
 
     }

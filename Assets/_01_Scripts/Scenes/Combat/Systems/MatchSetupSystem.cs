@@ -21,16 +21,28 @@ public class MatchSetupSystem : MonoBehaviour
             return;
         }
 
+        // IMPORTANT: set normal node count BEFORE checking boss state
+        int normalCount = biomeDef.nodeEncounters != null ? biomeDef.nodeEncounters.Length : 0;
+        run.SetNormalNodesPerBiome(normalCount);
 
         bool isBoss = run.IsBossNode;
 
+        EncounterDefinition encounterDef;
+        if (isBoss)
+        {
+            encounterDef = biomeDef.bossEncounter;
+        }
+        else
+        {
+            if (normalCount <= 0)
+            {
+                Log.Error(LogCat.General, () => $"Biome '{run.CurrentBiome}' has no nodeEncounters configured.");
+                return;
+            }
 
-        int normalNodeIndex = Mathf.Clamp(run.NodeIndexInBiome, 0, 3);
-
-
-        var encounterDef = isBoss
-            ? biomeDef.bossEncounter
-            : biomeDef.nodeEncounters[normalNodeIndex];
+            int normalNodeIndex = Mathf.Clamp(run.NodeIndexInBiome, 0, normalCount - 1);
+            encounterDef = biomeDef.nodeEncounters[normalNodeIndex];
+        }
 
         if (encounterDef == null)
         {
@@ -40,12 +52,17 @@ public class MatchSetupSystem : MonoBehaviour
             return;
         }
 
-        // RNG: Jam-ok, aber stabiler als nur NodeIndex.
-        // Optional später: RunSeed dazu addieren.
-        var rng = new System.Random((run.BiomeIndex * 100000) + (run.NodeIndexInBiome * 10007) + 1337);
-
+        // deterministic per run + node
+        var rng = run.CreateNodeRng(salt: 1337);
 
         var enemies = EncounterResolver.Resolve(encounterDef, rng);
+
+        // store reward context for the loot scene
+        run.SetRewardContext(new RewardContext
+        {
+            Tier = isBoss ? EncounterTier.Boss : EncounterTier.Normal,
+            Biome = run.CurrentBiome
+        });
 
         EnemySystem.Instance.Setup(enemies);
 

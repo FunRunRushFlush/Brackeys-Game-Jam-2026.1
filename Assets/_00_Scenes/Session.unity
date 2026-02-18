@@ -885,6 +885,7 @@ Transform:
   - {fileID: 1467640390}
   - {fileID: 1979660471}
   - {fileID: 1341883679}
+  - {fileID: 1733054677}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1046717256
@@ -932,11 +933,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SessionBootstrap
   <Run>k__BackingField: {fileID: 1306081897}
-  <Loot>k__BackingField: {fileID: 1467640391}
   <Deck>k__BackingField: {fileID: 0}
   <Perks>k__BackingField: {fileID: 0}
   <RunTimer>k__BackingField: {fileID: 0}
   <Hero>k__BackingField: {fileID: 1341883680}
+  <CardDatabase>k__BackingField: {fileID: 1733054678}
 --- !u!1 &1096307619
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,6 +1540,70 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeText
   _text: {fileID: 1726398223}
+--- !u!1 &1733054676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1733054677}
+  - component: {fileID: 1733054678}
+  m_Layer: 0
+  m_Name: CardDatabase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1733054677
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733054676}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 990175786}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1733054678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733054676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63686d519145d4a48b154bf24e53bad5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardDatabase
+  allCards:
+  - {fileID: 11400000, guid: f693241107fca944ab95a3713f344226, type: 2}
+  - {fileID: 11400000, guid: ca153b58ae684c4439cf2e0f475f6194, type: 2}
+  - {fileID: 11400000, guid: 66fd8749ee49d4b4c893c62d4df0d106, type: 2}
+  - {fileID: 11400000, guid: 958933ece9a65b14aa1161edd9807bad, type: 2}
+  - {fileID: 11400000, guid: bfa979a3aa540b94f950a618fde900c6, type: 2}
+  - {fileID: 11400000, guid: 00d9a7cd111bb284ebff89ec5aa38431, type: 2}
+  - {fileID: 11400000, guid: 10a0db0f3a51b4449b201d9b4b6feb88, type: 2}
+  - {fileID: 11400000, guid: 8babfb29bd9f255499e44a82d07f1ffe, type: 2}
+  - {fileID: 11400000, guid: e8ee693408315314d9229715e5d5a87e, type: 2}
+  - {fileID: 11400000, guid: 4a43b75a8e519f744bc4a7a2e48a4653, type: 2}
+  - {fileID: 11400000, guid: 2101be1f0119a8a4986f64a94f147fb8, type: 2}
+  - {fileID: 11400000, guid: 2d45846d143555946b5e052fa739f64c, type: 2}
+  - {fileID: 11400000, guid: 647b6ab704dfd0447b57599ff6fa9a1b, type: 2}
+  - {fileID: 11400000, guid: 0b6dd0855ab3369458f1fc921fef6e98, type: 2}
+  - {fileID: 11400000, guid: a17301d317aae8242a244b552a1dbafa, type: 2}
+  - {fileID: 11400000, guid: c3f1b09181af8bf42becfe0e54499611, type: 2}
+  - {fileID: 11400000, guid: fd5030e6e0dd00941b1979274a8aff5d, type: 2}
+  - {fileID: 11400000, guid: a717229937f45904ab7725b7cd20d97b, type: 2}
+  - {fileID: 11400000, guid: 3b847c0081f726949bddd1d9c3984e11, type: 2}
 --- !u!1 &1754863368
 GameObject:
   m_ObjectHideFlags: 0
