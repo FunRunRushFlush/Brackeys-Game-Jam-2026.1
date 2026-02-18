@@ -10,51 +10,52 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
-  m_Name: Molten Shield
+  m_Name: All In
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  Id: molten_shield
-  DisplayName: Molten Shield
-  <Description>k__BackingField: Gain 6 Block and Burn 3 all Enemies
-  <Mana>k__BackingField: 1
-  <Image>k__BackingField: {fileID: -1211305605, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
-  <Tags>k__BackingField: 01000000
+  Id: all_in
+  DisplayName: All In
+  <Description>k__BackingField: Everyone increases Strength by 10
+  <Mana>k__BackingField: 0
+  <Image>k__BackingField: {fileID: 0}
+  <Tags>k__BackingField: 
   <ManualTargetEffect>k__BackingField:
     rid: -2
   <OtherEffects>k__BackingField:
-  - rid: 1986237386231906400
-  - rid: 1986237386231906403
+  - rid: 1986237386231906416
+  - rid: 1986237386231906420
   <PlayConditions>k__BackingField: []
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 1986237386231906400
+    - rid: 1986237386231906416
       type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
       data:
         <TargetMode>k__BackingField:
-          rid: 1986237386231906401
+          rid: 1986237386231906418
         <Effect>k__BackingField:
-          rid: 1986237386231906402
-    - rid: 1986237386231906401
-      type: {class: HeroTM, ns: , asm: Assembly-CSharp}
-      data: 
-    - rid: 1986237386231906402
-      type: {class: AddBlockEffect, ns: , asm: Assembly-CSharp}
-      data:
-        amount: 6
-    - rid: 1986237386231906403
-      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
-      data:
-        <TargetMode>k__BackingField:
-          rid: 1986237386231906404
-        <Effect>k__BackingField:
-          rid: 1986237386231906405
-    - rid: 1986237386231906404
-      type: {class: AllEnemiesTM, ns: , asm: Assembly-CSharp}
-      data: 
-    - rid: 1986237386231906405
+          rid: 1986237386231906417
+    - rid: 1986237386231906417
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
-        statusEffectType: 1
-        stackCount: 3
+        statusEffectType: 2
+        stackCount: 10
+    - rid: 1986237386231906418
+      type: {class: AllEnemiesTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 1986237386231906420
+      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetMode>k__BackingField:
+          rid: 1986237386231906421
+        <Effect>k__BackingField:
+          rid: 1986237386231906422
+    - rid: 1986237386231906421
+      type: {class: HeroTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 1986237386231906422
+      type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
+      data:
+        statusEffectType: 2
+        stackCount: 10

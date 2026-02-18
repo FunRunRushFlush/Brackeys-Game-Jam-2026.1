@@ -21,9 +21,21 @@ public class DamageSystem : Singleton<DamageSystem>
 
     private IEnumerator DealDamagePerformer(DealDamageGA dealDamageGA)
     {
+        int baseAmount = dealDamageGA.Amount;
+
+        int str = dealDamageGA.Caster != null
+            ? dealDamageGA.Caster.GetStatusEffectStacks(StatusEffectType.STRENGTH)
+            : 0;
+
+        int weak = dealDamageGA.Caster != null
+            ? dealDamageGA.Caster.GetStatusEffectStacks(StatusEffectType.WEAKNESS)
+            : 0;
+
+        int modifiedAmount = Mathf.Max(0, baseAmount + str - weak);
+
         foreach (var target in dealDamageGA.Targets)
         {
-            target.Damage(dealDamageGA.Amount);
+            target.Damage(modifiedAmount);
             Instantiate(damageVFX, target.transform.position, Quaternion.identity);
             yield return new WaitForSeconds(0.15f);
 

@@ -10,51 +10,36 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
-  m_Name: Molten Shield
+  m_Name: Total Chaos
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  Id: molten_shield
-  DisplayName: Molten Shield
-  <Description>k__BackingField: Gain 6 Block and Burn 3 all Enemies
+  Id: power_up
+  DisplayName: Power Up
+  <Description>k__BackingField: Increase Strength by 3
   <Mana>k__BackingField: 1
-  <Image>k__BackingField: {fileID: -1211305605, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  <Image>k__BackingField: {fileID: -1358773613, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   <Tags>k__BackingField: 01000000
   <ManualTargetEffect>k__BackingField:
     rid: -2
   <OtherEffects>k__BackingField:
-  - rid: 1986237386231906400
-  - rid: 1986237386231906403
+  - rid: 1986237386231906409
   <PlayConditions>k__BackingField: []
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 1986237386231906400
+    - rid: 1986237386231906409
       type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
       data:
         <TargetMode>k__BackingField:
-          rid: 1986237386231906401
+          rid: 1986237386231906410
         <Effect>k__BackingField:
-          rid: 1986237386231906402
-    - rid: 1986237386231906401
+          rid: 1986237386231906411
+    - rid: 1986237386231906410
       type: {class: HeroTM, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 1986237386231906402
-      type: {class: AddBlockEffect, ns: , asm: Assembly-CSharp}
-      data:
-        amount: 6
-    - rid: 1986237386231906403
-      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
-      data:
-        <TargetMode>k__BackingField:
-          rid: 1986237386231906404
-        <Effect>k__BackingField:
-          rid: 1986237386231906405
-    - rid: 1986237386231906404
-      type: {class: AllEnemiesTM, ns: , asm: Assembly-CSharp}
-      data: 
-    - rid: 1986237386231906405
+    - rid: 1986237386231906411
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
-        statusEffectType: 1
+        statusEffectType: 2
         stackCount: 3

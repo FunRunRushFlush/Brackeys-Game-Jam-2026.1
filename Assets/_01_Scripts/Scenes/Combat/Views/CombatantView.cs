@@ -110,28 +110,38 @@ public class CombatantView : MonoBehaviour
 
     public void AddStatusEffect(StatusEffectType type, int stackCount)
     {
-        if (statusEffects.ContainsKey(type))
+        if (!this) return;                
+        if (stackCount <= 0) return;
+
+  
+        if (CurrentHealth <= 0) return;
+
+        if (!statusEffects.ContainsKey(type))
+            statusEffects[type] = 0;
+
+        statusEffects[type] += stackCount;
+
+        if (statusEffectsManagerUI)
         {
-            statusEffects[type] += stackCount;
+            statusEffectsManagerUI.UpdateStatusEfectUI(type, statusEffects[type]);
         }
-        else
-        {
-            statusEffects.Add(type, stackCount);
-        }
-        statusEffectsManagerUI.UpdateStatusEfectUI(type, GetStatusEffectStacks(type));
     }
 
     public void RemoveStatusEffect(StatusEffectType type, int stackCount)
     {
-        if (statusEffects.ContainsKey(type))
+        if (!this) return;
+        if (CurrentHealth <= 0) return;
+
+        if (!statusEffects.ContainsKey(type)) return;
+
+        statusEffects[type] -= stackCount;
+        if (statusEffects[type] <= 0)
+            statusEffects.Remove(type);
+
+        if (statusEffectsManagerUI)
         {
-            statusEffects[type] -= stackCount;
-            if (statusEffects[type] <= 0)
-            {
-                statusEffects.Remove(type);
-            }
+            statusEffectsManagerUI.UpdateStatusEfectUI(type, GetStatusEffectStacks(type));
         }
-        statusEffectsManagerUI.UpdateStatusEfectUI(type, GetStatusEffectStacks(type));
     }
 
     public int GetStatusEffectStacks(StatusEffectType type)

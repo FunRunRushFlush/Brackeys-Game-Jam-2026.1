@@ -18,11 +18,12 @@ MonoBehaviour:
   <HandSize>k__BackingField: 5
   <Mana>k__BackingField: 3
   <Deck>k__BackingField:
+  - {fileID: 11400000, guid: 483cd6020ee6dc348a0a47aba8f66aa7, type: 2}
   - {fileID: 11400000, guid: ca153b58ae684c4439cf2e0f475f6194, type: 2}
-  - {fileID: 11400000, guid: ca153b58ae684c4439cf2e0f475f6194, type: 2}
-  - {fileID: 11400000, guid: 8cc2776fb326de94f8e574ff1075ea37, type: 2}
   - {fileID: 11400000, guid: 8cc2776fb326de94f8e574ff1075ea37, type: 2}
   - {fileID: 11400000, guid: 00d9a7cd111bb284ebff89ec5aa38431, type: 2}
   - {fileID: 11400000, guid: 00d9a7cd111bb284ebff89ec5aa38431, type: 2}
   - {fileID: 11400000, guid: e8ee693408315314d9229715e5d5a87e, type: 2}
   - {fileID: 11400000, guid: ba49a75a77661d84e80129dd24e937fa, type: 2}
+  - {fileID: 11400000, guid: 1448383a8b6bb4745b6f442b82ad7f96, type: 2}
+  - {fileID: 11400000, guid: f693241107fca944ab95a3713f344226, type: 2}

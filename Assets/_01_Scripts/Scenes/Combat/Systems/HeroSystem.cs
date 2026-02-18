@@ -37,6 +37,10 @@ public class HeroSystem : Singleton<HeroSystem>
             ActionSystem.Instance.AddReaction(applyBurnGA);
         }
 
+        int poisonStacks = HeroView.GetStatusEffectStacks(StatusEffectType.POISON);
+        if (poisonStacks > 0)
+            ActionSystem.Instance.AddReaction(new ApplyPoisonGA(poisonStacks, HeroView));
+
         DiscardAllCardsGA discardAllCardsGA = new();
         ActionSystem.Instance.AddReaction(discardAllCardsGA);
     }
