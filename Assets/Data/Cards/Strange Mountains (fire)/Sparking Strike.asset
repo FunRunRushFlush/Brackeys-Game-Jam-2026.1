@@ -12,18 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
   m_Name: Sparking Strike
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  Id: 
-  DisplayName: 
-  <Description>k__BackingField: 
-  <Mana>k__BackingField: 0
-  <Image>k__BackingField: {fileID: 0}
-  <Tags>k__BackingField: 
+  Id: 'sparking-strike '
+  DisplayName: Sparking Strike
+  <Description>k__BackingField: 'deal 7 damage apply burn 5 to random enemy '
+  <Mana>k__BackingField: 2
+  <Image>k__BackingField: {fileID: 539447770, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  <Tags>k__BackingField: 01000000
   <ManualTargetEffect>k__BackingField:
-    rid: -2
-  <OtherEffects>k__BackingField: []
+    rid: 792979202384330871
+  <OtherEffects>k__BackingField:
+  - rid: 792979202384330872
   <PlayConditions>k__BackingField: []
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
+    - rid: 792979202384330871
+      type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        damageAmount: 7
+    - rid: 792979202384330872
+      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetMode>k__BackingField:
+          rid: 792979202384330873
+        <Effect>k__BackingField:
+          rid: 792979202384330874
+    - rid: 792979202384330873
+      type: {class: RandomEnemyTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 792979202384330874
+      type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
+      data:
+        statusEffectType: 1
+        stackCount: 5

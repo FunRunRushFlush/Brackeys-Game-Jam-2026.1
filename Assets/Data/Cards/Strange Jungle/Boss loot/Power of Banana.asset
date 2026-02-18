@@ -14,16 +14,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: power-of-banana
   DisplayName: Power of Banana
-  <Description>k__BackingField: 'Heal 15 Life '
+  <Description>k__BackingField: Deal 15 Damage apply rendom enemy weakness 5 and
+    poissen 5
   <Mana>k__BackingField: 3
   <Image>k__BackingField: {fileID: 21300000, guid: 095b311531b064048b1cebe04bc20eee, type: 3}
-  <Tags>k__BackingField: 
+  <Tags>k__BackingField: 02000000
   <ManualTargetEffect>k__BackingField:
-    rid: -2
-  <OtherEffects>k__BackingField: []
+    rid: 792979202384330905
+  <OtherEffects>k__BackingField:
+  - rid: 792979202384330906
+  - rid: 792979202384330909
   <PlayConditions>k__BackingField: []
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
+    - rid: 792979202384330905
+      type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        damageAmount: 15
+    - rid: 792979202384330906
+      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetMode>k__BackingField:
+          rid: 792979202384330907
+        <Effect>k__BackingField:
+          rid: 792979202384330908
+    - rid: 792979202384330907
+      type: {class: RandomEnemyTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 792979202384330908
+      type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
+      data:
+        statusEffectType: 4
+        stackCount: 5
+    - rid: 792979202384330909
+      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetMode>k__BackingField:
+          rid: 792979202384330910
+        <Effect>k__BackingField:
+          rid: 792979202384330911
+    - rid: 792979202384330910
+      type: {class: RandomEnemyTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 792979202384330911
+      type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
+      data:
+        statusEffectType: 2
+        stackCount: 5

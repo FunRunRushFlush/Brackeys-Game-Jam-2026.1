@@ -29,30 +29,30 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 792979202384330752
+      type: {class: AllEnemiesTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 792979202384330753
+      type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        damageAmount: 999
+    - rid: 792979202384330754
+      type: {class: NoTM, ns: , asm: Assembly-CSharp}
+      data: 
     - rid: 6143720380275097896
       type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
       data:
         <TargetMode>k__BackingField:
-          rid: 6143720380275097897
+          rid: 792979202384330752
         <Effect>k__BackingField:
-          rid: 6143720380275097898
-    - rid: 6143720380275097897
-      type: {class: AllEnemiesTM, ns: , asm: Assembly-CSharp}
-      data: 
-    - rid: 6143720380275097898
-      type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
-      data:
-        damageAmount: 999
+          rid: 792979202384330753
     - rid: 6143720380275097899
       type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
       data:
         <TargetMode>k__BackingField:
-          rid: 6143720380275097900
+          rid: 792979202384330754
         <Effect>k__BackingField:
           rid: 6143720380275097901
-    - rid: 6143720380275097900
-      type: {class: NoTM, ns: , asm: Assembly-CSharp}
-      data: 
     - rid: 6143720380275097901
       type: {class: DrawCardsEffect, ns: , asm: Assembly-CSharp}
       data:
