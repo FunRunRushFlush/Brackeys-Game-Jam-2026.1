@@ -20,12 +20,7 @@ MonoBehaviour:
   <Deck>k__BackingField:
   - {fileID: 11400000, guid: e8ee693408315314d9229715e5d5a87e, type: 2}
   - {fileID: 11400000, guid: e8ee693408315314d9229715e5d5a87e, type: 2}
-  - {fileID: 11400000, guid: 10a0db0f3a51b4449b201d9b4b6feb88, type: 2}
-  - {fileID: 11400000, guid: 00d9a7cd111bb284ebff89ec5aa38431, type: 2}
-  - {fileID: 11400000, guid: 00d9a7cd111bb284ebff89ec5aa38431, type: 2}
-  - {fileID: 11400000, guid: 00d9a7cd111bb284ebff89ec5aa38431, type: 2}
-  - {fileID: 11400000, guid: bfa979a3aa540b94f950a618fde900c6, type: 2}
-  - {fileID: 11400000, guid: 958933ece9a65b14aa1161edd9807bad, type: 2}
-  - {fileID: 11400000, guid: 2101be1f0119a8a4986f64a94f147fb8, type: 2}
-  - {fileID: 11400000, guid: 4a43b75a8e519f744bc4a7a2e48a4653, type: 2}
-  - {fileID: 11400000, guid: 2d45846d143555946b5e052fa739f64c, type: 2}
+  - {fileID: 11400000, guid: e8ee693408315314d9229715e5d5a87e, type: 2}
+  - {fileID: 11400000, guid: ca153b58ae684c4439cf2e0f475f6194, type: 2}
+  - {fileID: 11400000, guid: ca153b58ae684c4439cf2e0f475f6194, type: 2}
+  - {fileID: 11400000, guid: ca153b58ae684c4439cf2e0f475f6194, type: 2}

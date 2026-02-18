@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: Skeleton Random Enemy Behaviour SO
   m_EditorClassIdentifier: Assembly-CSharp::RandomEnemyBehaviourSO
   moves:
-  - {fileID: 11400000, guid: a9ed2dceb5076d64a936e045781a31bb, type: 2}
   - {fileID: 11400000, guid: 8180bce78b69bc943a963f211ba78e66, type: 2}
   - {fileID: 11400000, guid: 4c07b09fd251b064280a615fa43e1da3, type: 2}

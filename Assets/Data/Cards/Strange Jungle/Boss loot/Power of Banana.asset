@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: power-of-banana
   DisplayName: Power of Banana
-  <Description>k__BackingField: Deal 15 Damage apply rendom enemy weakness 5 and
-    poissen 5
+  <Description>k__BackingField: Deal 15 Damage apply weakness 1and poissen 5 and
+    apply block 3
   <Mana>k__BackingField: 3
   <Image>k__BackingField: {fileID: 21300000, guid: 095b311531b064048b1cebe04bc20eee, type: 3}
   Rarity: 2
@@ -26,6 +26,7 @@ MonoBehaviour:
   <OtherEffects>k__BackingField:
   - rid: 792979202384330906
   - rid: 792979202384330909
+  - rid: 792979208258191439
   <PlayConditions>k__BackingField: []
   references:
     version: 2
@@ -48,7 +49,7 @@ MonoBehaviour:
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
         statusEffectType: 4
-        stackCount: 5
+        stackCount: 1
     - rid: 792979202384330909
       type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
       data:
@@ -64,3 +65,17 @@ MonoBehaviour:
       data:
         statusEffectType: 2
         stackCount: 5
+    - rid: 792979208258191439
+      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetMode>k__BackingField:
+          rid: 792979208258191440
+        <Effect>k__BackingField:
+          rid: 792979208258191442
+    - rid: 792979208258191440
+      type: {class: HeroTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 792979208258191442
+      type: {class: AddBlockEffect, ns: , asm: Assembly-CSharp}
+      data:
+        amount: 3

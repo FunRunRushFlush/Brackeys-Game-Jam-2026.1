@@ -16,7 +16,7 @@ MonoBehaviour:
   <Health>k__BackingField: 35
   <AttackValue>k__BackingField: 6
   <BlockValue>k__BackingField: 6
-  <BurnValue>k__BackingField: 2
+  <BurnValue>k__BackingField: 0
   <StrengthValue>k__BackingField: 1
   <WeakValue>k__BackingField: 1
   <ViewPrefab>k__BackingField: {fileID: 5148825269187451596, guid: 38b6f28f19a78e54d939836cdf1ec115, type: 3}
