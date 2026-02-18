@@ -42,7 +42,7 @@ MonoBehaviour:
     - rid: 6143720380275097898
       type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
       data:
-        damageAmount: 20
+        damageAmount: 999
     - rid: 6143720380275097899
       type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
       data:
