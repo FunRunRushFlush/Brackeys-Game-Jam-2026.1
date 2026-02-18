@@ -395,6 +395,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1289553049, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
     - target: {fileID: 405171200032585950, guid: 1fde9cfa50d9a2d45ac386f168029139, type: 3}
+      propertyPath: poisonSprite
+      value: 
+      objectReference: {fileID: -2013834531, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+    - target: {fileID: 405171200032585950, guid: 1fde9cfa50d9a2d45ac386f168029139, type: 3}
       propertyPath: strengthSprite
       value: 
       objectReference: {fileID: -1932038779, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
