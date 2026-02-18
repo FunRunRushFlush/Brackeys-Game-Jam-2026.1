@@ -14,4 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EncounterDefinition
   minEnemies: 1
   maxEnemies: 3
-  pool: []
+  pool:
+  - data: {fileID: 11400000, guid: c67363aa7f5c034408904de413b71c4b, type: 2}
+    weight: 0
+  - data: {fileID: 11400000, guid: ff2b434a3dfe75d4e83cb86a67f391b1, type: 2}
+    weight: 0
+  - data: {fileID: 11400000, guid: 79d1705e7c2789c418301123fde5190c, type: 2}
+    weight: 0

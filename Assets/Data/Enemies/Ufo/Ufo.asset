@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ufo
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   <Image>k__BackingField: {fileID: 599229940, guid: ea186413d2052ea4ba1a2c5bfe4c9c67, type: 3}
-  <Health>k__BackingField: 250
+  <Health>k__BackingField: 125
   <AttackValue>k__BackingField: 15
   <BlockValue>k__BackingField: 10
   <BurnValue>k__BackingField: 2
