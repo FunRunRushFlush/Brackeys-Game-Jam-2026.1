@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f4d2f2e8b4d51c4495011c79c932022, type: 3}
-  m_Name: FireWorm
+  m_Name: Ufo
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   <Image>k__BackingField: {fileID: 599229940, guid: ea186413d2052ea4ba1a2c5bfe4c9c67, type: 3}
-  <Health>k__BackingField: 75
-  <AttackValue>k__BackingField: 10
-  <BlockValue>k__BackingField: 8
+  <Health>k__BackingField: 250
+  <AttackValue>k__BackingField: 15
+  <BlockValue>k__BackingField: 10
   <BurnValue>k__BackingField: 2
   <StrengthValue>k__BackingField: 1
   <WeakValue>k__BackingField: 1
-  <ViewPrefab>k__BackingField: {fileID: 3227157653262435112, guid: 7d8f0e60af6a6604ba459ae383ee7238, type: 3}
-  <Behaviour>k__BackingField: {fileID: 11400000, guid: 21fee29c7fb066c44af64fe0a2f3cec6, type: 2}
+  <ViewPrefab>k__BackingField: {fileID: 7140840544398809644, guid: b3b27f75ddb17da4b93373ba1bf74513, type: 3}
+  <Behaviour>k__BackingField: {fileID: 11400000, guid: cf76d86c46bfe7b40afb51e2ed8a5344, type: 2}

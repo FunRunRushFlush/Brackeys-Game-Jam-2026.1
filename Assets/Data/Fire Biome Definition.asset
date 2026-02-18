@@ -17,10 +17,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3b1124f02c287f8448d17e790112e093, type: 2}
   - {fileID: 11400000, guid: 827b7f0df1ed1234cbba932865b3916a, type: 2}
   - {fileID: 11400000, guid: 827b7f0df1ed1234cbba932865b3916a, type: 2}
-  - {fileID: 11400000, guid: 3b1124f02c287f8448d17e790112e093, type: 2}
+  - {fileID: 11400000, guid: 2c6ce978215961f4eb5795c170303fcb, type: 2}
   bossEncounter: {fileID: 11400000, guid: 3577c8e0b46e729458a7504a2837ee65, type: 2}
   normalArenaScenes:
   - Arena_Fire_01
   - Arena_Fire_02
   - Arena_Fire_03
-  bossArenaScene: Arena_Forest_Boss
+  bossArenaScene: Arena_Fire_Test
