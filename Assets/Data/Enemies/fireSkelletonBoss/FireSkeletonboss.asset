@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f4d2f2e8b4d51c4495011c79c932022, type: 3}
-  m_Name: FireSkeleton
+  m_Name: FireSkeletonboss
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   <Image>k__BackingField: {fileID: 728994716, guid: ce37a417ba6225243bfda43169bc8724, type: 3}
-  <Health>k__BackingField: 40
-  <AttackValue>k__BackingField: 6
-  <BlockValue>k__BackingField: 6
-  <BurnValue>k__BackingField: 2
+  <Health>k__BackingField: 150
+  <AttackValue>k__BackingField: 18
+  <BlockValue>k__BackingField: 8
+  <BurnValue>k__BackingField: 4
   <StrengthValue>k__BackingField: 1
   <WeakValue>k__BackingField: 1
   <ViewPrefab>k__BackingField: {fileID: 7961207979806011403, guid: 5955bf295ee807a4494ed62abe0b837b, type: 3}
