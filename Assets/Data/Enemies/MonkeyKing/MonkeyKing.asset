@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: MonkeyKing
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   <Image>k__BackingField: {fileID: -556450086, guid: 2b02e6e11c2759947a058ffa8e54336d, type: 3}
-  <Health>k__BackingField: 99
-  <AttackValue>k__BackingField: 12
-  <BlockValue>k__BackingField: 8
+  <Health>k__BackingField: 9999
+  <AttackValue>k__BackingField: 99
+  <BlockValue>k__BackingField: 99
   <BurnValue>k__BackingField: 2
   <StrengthValue>k__BackingField: 1
   <WeakValue>k__BackingField: 1
