@@ -12,16 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
   m_Name: Total Chaos
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  Id: power_up
-  DisplayName: Power Up
-  <Description>k__BackingField: Increase Strength by 3
+  Id: total_chaos
+  DisplayName: Total Chaos
+  <Description>k__BackingField: All gain 10 Weakness
   <Mana>k__BackingField: 1
-  <Image>k__BackingField: {fileID: -1358773613, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  <Image>k__BackingField: {fileID: 937526823, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   <Tags>k__BackingField: 01000000
   <ManualTargetEffect>k__BackingField:
     rid: -2
   <OtherEffects>k__BackingField:
   - rid: 1986237386231906409
+  - rid: 1986237386231906429
   <PlayConditions>k__BackingField: []
   references:
     version: 2
@@ -41,5 +42,20 @@ MonoBehaviour:
     - rid: 1986237386231906411
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
-        statusEffectType: 2
-        stackCount: 3
+        statusEffectType: 3
+        stackCount: 10
+    - rid: 1986237386231906429
+      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetMode>k__BackingField:
+          rid: 1986237386231906430
+        <Effect>k__BackingField:
+          rid: 1986237386231906431
+    - rid: 1986237386231906430
+      type: {class: AllEnemiesTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 1986237386231906431
+      type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
+      data:
+        statusEffectType: 3
+        stackCount: 10
