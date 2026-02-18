@@ -24231,7 +24231,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_1097
+      name: Icons_Strenght Symbol
       rect:
         serializedVersion: 2
         x: 576
@@ -24319,7 +24319,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_1101
+      name: Icons_Weakness
       rect:
         serializedVersion: 2
         x: 832
@@ -48441,13 +48441,11 @@ TextureImporter:
       Icons_1094: 542852071
       Icons_1095: -183005222
       Icons_1096: 1976253211
-      Icons_1097: -1932038779
       Icons_1098: 901270021
       Icons_1099: -863286509
       Icons_11: 903454247
       Icons_110: -231724644
       Icons_1100: -91747022
-      Icons_1101: 426350366
       Icons_1102: -1964010644
       Icons_1103: 876723773
       Icons_1104: -1594383981
@@ -50525,7 +50523,9 @@ TextureImporter:
       Icons_ShieldGrey02: 1201276158
       Icons_Spark: 1493836590
       Icons_SparkingStrike: 539447770
+      Icons_Strenght Symbol: -1932038779
       Icons_Treasure: 576810202
+      Icons_Weakness: 426350366
       Icons_fire: -1161984547
       Icons_fireslash: 961534101
   mipmapLimitGroupName: 
