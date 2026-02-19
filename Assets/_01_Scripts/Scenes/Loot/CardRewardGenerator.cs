@@ -1,6 +1,6 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
 public static class CardRewardGenerator
 {
@@ -10,25 +10,34 @@ public static class CardRewardGenerator
         RewardContext ctx,
         System.Random rng,
         int choiceCount = 3,
-        float biomeBoost = 3f)
+        float biomeBoost = 3f,
+        IReadOnlyList<RarityWeight> rarityWeights = null,
+        bool includeAdminAndStarter = false)
     {
-        // 1) Decide which pool we are drawing from
-        IReadOnlyList<CardData> drawPool = pool;
+        rarityWeights ??= DefaultWeightsFor(ctx.Tier);
 
-        // Boss: try to restrict to Rare-only pool (if possible)
-        if (ctx.Tier == EncounterTier.Boss)
-        {
-            var rarePool = pool.Where(c => c != null && c.Rarity == CardRarity.Rare).ToList();
-
-
-            if (rarePool.Count >= choiceCount)
-                drawPool = rarePool;
-        }
+        // Base pool: null + (Admin/Starter optional) raus
+        var basePool = (pool ?? Array.Empty<CardData>())
+            .Where(c => c != null)
+            .Where(c => includeAdminAndStarter || (c.Rarity != CardRarity.Admin && c.Rarity != CardRarity.Starter))
+            .ToList();
 
         var choices = new List<CardData>(choiceCount);
+        if (basePool.Count == 0) return choices;
+
+        // Group by rarity for faster draws
+        var byRarity = basePool
+            .GroupBy(c => c.Rarity)
+            .ToDictionary(g => g.Key, g => (IReadOnlyList<CardData>)g.ToList());
 
         for (int i = 0; i < choiceCount; i++)
         {
+            var rarity = RollRarity(rarityWeights, byRarity, rng);
+
+            // if no cards exist for rolled rarity -> fallback to basePool
+            if (!byRarity.TryGetValue(rarity, out var drawPool) || drawPool == null || drawPool.Count == 0)
+                drawPool = basePool;
+
             var pick = PickWeighted(
                 drawPool,
                 alreadyChosen: choices,
@@ -43,7 +52,75 @@ public static class CardRewardGenerator
         return choices;
     }
 
-    static bool IsPreferredForBiome(CardData card, BiomeType biome)
+    private static CardRarity RollRarity(
+        IReadOnlyList<RarityWeight> weights,
+        Dictionary<CardRarity, IReadOnlyList<CardData>> availableByRarity,
+        System.Random rng)
+    {
+        // Only consider rarities that exist in pool AND weight > 0
+        float total = 0f;
+        var tmp = new List<RarityWeight>(weights.Count);
+
+        for (int i = 0; i < weights.Count; i++)
+        {
+            var w = weights[i];
+            if (w.Weight <= 0f) continue;
+
+            if (availableByRarity != null &&
+                availableByRarity.TryGetValue(w.Rarity, out var list) &&
+                list != null && list.Count > 0)
+            {
+                tmp.Add(w);
+                total += w.Weight;
+            }
+        }
+
+        // fallback: if nothing valid -> just pick any rarity that exists
+        if (tmp.Count == 0)
+        {
+            if (availableByRarity != null && availableByRarity.Count > 0)
+                return availableByRarity.Keys.First();
+            return CardRarity.Common;
+        }
+
+        float roll = (float)(rng.NextDouble() * total);
+        for (int i = 0; i < tmp.Count; i++)
+        {
+            roll -= tmp[i].Weight;
+            if (roll <= 0f)
+                return tmp[i].Rarity;
+        }
+
+        return tmp[tmp.Count - 1].Rarity;
+    }
+
+    private static IReadOnlyList<RarityWeight> DefaultWeightsFor(EncounterTier tier)
+    {
+        return tier switch
+        {
+            EncounterTier.Boss => new[]
+            {
+                new RarityWeight(CardRarity.Rare, 80f),
+                new RarityWeight(CardRarity.Epic, 20f),
+                new RarityWeight(CardRarity.Common, 0f),
+                new RarityWeight(CardRarity.Uncommon, 0f),
+                new RarityWeight(CardRarity.Admin, 0f),
+                new RarityWeight(CardRarity.Starter, 0f),
+            },
+
+            _ => new[]
+            {
+                new RarityWeight(CardRarity.Common, 70f),
+                new RarityWeight(CardRarity.Uncommon, 21f),
+                new RarityWeight(CardRarity.Rare, 7f),
+                new RarityWeight(CardRarity.Epic, 2f),
+                new RarityWeight(CardRarity.Admin, 0f),
+                new RarityWeight(CardRarity.Starter, 0f),
+            }
+        };
+    }
+
+    private static bool IsPreferredForBiome(CardData card, BiomeType biome)
     {
         if (card.PreferredBiomes == null || card.PreferredBiomes.Length == 0)
             return false;
@@ -55,7 +132,7 @@ public static class CardRewardGenerator
         return false;
     }
 
-    static CardData PickWeighted(
+    private static CardData PickWeighted(
         IReadOnlyList<CardData> pool,
         List<CardData> alreadyChosen,
         BiomeType biome,
@@ -75,7 +152,6 @@ public static class CardRewardGenerator
 
             float w = 1f;
 
-            // biome weighting
             if (IsPreferredForBiome(c, biome))
                 w *= biomeBoost;
 
@@ -98,5 +174,18 @@ public static class CardRewardGenerator
         }
 
         return pool[pool.Count - 1];
+    }
+}
+
+[Serializable]
+public readonly struct RarityWeight
+{
+    public readonly CardRarity Rarity;
+    public readonly float Weight;
+
+    public RarityWeight(CardRarity rarity, float weight)
+    {
+        Rarity = rarity;
+        Weight = weight;
     }
 }

@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Game.Logging;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -139,7 +140,7 @@ public class CardSystem : Singleton<CardSystem>
     {
         Debug.Log($"[CardSystem] PlayCardPerformer: {playCardGA.Card?.Title} Mana={playCardGA.Card?.Mana} ManualTarget={(playCardGA.ManualTarget != null)} Caster={(playCardGA.Caster != null)}");
 
-        // Validate centrally so illegal plays can't slip through UI checks.
+        // Validate centrally so illegal plays can't slip through UI checks
         var canCommit = CardPlayabilitySystem.Instance.EvaluateCommit(playCardGA.Card, HeroSystem.Instance.HeroView, playCardGA.ManualTarget);
         if (!canCommit.CanPlay)
             yield break;
@@ -154,22 +155,41 @@ public class CardSystem : Singleton<CardSystem>
         ActionSystem.Instance.AddReaction(spendManaGA);
         Debug.Log("[CardSystem] Added SpendManaGA");
 
-        if (playCardGA.Card.ManaulTargetEffect != null)
+        if (playCardGA.Card.HasManualTargetEffects)
         {
-            Debug.Log($"[CardSystem] Adding PerformEffectsGA for manual={playCardGA.Card?.ManaulTargetEffect != null} otherEffects={(playCardGA.Card?.OtherEffects == null ? 0 : playCardGA.Card.OtherEffects.Count)}");
+            Log.Debug(LogCat.Gameplay, () =>
+                $"[CardSystem] ManualTargetEffects={playCardGA.Card.ManualTargetEffects?.Count ?? 0}, " +
+                $"OtherEffects={(playCardGA.Card.OtherEffects?.Count ?? 0)}");
 
-            PerformEffectsGA performEffectsGA = new(playCardGA.Card.ManaulTargetEffect, new() { playCardGA.ManualTarget });
-            ActionSystem.Instance.AddReaction(performEffectsGA);
+            if (playCardGA.ManualTarget == null)
+            {
+                Debug.LogWarning("[CardSystem] Card has ManualTargetEffects but ManualTarget is null. Skipping.");
+            }
+            else
+            {
+                var targets = new List<CombatantView> { playCardGA.ManualTarget };
+
+                foreach (var effect in playCardGA.Card.ManualTargetEffects)
+                {
+                    if (effect == null) continue;
+
+                    var performEffectsGA = new PerformEffectsGA(effect, targets, playCardGA.Caster);
+                    ActionSystem.Instance.AddReaction(performEffectsGA);
+                }
+            }
         }
+
 
         var otherEffects = playCardGA.Card.OtherEffects;
         if (otherEffects != null)
+        { 
             foreach (var effectWrapper in otherEffects)
             {
                 List<CombatantView> targets = effectWrapper.TargetMode.GetTargets();
-                PerformEffectsGA performEffectsGA = new(effectWrapper.Effect, targets);
+                PerformEffectsGA performEffectsGA = new(effectWrapper.Effect, targets, playCardGA.Caster);
                 ActionSystem.Instance.AddReaction(performEffectsGA);
             }
+        }
 
         UpdatePileCounts();
 

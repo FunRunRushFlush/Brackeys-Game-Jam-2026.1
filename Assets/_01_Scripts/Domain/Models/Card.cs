@@ -6,22 +6,22 @@ public class Card
     private readonly CardData cardData;
     public CardData Data => cardData;
 
-    public string Title => cardData.name;
+    public string Title => string.IsNullOrWhiteSpace(cardData.DisplayName) ? cardData.name : cardData.DisplayName;
     public string Description => cardData.Description;
 
     public int Mana { get; private set; }
     public Sprite Image => cardData.Image;
 
-    public Effect ManaulTargetEffect => cardData.ManualTargetEffect;
-    public List<AutoTargetEffect> OtherEffects => cardData.OtherEffects;
-    public List<CardTag> Tags => cardData.Tags;
-    public bool HasTag(CardTag tag) => Tags != null && Tags.Contains(tag);
+    public IReadOnlyList<Effect> ManualTargetEffects => cardData.ManualTargetEffects;
+    public IReadOnlyList<AutoTargetEffect> OtherEffects => cardData.OtherEffects;
+    public IReadOnlyList<CardTag> Tags => cardData.Tags;
 
-    /// <summary>
-    /// Optional extra conditions that must be met to play this card.
-    /// Defined on CardData.
-    /// </summary>
-    public List<CardCondition> PlayConditions => cardData.PlayConditions;
+    public bool HasTag(CardTag tag) => cardData.Tags != null && cardData.Tags.Contains(tag);
+
+    public IReadOnlyList<CardCondition> PlayConditions => cardData.PlayConditions;
+
+    public bool HasManualTargetEffects =>
+        cardData.ManualTargetEffects != null && cardData.ManualTargetEffects.Count > 0;
 
     public Card(CardData data)
     {

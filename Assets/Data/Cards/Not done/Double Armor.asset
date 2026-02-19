@@ -17,19 +17,17 @@ MonoBehaviour:
   <Description>k__BackingField: Gain 10 Armor. Requiers min. 5 Armor
   <Mana>k__BackingField: 1
   <Image>k__BackingField: {fileID: 21300000, guid: 5659290580983f947b95ffc10ded5585, type: 3}
+  Rarity: 0
+  PreferredBiomes: 
   <Tags>k__BackingField: 01000000
-  <ManualTargetEffect>k__BackingField:
-    rid: -2
+  <ManualTargetEffects>k__BackingField: []
   <OtherEffects>k__BackingField:
   - rid: 6143720491434901629
   <PlayConditions>k__BackingField:
   - rid: 6143720491434901673
-  - rid: -2
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
     - rid: 6143720491434901629
       type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
       data:

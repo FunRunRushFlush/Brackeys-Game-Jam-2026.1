@@ -110,7 +110,7 @@ public class CardView : MonoBehaviour
             return;
 
 
-        if (Card.ManaulTargetEffect != null && !IsTargeting() && IsOverDropArea() && CardPlayabilitySystem.Instance.EvaluateStart(Card, HeroSystem.Instance.HeroView).CanPlay)
+        if (Card.HasManualTargetEffects && !IsTargeting() && IsOverDropArea() && CardPlayabilitySystem.Instance.EvaluateStart(Card, HeroSystem.Instance.HeroView).CanPlay)
         {
             state = CardState.Targeting;
 

@@ -15,12 +15,15 @@ public class CardData : ScriptableObject
     [field: SerializeField] public int Mana { get; private set; }
 
     [field: SerializeField] public Sprite Image { get; private set; }
+
+    [Header("LootProperty")]
     [field: SerializeField] public CardRarity Rarity = CardRarity.Common;
 
     [field: SerializeField] public BiomeType[] PreferredBiomes;
     [field: SerializeField] public List<CardTag> Tags { get; private set; } = new();
 
-    [field: SerializeReference, SR] public Effect ManualTargetEffect { get; private set; } = null;
+    [Header("Card Effects")]
+    [field: SerializeReference, SR] public List<Effect> ManualTargetEffects { get; private set; } = new();
 
     [field: SerializeReference, SR] public List<AutoTargetEffect> OtherEffects { get; private set; }
 
@@ -28,4 +31,4 @@ public class CardData : ScriptableObject
 
 }
 
-public enum CardRarity { Common, Uncommon, Rare }
+

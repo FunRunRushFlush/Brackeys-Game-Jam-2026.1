@@ -10,34 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
-  m_Name: Armor Up
+  m_Name: AdminBuff
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  Id: armor_up
-  DisplayName: Armor Up
-  <Description>k__BackingField: Add 6 Armor
-  <Mana>k__BackingField: 1
-  <Image>k__BackingField: {fileID: 21300000, guid: 5659290580983f947b95ffc10ded5585, type: 3}
+  Id: admin_buff
+  DisplayName: Admin Buff
+  <Description>k__BackingField: Strength 2
+  <Mana>k__BackingField: 0
+  <Image>k__BackingField: {fileID: -1064369116, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 0
   PreferredBiomes: 
-  <Tags>k__BackingField: 01000000
+  <Tags>k__BackingField: 
   <ManualTargetEffects>k__BackingField: []
   <OtherEffects>k__BackingField:
-  - rid: 6143720491434901629
+  - rid: 1986237406812307553
   <PlayConditions>k__BackingField: []
   references:
     version: 2
     RefIds:
-    - rid: 6143720491434901629
+    - rid: 1986237406812307553
       type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
       data:
         <TargetMode>k__BackingField:
-          rid: 6143720491434901630
+          rid: 1986237406812307560
         <Effect>k__BackingField:
-          rid: 6143720681692463188
-    - rid: 6143720491434901630
+          rid: 1986237406812307554
+    - rid: 1986237406812307554
+      type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
+      data:
+        statusEffectType: 3
+        stackCount: 2
+    - rid: 1986237406812307560
       type: {class: HeroTM, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 6143720681692463188
-      type: {class: AddBlockEffect, ns: , asm: Assembly-CSharp}
-      data:
-        amount: 6

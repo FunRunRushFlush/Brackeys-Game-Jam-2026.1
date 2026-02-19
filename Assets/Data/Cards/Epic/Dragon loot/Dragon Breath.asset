@@ -18,11 +18,10 @@ MonoBehaviour:
     card
   <Mana>k__BackingField: 2
   <Image>k__BackingField: {fileID: -1153227558, guid: 9fe37fd1976076f4f8245f2e2e09a346, type: 3}
-  Rarity: 2
+  Rarity: 5
   PreferredBiomes: 01000000
   <Tags>k__BackingField: 02000000
-  <ManualTargetEffect>k__BackingField:
-    rid: 792979202384330864
+  <ManualTargetEffects>k__BackingField: []
   <OtherEffects>k__BackingField:
   - rid: 792979202384330865
   - rid: 792979202384330868
@@ -30,10 +29,6 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 792979202384330864
-      type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
-      data:
-        damageAmount: 20
     - rid: 792979202384330865
       type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
       data:

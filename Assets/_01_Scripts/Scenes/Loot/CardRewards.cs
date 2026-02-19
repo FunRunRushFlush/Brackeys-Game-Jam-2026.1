@@ -5,31 +5,41 @@ using UnityEngine;
 
 public class CardRewards : MonoBehaviour
 {
-    //[Header("Card Loot")]
+    [Header("Card Loot")]
+    [SerializeField] private CardRewardRarityConfig rarityConfig;
     //[SerializeField] private CardLootEntry[] cardLoot;
 
     [Header("UI")]
     [SerializeField] private RectTransform rewardsContainer;
     [SerializeField] private MultiSelectionGroup selectionGroup;
 
+
     private void Start()
     {
         var session = CoreManager.Instance?.Session;
+        if (session == null || session.Run == null)
+            return;
+
         var rng = session.Run.CreateNodeRng(salt: 9001);
         var ctx = session.Run.CurrentRewardContext;
+
+        var choiceCount = rarityConfig != null ? rarityConfig.ChoiceCount : 3;
+        var biomeBoost = rarityConfig != null ? rarityConfig.BiomeBoost : 3f;
+        var weights = rarityConfig != null ? rarityConfig.GetWeights(ctx.Tier) : null;
+        var includeSpecial = rarityConfig != null && rarityConfig.IncludeAdminAndStarter;
 
         var choices = CardRewardGenerator.GenerateChoices(
             session.CardDatabase.AllCards,
             session.Hero.Deck,
             ctx,
             rng,
-            choiceCount: 3);
-
-
+            choiceCount: choiceCount,
+            biomeBoost: biomeBoost,
+            rarityWeights: weights,
+            includeAdminAndStarter: includeSpecial);
 
         CreateRewardViewsUI(choices);
     }
-
     public void CreateRewardViewsUI(List<CardData> cards)
     {
         if (CardViewCreator.Instance == null)

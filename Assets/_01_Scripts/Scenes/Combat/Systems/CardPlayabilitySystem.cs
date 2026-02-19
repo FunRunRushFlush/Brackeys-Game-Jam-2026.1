@@ -26,7 +26,7 @@ public class CardPlayabilitySystem : Singleton<CardPlayabilitySystem>
         if (!ManaSystem.Instance.HasEnoughMana(card.Mana))
             result.AddReason(CardPlayFailCode.NotEnoughMana, "Not enough mana");
 
-        if (card.ManaulTargetEffect != null)
+        if (card.HasManualTargetEffects)
         {
             if (!HasAnyManualTargetsInternal())
                 result.AddReason(CardPlayFailCode.NoValidTargets, "No valid targets");
@@ -55,13 +55,14 @@ public class CardPlayabilitySystem : Singleton<CardPlayabilitySystem>
         if (!ManaSystem.Instance.HasEnoughMana(card.Mana))
             result.AddReason(CardPlayFailCode.NotEnoughMana, "Not enough mana");
 
-        if (card.ManaulTargetEffect != null)
+        if (card.HasManualTargetEffects)
         {
             if (manualTarget == null)
                 result.AddReason(CardPlayFailCode.TargetRequired, "Select a target");
             else if (!IsValidManualTarget(manualTarget))
                 result.AddReason(CardPlayFailCode.InvalidTarget, "Invalid target");
         }
+
 
         EvaluateCustomConditions(result, new CardPlayabilityContext(card, caster, manualTarget, CardPlayPhase.CommitPlay));
         return result;
@@ -89,7 +90,7 @@ public class CardPlayabilitySystem : Singleton<CardPlayabilitySystem>
 
     private void EvaluateCustomConditions(CardPlayabilityResult result, in CardPlayabilityContext context)
     {
-        List<CardCondition> conditions = context.Card.PlayConditions;
+        var conditions = context.Card.PlayConditions;
         if (conditions == null || conditions.Count == 0)
             return;
 

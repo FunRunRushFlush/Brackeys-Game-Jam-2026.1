@@ -17,11 +17,10 @@ MonoBehaviour:
   <Description>k__BackingField: Deal all enemies 30 Damage apply them burn 5
   <Mana>k__BackingField: 3
   <Image>k__BackingField: {fileID: 395615244, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
-  Rarity: 2
+  Rarity: 5
   PreferredBiomes: 01000000
   <Tags>k__BackingField: 02000000
-  <ManualTargetEffect>k__BackingField:
-    rid: -2
+  <ManualTargetEffects>k__BackingField: []
   <OtherEffects>k__BackingField:
   - rid: 792979202384330858
   - rid: 792979202384330861
@@ -29,8 +28,6 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
     - rid: 792979202384330858
       type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
       data:

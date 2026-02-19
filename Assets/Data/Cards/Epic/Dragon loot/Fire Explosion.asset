@@ -10,24 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
-  m_Name: Strike
+  m_Name: Fire Explosion
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  Id: strike
-  DisplayName: Strike
-  <Description>k__BackingField: Deal 8 Damage
-  <Mana>k__BackingField: 1
-  <Image>k__BackingField: {fileID: 21300000, guid: 9ee31c3c06737a94b97fbbb8ed3b62d6, type: 3}
-  Rarity: 0
-  PreferredBiomes: 
-  <Tags>k__BackingField: 00000000
-  <ManualTargetEffects>k__BackingField:
-  - rid: 1986237406812307549
+  Id: fire-explosion
+  DisplayName: Fire Explosion
+  <Description>k__BackingField: 'deal 50 damge '
+  <Mana>k__BackingField: 3
+  <Image>k__BackingField: {fileID: -1091159536, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  Rarity: 5
+  PreferredBiomes: 01000000
+  <Tags>k__BackingField: 02000000
+  <ManualTargetEffects>k__BackingField: []
   <OtherEffects>k__BackingField: []
   <PlayConditions>k__BackingField: []
   references:
     version: 2
-    RefIds:
-    - rid: 1986237406812307549
-      type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
-      data:
-        damageAmount: 8
+    RefIds: []
