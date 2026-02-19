@@ -39917,7 +39917,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_1810
+      name: Icons_armor shild
       rect:
         serializedVersion: 2
         x: 128
@@ -39939,7 +39939,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_1811
+      name: Icons_poissendshild
       rect:
         serializedVersion: 2
         x: 192
@@ -39961,7 +39961,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_1812
+      name: Icons_molted shild
       rect:
         serializedVersion: 2
         x: 256
@@ -44431,7 +44431,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 960
-        y: 704
+        y: 705
         width: 64
         height: 64
       alignment: 0
@@ -44779,7 +44779,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_2031
+      name: Icons_coat
       rect:
         serializedVersion: 2
         x: 960
@@ -45263,7 +45263,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_2053
+      name: Icons_helmet
       rect:
         serializedVersion: 2
         x: 320
@@ -45329,7 +45329,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_2056
+      name: Icons_shoe
       rect:
         serializedVersion: 2
         x: 512
@@ -46583,11 +46583,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_2113
+      name: Icons_normal shild
       rect:
         serializedVersion: 2
-        x: 64
-        y: 256
+        x: 68
+        y: 257
         width: 64
         height: 64
       alignment: 0
@@ -47177,7 +47177,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_2140
+      name: Icons_moltedshild
       rect:
         serializedVersion: 2
         x: 768
@@ -49219,9 +49219,6 @@ TextureImporter:
       Icons_1808: 1709723702
       Icons_1809: -1517035569
       Icons_181: -31950768
-      Icons_1810: 273597744
-      Icons_1811: -170378762
-      Icons_1812: -362590377
       Icons_1813: -1263504765
       Icons_1814: 737546875
       Icons_1815: -510352488
@@ -49464,7 +49461,6 @@ TextureImporter:
       Icons_2029: 382327350
       Icons_203: -223096448
       Icons_2030: -2137568739
-      Icons_2031: -1051010044
       Icons_2032: 1076418815
       Icons_2033: 625130960
       Icons_2034: 1491807059
@@ -49488,10 +49484,8 @@ TextureImporter:
       Icons_2050: 2033012787
       Icons_2051: -1641606454
       Icons_2052: -1633263689
-      Icons_2053: -1114876990
       Icons_2054: 1085281086
       Icons_2055: 1827061803
-      Icons_2056: -642001462
       Icons_2057: -559476769
       Icons_2058: -513599934
       Icons_2059: -1845777021
@@ -49555,7 +49549,6 @@ TextureImporter:
       Icons_2110: 1994186597
       Icons_2111: -1804774900
       Icons_2112: 707364728
-      Icons_2113: 450145093
       Icons_2116: -1042117226
       Icons_2117: 842848968
       Icons_2118: -200500370
@@ -49583,7 +49576,6 @@ TextureImporter:
       Icons_2138: -1314848672
       Icons_2139: -44200241
       Icons_214: 2126058
-      Icons_2140: -1463014139
       Icons_2141: 864117262
       Icons_2142: 1534341785
       Icons_2143: -993902005
@@ -50512,21 +50504,29 @@ TextureImporter:
       Icons_Universe Power: 1049547505
       Icons_Universe missels: 1654361971
       Icons_Weakness: 426350366
+      Icons_armor shild: 273597744
       Icons_armorup: 1635029525
       Icons_arrow rain: 898509285
+      Icons_coat: -1051010044
       Icons_deal with god: -1908516399
       Icons_fire: -1161984547
       Icons_fire power: -892033124
       Icons_fireslash: 961534101
       Icons_galaxy shot: -2135486157
+      Icons_helmet: -1114876990
       Icons_jungle power: -479035640
       Icons_merkury: 857171711
       Icons_meteor: 1127402503
+      Icons_molted shild: -362590377
+      Icons_moltedshild: -1463014139
+      Icons_normal shild: 450145093
       Icons_poissen dagger: -954147345
       Icons_poissen missles: -532356280
       Icons_poissen slash: -350439343
+      Icons_poissendshild: -170378762
       Icons_pot of greed: -1880069759
       Icons_potofgreed2: 1137041066
+      Icons_shoe: -642001462
       Icons_shooting star: -222971555
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
