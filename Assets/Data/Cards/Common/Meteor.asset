@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: meteor
   DisplayName: Meteor
-  <Description>k__BackingField: Deal 8 Damage Burn 2
+  <Description>k__BackingField: Deal 8 Damage apply  Burn 2
   <Mana>k__BackingField: 1
   <Image>k__BackingField: {fileID: 440998123, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 2

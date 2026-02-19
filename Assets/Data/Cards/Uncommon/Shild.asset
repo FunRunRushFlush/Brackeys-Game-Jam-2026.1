@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: 'shild '
   DisplayName: Shild
-  <Description>k__BackingField: 'block 5 '
+  <Description>k__BackingField: 'gain Block 5 '
   <Mana>k__BackingField: 0
   <Image>k__BackingField: {fileID: 450145093, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
-  Rarity: 2
+  Rarity: 3
   PreferredBiomes: 
   <Tags>k__BackingField: 
   <ManualTargetEffects>k__BackingField: []

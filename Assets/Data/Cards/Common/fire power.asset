@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: fire-power
   DisplayName: 'fire power '
-  <Description>k__BackingField: 'deal 8 Damage 7 Burn '
+  <Description>k__BackingField: 'Deal 8 Damage apply 7 Burn '
   <Mana>k__BackingField: 1
   <Image>k__BackingField: {fileID: -892033124, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 2

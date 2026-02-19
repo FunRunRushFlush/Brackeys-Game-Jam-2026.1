@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: power-of-banana
   DisplayName: Power of Banana
-  <Description>k__BackingField: Deal 15 Damage apply weakness 1and poissen 5 and
+  <Description>k__BackingField: Deal 15 Damage apply Weakness 1 and Poissen 5 and
     apply block 3
   <Mana>k__BackingField: 3
   <Image>k__BackingField: {fileID: 21300000, guid: 095b311531b064048b1cebe04bc20eee, type: 3}

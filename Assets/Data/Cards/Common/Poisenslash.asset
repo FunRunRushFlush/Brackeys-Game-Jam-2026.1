@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
-  m_Name: Poissenslash
+  m_Name: Poisenslash
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: 'poissen-Slash '
   DisplayName: 'Poissen Slash '
-  <Description>k__BackingField: Deal 1 Damage poissen 3
+  <Description>k__BackingField: Deal 1 Damage apply Poisen 3
   <Mana>k__BackingField: 0
   <Image>k__BackingField: {fileID: -350439343, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 2

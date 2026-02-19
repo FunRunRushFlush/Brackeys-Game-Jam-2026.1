@@ -15937,7 +15937,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_720
+      name: Icons_Strike
       rect:
         serializedVersion: 2
         x: 0
@@ -47397,7 +47397,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_ShieldBlue01
+      name: Icons_ArmorUp
       rect:
         serializedVersion: 2
         x: 384
@@ -50183,7 +50183,6 @@ TextureImporter:
       Icons_718: -1274565428
       Icons_719: -1098792716
       Icons_72: 1634721143
-      Icons_720: -1113393990
       Icons_721: -199860320
       Icons_722: -1572332381
       Icons_723: -271416304
@@ -50472,6 +50471,7 @@ TextureImporter:
       Icons_995: 274486598
       Icons_998: -1378791382
       Icons_999: -469934633
+      Icons_ArmorUp: 275167302
       Icons_Attack: -159943946
       Icons_Attack02: 57011731
       Icons_Blackhole Power: -2141487142
@@ -50491,7 +50491,6 @@ TextureImporter:
       Icons_Galaxy Strike: -1508950131
       Icons_Galaxy slash: 648513060
       Icons_Neptun: -1178886757
-      Icons_ShieldBlue01: 275167302
       Icons_ShieldGrey01: 1219099209
       Icons_ShieldGrey02: 1201276158
       Icons_Shining in the stars: 1231357146
@@ -50500,6 +50499,7 @@ TextureImporter:
       Icons_Star: -1386699948
       Icons_Starbeam: -866187588
       Icons_Strenght Symbol: -1932038779
+      Icons_Strike: -1113393990
       Icons_Treasure: 576810202
       Icons_Universe Power: 1049547505
       Icons_Universe missels: 1654361971

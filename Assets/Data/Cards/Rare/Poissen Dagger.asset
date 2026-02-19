@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: 'poissen-dagger '
   DisplayName: 'Poissen Dagger '
-  <Description>k__BackingField: deal 10 poissens
+  <Description>k__BackingField: deal 10 Poisens
   <Mana>k__BackingField: 1
   <Image>k__BackingField: {fileID: -954147345, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 4
