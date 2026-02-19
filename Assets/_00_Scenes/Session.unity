@@ -886,8 +886,54 @@ Transform:
   - {fileID: 1979660471}
   - {fileID: 1341883679}
   - {fileID: 1733054677}
+  - {fileID: 1001710953}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1001710952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1001710953}
+  - component: {fileID: 1001710954}
+  m_Layer: 0
+  m_Name: RewardSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1001710953
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001710952}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 990175786}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1001710954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001710952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5033c9e23e24df741bee8ad35baff80c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RewardSystem
+  cardRewardRarityConfig: {fileID: 11400000, guid: 45281d3756464e04a9ef4c19035b7af7, type: 2}
 --- !u!1 &1046717256
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,11 +979,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SessionBootstrap
   <Run>k__BackingField: {fileID: 1306081897}
-  <Deck>k__BackingField: {fileID: 0}
+  <Deck>k__BackingField: {fileID: 1979660472}
   <Perks>k__BackingField: {fileID: 0}
   <RunTimer>k__BackingField: {fileID: 0}
   <Hero>k__BackingField: {fileID: 1341883680}
   <CardDatabase>k__BackingField: {fileID: 1733054678}
+  <RewardSystem>k__BackingField: {fileID: 1001710954}
 --- !u!1 &1096307619
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,8 @@ public class SessionRoot : MonoBehaviour, ISession
     [field: SerializeField] public RunTimer RunTimer { get; private set; }
     [field: SerializeField] public RunHeroData Hero { get; private set; }
     [field: SerializeField] public CardDatabase CardDatabase { get; private set; }
+    [field: SerializeField] public RewardSystem RewardSystem { get; private set; }
+
 
 
     void Awake()

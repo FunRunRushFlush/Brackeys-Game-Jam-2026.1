@@ -41,6 +41,7 @@ public class CardRewardRarityConfig : ScriptableObject
         new Entry(CardRarity.Uncommon, 0f),
     };
 
+
     [Serializable]
     public struct Entry
     {
@@ -72,4 +73,6 @@ public class CardRewardRarityConfig : ScriptableObject
 
         return list;
     }
+
+
 }
