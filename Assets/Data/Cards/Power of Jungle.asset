@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
   m_Name: Power of Jungle
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  Id: 
-  DisplayName: 
+  Id: power_of_jungle
+  DisplayName: Power of Jungle
   <Description>k__BackingField: 
   <Mana>k__BackingField: 0
   <Image>k__BackingField: {fileID: 0}

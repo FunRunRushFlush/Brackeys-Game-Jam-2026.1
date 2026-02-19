@@ -17,15 +17,12 @@ MonoBehaviour:
   <Description>k__BackingField: 'deall 15 Damage '
   <Mana>k__BackingField: 2
   <Image>k__BackingField: {fileID: 176558359, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  Rarity: 3
+  PreferredBiomes: 
   <Tags>k__BackingField: 
-  <ManualTargetEffect>k__BackingField:
-    rid: 792979202384330892
+  <ManualTargetEffects>k__BackingField: []
   <OtherEffects>k__BackingField: []
   <PlayConditions>k__BackingField: []
   references:
     version: 2
-    RefIds:
-    - rid: 792979202384330892
-      type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
-      data:
-        damageAmount: 15
+    RefIds: []
