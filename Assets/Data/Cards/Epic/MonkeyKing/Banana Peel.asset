@@ -17,11 +17,10 @@ MonoBehaviour:
   <Description>k__BackingField: Deal 1 Damage apply 1 Weakness Draw a Card
   <Mana>k__BackingField: 0
   <Image>k__BackingField: {fileID: 21300000, guid: f0e9f29bd041d5448b13c100336f888c, type: 3}
-  Rarity: 2
+  Rarity: 5
   PreferredBiomes: 00000000
   <Tags>k__BackingField: 00000000
-  <ManualTargetEffect>k__BackingField:
-    rid: 792979202384330900
+  <ManualTargetEffects>k__BackingField: []
   <OtherEffects>k__BackingField:
   - rid: 792979202384330893
   - rid: 792979202384330896
@@ -58,7 +57,3 @@ MonoBehaviour:
       data:
         statusEffectType: 4
         stackCount: 1
-    - rid: 792979202384330900
-      type: {class: DrawCardsEffect, ns: , asm: Assembly-CSharp}
-      data:
-        drawAmount: 1

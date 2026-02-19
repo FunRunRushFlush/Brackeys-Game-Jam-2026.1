@@ -17,7 +17,7 @@ MonoBehaviour:
   <Description>k__BackingField: Deal 8 Damage
   <Mana>k__BackingField: 1
   <Image>k__BackingField: {fileID: 21300000, guid: 9ee31c3c06737a94b97fbbb8ed3b62d6, type: 3}
-  Rarity: 0
+  Rarity: 1
   PreferredBiomes: 
   <Tags>k__BackingField: 00000000
   <ManualTargetEffects>k__BackingField:
