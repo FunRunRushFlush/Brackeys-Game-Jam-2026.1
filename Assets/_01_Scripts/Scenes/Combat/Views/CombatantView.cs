@@ -66,7 +66,10 @@ public class CombatantView : MonoBehaviour
             UpdateHealthbarUI();
         }
 
-        transform.DOShakePosition(0.2f, 0.5f);
+        if(transform != null)
+        {
+            transform.DOShakePosition(0.2f, 0.5f);
+        }
     }
     /// <summary>
     /// HP loss that bypasses Block.
