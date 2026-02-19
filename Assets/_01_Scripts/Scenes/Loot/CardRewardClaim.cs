@@ -14,7 +14,7 @@ public class CardRewardClaim : MonoBehaviour
     [SerializeField] private RewardEntryUI entryUI;
 
     [Header("Rewards")]
-    [SerializeField] private CardRewards cardRewards;
+    [SerializeField] private CardRewardsUI cardRewards;
 
     private bool _claimed;
 

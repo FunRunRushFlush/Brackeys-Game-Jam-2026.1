@@ -3,10 +3,10 @@ using Game.Scenes.Core;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CardRewards : MonoBehaviour
+public class CardRewardsUI : MonoBehaviour
 {
-    [Header("Card Loot")]
-    [SerializeField] private CardRewardRarityConfig rarityConfig;
+    //[Header("Card Loot")]
+    //[SerializeField] private CardRewardRarityConfig rarityConfig;
     //[SerializeField] private CardLootEntry[] cardLoot;
 
     [Header("UI")]
@@ -20,23 +20,10 @@ public class CardRewards : MonoBehaviour
         if (session == null || session.Run == null)
             return;
 
-        var rng = session.Run.CreateNodeRng(salt: 9001);
-        var ctx = session.Run.CurrentRewardContext;
 
-        var choiceCount = rarityConfig != null ? rarityConfig.ChoiceCount : 3;
-        var biomeBoost = rarityConfig != null ? rarityConfig.BiomeBoost : 3f;
-        var weights = rarityConfig != null ? rarityConfig.GetWeights(ctx.Tier) : null;
-        var includeSpecial = rarityConfig != null && rarityConfig.IncludeAdminAndStarter;
 
-        var choices = CardRewardGenerator.GenerateChoices(
-            session.CardDatabase.AllCards,
-            session.Hero.Deck,
-            ctx,
-            rng,
-            choiceCount: choiceCount,
-            biomeBoost: biomeBoost,
-            rarityWeights: weights,
-            includeAdminAndStarter: includeSpecial);
+        // Consumiert nur noch RewardSystem
+        var choices = session.RewardSystem.GenerateCardChoices();
 
         CreateRewardViewsUI(choices);
     }

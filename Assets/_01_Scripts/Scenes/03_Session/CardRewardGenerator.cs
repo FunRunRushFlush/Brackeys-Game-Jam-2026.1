@@ -9,12 +9,12 @@ public static class CardRewardGenerator
         IReadOnlyList<CardData> deck,
         RewardContext ctx,
         System.Random rng,
+        IReadOnlyList<RarityWeight> rarityWeights,
         int choiceCount = 3,
         float biomeBoost = 3f,
-        IReadOnlyList<RarityWeight> rarityWeights = null,
         bool includeAdminAndStarter = false)
     {
-        rarityWeights ??= DefaultWeightsFor(ctx.Tier);
+
 
         // Base pool: null + (Admin/Starter optional) raus
         var basePool = (pool ?? Array.Empty<CardData>())
@@ -94,31 +94,7 @@ public static class CardRewardGenerator
         return tmp[tmp.Count - 1].Rarity;
     }
 
-    private static IReadOnlyList<RarityWeight> DefaultWeightsFor(EncounterTier tier)
-    {
-        return tier switch
-        {
-            EncounterTier.Boss => new[]
-            {
-                new RarityWeight(CardRarity.Rare, 80f),
-                new RarityWeight(CardRarity.Epic, 20f),
-                new RarityWeight(CardRarity.Common, 0f),
-                new RarityWeight(CardRarity.Uncommon, 0f),
-                new RarityWeight(CardRarity.Admin, 0f),
-                new RarityWeight(CardRarity.Starter, 0f),
-            },
-
-            _ => new[]
-            {
-                new RarityWeight(CardRarity.Common, 70f),
-                new RarityWeight(CardRarity.Uncommon, 21f),
-                new RarityWeight(CardRarity.Rare, 7f),
-                new RarityWeight(CardRarity.Epic, 2f),
-                new RarityWeight(CardRarity.Admin, 0f),
-                new RarityWeight(CardRarity.Starter, 0f),
-            }
-        };
-    }
+  
 
     private static bool IsPreferredForBiome(CardData card, BiomeType biome)
     {
