@@ -17,7 +17,7 @@ MonoBehaviour:
   <Description>k__BackingField: 'Gain 5 Block '
   <Mana>k__BackingField: 0
   <Image>k__BackingField: {fileID: -1114876990, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
-  Rarity: 4
+  Rarity: 3
   PreferredBiomes: 
   <Tags>k__BackingField: 
   <ManualTargetEffects>k__BackingField: []
@@ -33,12 +33,11 @@ MonoBehaviour:
         <TargetMode>k__BackingField:
           rid: 792979208258191521
         <Effect>k__BackingField:
-          rid: 792979208258191522
+          rid: 792979208258191551
     - rid: 792979208258191521
       type: {class: HeroTM, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 792979208258191522
-      type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
+    - rid: 792979208258191551
+      type: {class: AddBlockEffect, ns: , asm: Assembly-CSharp}
       data:
-        statusEffectType: 0
-        stackCount: 5
+        amount: 5

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
-  m_Name: PoisendSchild 1
+  m_Name: PoiswndShild
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  Id: fire-shild
-  DisplayName: Fire Shild
-  <Description>k__BackingField: Block 5 apply 2 Burn
+  Id: poisend-shild
+  DisplayName: poisend Shild
+  <Description>k__BackingField: Block 5 apply 2 poisen
   <Mana>k__BackingField: 1
-  <Image>k__BackingField: {fileID: -362590377, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  <Image>k__BackingField: {fileID: -170378762, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 2
   PreferredBiomes: 
   <Tags>k__BackingField: 01000000
@@ -34,15 +34,10 @@ MonoBehaviour:
         <TargetMode>k__BackingField:
           rid: 792979208258191527
         <Effect>k__BackingField:
-          rid: 792979208258191528
+          rid: 792979208258191544
     - rid: 792979208258191527
       type: {class: HeroTM, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 792979208258191528
-      type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
-      data:
-        statusEffectType: 0
-        stackCount: 5
     - rid: 792979208258191529
       type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
       data:
@@ -56,5 +51,9 @@ MonoBehaviour:
     - rid: 792979208258191531
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
-        statusEffectType: 1
+        statusEffectType: 2
         stackCount: 2
+    - rid: 792979208258191544
+      type: {class: AddBlockEffect, ns: , asm: Assembly-CSharp}
+      data:
+        amount: 5
