@@ -14,45 +14,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: arrow_rain
   DisplayName: Arrow Rain
-  <Description>k__BackingField: Deal 7 damage to all enemies
-  <Mana>k__BackingField: 1
+  <Description>k__BackingField: 'Deal 7 Damage to all enemies  '
+  <Mana>k__BackingField: 2
   <Image>k__BackingField: {fileID: 898509285, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 2
   PreferredBiomes: 
   <Tags>k__BackingField: 00000000
   <ManualTargetEffects>k__BackingField: []
   <OtherEffects>k__BackingField:
-  - rid: 6143720380275097896
-  - rid: 6143720380275097899
+  - rid: 792979202384330876
   <PlayConditions>k__BackingField: []
   references:
     version: 2
     RefIds:
-    - rid: 792979202384330752
+    - rid: 792979202384330876
+      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetMode>k__BackingField:
+          rid: 792979202384330877
+        <Effect>k__BackingField:
+          rid: 792979202384330878
+    - rid: 792979202384330877
       type: {class: AllEnemiesTM, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 792979202384330753
+    - rid: 792979202384330878
       type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
       data:
         damageAmount: 7
-    - rid: 792979202384330754
-      type: {class: NoTM, ns: , asm: Assembly-CSharp}
-      data: 
-    - rid: 6143720380275097896
-      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
-      data:
-        <TargetMode>k__BackingField:
-          rid: 792979202384330752
-        <Effect>k__BackingField:
-          rid: 792979202384330753
-    - rid: 6143720380275097899
-      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
-      data:
-        <TargetMode>k__BackingField:
-          rid: 792979202384330754
-        <Effect>k__BackingField:
-          rid: 6143720380275097901
-    - rid: 6143720380275097901
-      type: {class: DrawCardsEffect, ns: , asm: Assembly-CSharp}
-      data:
-        drawAmount: 1

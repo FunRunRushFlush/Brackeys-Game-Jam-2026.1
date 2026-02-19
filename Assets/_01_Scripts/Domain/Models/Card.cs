@@ -8,6 +8,8 @@ public class Card
 
     public string Title => string.IsNullOrWhiteSpace(cardData.DisplayName) ? cardData.name : cardData.DisplayName;
     public string Description => cardData.Description;
+    public CardRarity Rarity => cardData.Rarity;
+
 
     public int Mana { get; private set; }
     public Sprite Image => cardData.Image;

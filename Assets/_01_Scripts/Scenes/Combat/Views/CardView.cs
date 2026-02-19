@@ -7,6 +7,8 @@ public class CardView : MonoBehaviour
     [SerializeField] private GameObject wrapper;
     [SerializeField] private TMP_Text mana;
     [SerializeField] private TMP_Text description;
+    [SerializeField] private TMP_Text rarity;
+
     [SerializeField] private TMP_Text title;
 
     [SerializeField] private LayerMask dropAreaLayerMask;
@@ -41,6 +43,7 @@ public class CardView : MonoBehaviour
     {
         Card = card;
         title.text = card.Title;
+        rarity.text = card.Rarity.ToString();
         description.text = card.Description;
         mana.text = card.Mana.ToString();
         imageSR.sprite = card.Image;
