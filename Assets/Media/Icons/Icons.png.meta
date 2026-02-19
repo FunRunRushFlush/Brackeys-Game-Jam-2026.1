@@ -339,7 +339,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_11
+      name: Icons_11 Starlight
       rect:
         serializedVersion: 2
         x: 704
@@ -867,10 +867,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_35
+      name: Icons_35 portal
       rect:
         serializedVersion: 2
-        x: 192
+        x: 194
         y: 8576
         width: 64
         height: 64
@@ -3067,11 +3067,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_135
+      name: Icons_pot of greed
       rect:
         serializedVersion: 2
-        x: 448
-        y: 8192
+        x: 457
+        y: 8191
         width: 64
         height: 64
       alignment: 0
@@ -3551,7 +3551,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_157
+      name: Icons_potofgreed2
       rect:
         serializedVersion: 2
         x: 832
@@ -6565,7 +6565,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_294
+      name: Icons_294 planetstaff
       rect:
         serializedVersion: 2
         x: 384
@@ -8501,7 +8501,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_382
+      name: Icons_merkury
       rect:
         serializedVersion: 2
         x: 896
@@ -13187,7 +13187,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_595
+      name: Icons_Neptun
       rect:
         serializedVersion: 2
         x: 192
@@ -14639,7 +14639,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_661
+      name: Icons_Book of Wisdom
       rect:
         serializedVersion: 2
         x: 320
@@ -16179,7 +16179,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_731
+      name: Icons_Dobbelstrike
       rect:
         serializedVersion: 2
         x: 704
@@ -16597,11 +16597,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_750
+      name: Icons_BlackholeGravitation
       rect:
         serializedVersion: 2
         x: 896
-        y: 5760
+        y: 5759
         width: 64
         height: 64
       alignment: 0
@@ -16619,7 +16619,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_751
+      name: Icons_Blackhole Power
       rect:
         serializedVersion: 2
         x: 960
@@ -16861,7 +16861,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_762
+      name: Icons_762Cometmeteor
       rect:
         serializedVersion: 2
         x: 640
@@ -17018,8 +17018,8 @@ TextureImporter:
       name: Icons_769
       rect:
         serializedVersion: 2
-        x: 64
-        y: 5632
+        x: 61
+        y: 5634
         width: 64
         height: 64
       alignment: 0
@@ -17150,7 +17150,7 @@ TextureImporter:
       name: Icons_775
       rect:
         serializedVersion: 2
-        x: 448
+        x: 449
         y: 5632
         width: 64
         height: 64
@@ -17763,11 +17763,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_803
+      name: Icons_poissen dagger
       rect:
         serializedVersion: 2
-        x: 192
-        y: 5504
+        x: 191
+        y: 5502
         width: 64
         height: 64
       alignment: 0
@@ -18401,7 +18401,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_832
+      name: Icons_poissen slash
       rect:
         serializedVersion: 2
         x: 0
@@ -18423,7 +18423,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_833
+      name: Icons_poissen missles
       rect:
         serializedVersion: 2
         x: 64
@@ -18577,7 +18577,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_840
+      name: Icons_Galaxy slash
       rect:
         serializedVersion: 2
         x: 512
@@ -18599,7 +18599,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_841
+      name: Icons_Universe missels
       rect:
         serializedVersion: 2
         x: 576
@@ -18621,7 +18621,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_842
+      name: Icons_galaxy shot
       rect:
         serializedVersion: 2
         x: 640
@@ -19127,7 +19127,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_865
+      name: Icons_jungle power
       rect:
         serializedVersion: 2
         x: 64
@@ -19193,7 +19193,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_868
+      name: Icons_fire power
       rect:
         serializedVersion: 2
         x: 256
@@ -19391,11 +19391,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_877
+      name: Icons_Universe Power
       rect:
         serializedVersion: 2
         x: 832
-        y: 5248
+        y: 5246
         width: 64
         height: 64
       alignment: 0
@@ -21943,7 +21943,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_993
+      name: Icons_shooting star
       rect:
         serializedVersion: 2
         x: 64
@@ -23109,7 +23109,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_1046
+      name: Icons_Star
       rect:
         serializedVersion: 2
         x: 384
@@ -23131,7 +23131,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_1047
+      name: Icons_Starbeam
       rect:
         serializedVersion: 2
         x: 448
@@ -23288,8 +23288,8 @@ TextureImporter:
       name: Icons_1054
       rect:
         serializedVersion: 2
-        x: 896
-        y: 4544
+        x: 898
+        y: 4543
         width: 64
         height: 64
       alignment: 0
@@ -23857,7 +23857,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_1080
+      name: Icons_deal with god
       rect:
         serializedVersion: 2
         x: 512
@@ -23945,7 +23945,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_1084
+      name: Icons_Shining in the stars
       rect:
         serializedVersion: 2
         x: 768
@@ -29599,11 +29599,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_1341
+      name: Icons_arrow rain
       rect:
         serializedVersion: 2
         x: 832
-        y: 3392
+        y: 3391
         width: 64
         height: 64
       alignment: 0
@@ -30369,7 +30369,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_1376
+      name: Icons_meteor
       rect:
         serializedVersion: 2
         x: 0
@@ -30900,8 +30900,8 @@ TextureImporter:
       name: Icons_1400
       rect:
         serializedVersion: 2
-        x: 512
-        y: 3136
+        x: 481
+        y: 3128
         width: 64
         height: 64
       alignment: 0
@@ -37123,7 +37123,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_1683
+      name: Icons_Galaxy Strike
       rect:
         serializedVersion: 2
         x: 192
@@ -41259,7 +41259,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_1871
+      name: Icons_armorup
       rect:
         serializedVersion: 2
         x: 960
@@ -48385,8 +48385,6 @@ TextureImporter:
       Icons_1043: -250576660
       Icons_1044: -38822996
       Icons_1045: 28711946
-      Icons_1046: -1386699948
-      Icons_1047: -866187588
       Icons_1048: -1587026662
       Icons_1049: 1391033753
       Icons_105: 443817374
@@ -48423,11 +48421,9 @@ TextureImporter:
       Icons_1078: -1322952185
       Icons_1079: -685159562
       Icons_108: 1428005922
-      Icons_1080: -1908516399
       Icons_1081: 1998337909
       Icons_1082: -1643219632
       Icons_1083: -1254138289
-      Icons_1084: 1231357146
       Icons_1085: 1995372693
       Icons_1086: 467564743
       Icons_1087: -87708453
@@ -48443,7 +48439,7 @@ TextureImporter:
       Icons_1096: 1976253211
       Icons_1098: 901270021
       Icons_1099: -863286509
-      Icons_11: 903454247
+      Icons_11 Starlight: 903454247
       Icons_110: -231724644
       Icons_1100: -91747022
       Icons_1102: -1964010644
@@ -48711,7 +48707,6 @@ TextureImporter:
       Icons_1339: -1716528113
       Icons_134: 364924943
       Icons_1340: 437535683
-      Icons_1341: 898509285
       Icons_1342: 102777574
       Icons_1343: 751136147
       Icons_1344: 97779743
@@ -48720,7 +48715,6 @@ TextureImporter:
       Icons_1347: -231177568
       Icons_1348: 57838264
       Icons_1349: 237644857
-      Icons_135: -1880069759
       Icons_1350: -484467998
       Icons_1351: -2074562919
       Icons_1352: -526646408
@@ -48749,7 +48743,6 @@ TextureImporter:
       Icons_1373: -893476783
       Icons_1374: 626309659
       Icons_1375: -1553480403
-      Icons_1376: 1127402503
       Icons_1377: 1527012398
       Icons_1378: 742019352
       Icons_1379: 810199308
@@ -48961,7 +48954,6 @@ TextureImporter:
       Icons_1567: 1466697224
       Icons_1568: 189750098
       Icons_1569: -1418340741
-      Icons_157: 1137041066
       Icons_1570: 1937175524
       Icons_1571: -1084368268
       Icons_1572: -536998558
@@ -49086,7 +49078,6 @@ TextureImporter:
       Icons_1680: -1949661536
       Icons_1681: -496188848
       Icons_1682: 1142727268
-      Icons_1683: -1508950131
       Icons_1684: 1527440690
       Icons_1685: 1326691326
       Icons_1686: 565605294
@@ -49295,7 +49286,6 @@ TextureImporter:
       Icons_1869: -1386440901
       Icons_187: -1089099438
       Icons_1870: 686298405
-      Icons_1871: 1635029525
       Icons_1872: -71049130
       Icons_1873: 2006599676
       Icons_1874: 1774578563
@@ -49731,7 +49721,7 @@ TextureImporter:
       Icons_291: -408099170
       Icons_292: -1027026755
       Icons_293: 198882699
-      Icons_294: -2102345586
+      Icons_294 planetstaff: -2102345586
       Icons_295: -1547506263
       Icons_296: 577186886
       Icons_297: 1893926937
@@ -49793,7 +49783,7 @@ TextureImporter:
       Icons_347: -1034679031
       Icons_348: -1380355960
       Icons_349: 1197016990
-      Icons_35: 298553528
+      Icons_35 portal: 298553528
       Icons_350: -783168270
       Icons_351: 2001952771
       Icons_352: -1200595615
@@ -49829,7 +49819,6 @@ TextureImporter:
       Icons_38: 193589365
       Icons_380: -1146929405
       Icons_381: 56947368
-      Icons_382: 857171711
       Icons_383: -959146838
       Icons_384: -1745118153
       Icons_385: 1262530865
@@ -50064,7 +50053,6 @@ TextureImporter:
       Icons_592: 1356691915
       Icons_593: -516015635
       Icons_594: -830910206
-      Icons_595: -1178886757
       Icons_596: 1362443646
       Icons_597: 789572701
       Icons_598: -1424050073
@@ -50138,7 +50126,6 @@ TextureImporter:
       Icons_659: -1388248431
       Icons_66: -1779481284
       Icons_660: -635947973
-      Icons_661: -1678947853
       Icons_662: -332480254
       Icons_663: -1702965526
       Icons_664: -556637010
@@ -50215,7 +50202,6 @@ TextureImporter:
       Icons_729: 923592140
       Icons_73: -1430622403
       Icons_730: 2029304282
-      Icons_731: -1497143790
       Icons_732: -134423198
       Icons_733: -1229828771
       Icons_734: 246124881
@@ -50236,8 +50222,6 @@ TextureImporter:
       Icons_748: 1782186410
       Icons_749: 88504239
       Icons_75: -1910070342
-      Icons_750: -1384840098
-      Icons_751: -2141487142
       Icons_752: -1987688134
       Icons_753: -951198838
       Icons_754: -1133375856
@@ -50249,7 +50233,7 @@ TextureImporter:
       Icons_76: -1680290706
       Icons_760: -216191925
       Icons_761: 1129971243
-      Icons_762: 440998123
+      Icons_762Cometmeteor: 440998123
       Icons_763: 1473982619
       Icons_764: -2063076220
       Icons_765: -722811224
@@ -50295,7 +50279,6 @@ TextureImporter:
       Icons_800: -532905483
       Icons_801: -480822823
       Icons_802: -1684451502
-      Icons_803: -954147345
       Icons_804: 1827986043
       Icons_805: 147356821
       Icons_806: -1520972395
@@ -50327,8 +50310,6 @@ TextureImporter:
       Icons_83: 1862754267
       Icons_830: 1548512799
       Icons_831: -1416478978
-      Icons_832: -350439343
-      Icons_833: -532356280
       Icons_834: -259562188
       Icons_835: -1739457513
       Icons_836: -1151091824
@@ -50336,9 +50317,6 @@ TextureImporter:
       Icons_838: -1214004279
       Icons_839: 191542960
       Icons_84: -1566724792
-      Icons_840: 648513060
-      Icons_841: 1654361971
-      Icons_842: -2135486157
       Icons_843: 1525186044
       Icons_844: 179351771
       Icons_845: 481935033
@@ -50363,10 +50341,8 @@ TextureImporter:
       Icons_862: -619600038
       Icons_863: -159902920
       Icons_864: 516576908
-      Icons_865: -479035640
       Icons_866: -1801678245
       Icons_867: 2042002444
-      Icons_868: -892033124
       Icons_869: -1304880636
       Icons_87: -1296294744
       Icons_870: -1868032055
@@ -50376,7 +50352,6 @@ TextureImporter:
       Icons_874: -487024623
       Icons_875: -990999973
       Icons_876: -1947166618
-      Icons_877: 1049547505
       Icons_878: -1423683818
       Icons_879: 880295382
       Icons_88: -1766735676
@@ -50502,32 +50477,57 @@ TextureImporter:
       Icons_99: -2057609127
       Icons_990: 1747469047
       Icons_991: -719065472
-      Icons_993: -222971555
       Icons_995: 274486598
       Icons_998: -1378791382
       Icons_999: -469934633
       Icons_Attack: -159943946
       Icons_Attack02: 57011731
+      Icons_Blackhole Power: -2141487142
+      Icons_BlackholeGravitation: -1384840098
+      Icons_Book of Wisdom: -1678947853
       Icons_BowShot: 176558359
       Icons_Burn01: -1211305605
       Icons_Burn02: -1289553049
       Icons_BurnAttack01: 1297590212
       Icons_Claws: -442770290
+      Icons_Dobbelstrike: -1497143790
       Icons_Fire explosion: -1091159536
       Icons_Fireballrain: 395615244
       Icons_Firestorm: -527411974
       Icons_Firestrike: 2047651849
       Icons_Flames: 1418751897
+      Icons_Galaxy Strike: -1508950131
+      Icons_Galaxy slash: 648513060
+      Icons_Neptun: -1178886757
       Icons_ShieldBlue01: 275167302
       Icons_ShieldGrey01: 1219099209
       Icons_ShieldGrey02: 1201276158
+      Icons_Shining in the stars: 1231357146
       Icons_Spark: 1493836590
       Icons_SparkingStrike: 539447770
+      Icons_Star: -1386699948
+      Icons_Starbeam: -866187588
       Icons_Strenght Symbol: -1932038779
       Icons_Treasure: 576810202
+      Icons_Universe Power: 1049547505
+      Icons_Universe missels: 1654361971
       Icons_Weakness: 426350366
+      Icons_armorup: 1635029525
+      Icons_arrow rain: 898509285
+      Icons_deal with god: -1908516399
       Icons_fire: -1161984547
+      Icons_fire power: -892033124
       Icons_fireslash: 961534101
+      Icons_galaxy shot: -2135486157
+      Icons_jungle power: -479035640
+      Icons_merkury: 857171711
+      Icons_meteor: 1127402503
+      Icons_poissen dagger: -954147345
+      Icons_poissen missles: -532356280
+      Icons_poissen slash: -350439343
+      Icons_pot of greed: -1880069759
+      Icons_potofgreed2: 1137041066
+      Icons_shooting star: -222971555
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

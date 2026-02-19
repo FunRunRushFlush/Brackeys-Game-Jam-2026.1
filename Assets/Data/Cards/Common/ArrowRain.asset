@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
+  m_Name: ArrowRain
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  Id: arrow_rain
+  DisplayName: Arrow Rain
+  <Description>k__BackingField: Deal 20 damage to all enemies
+  <Mana>k__BackingField: 1
+  <Image>k__BackingField: {fileID: 21300000, guid: 90563110d2c898047bb472c9a9f359da, type: 3}
+  Rarity: 2
+  PreferredBiomes: 
+  <Tags>k__BackingField: 00000000
+  <ManualTargetEffects>k__BackingField: []
+  <OtherEffects>k__BackingField:
+  - rid: 6143720380275097896
+  - rid: 6143720380275097899
+  <PlayConditions>k__BackingField: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 792979202384330752
+      type: {class: AllEnemiesTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 792979202384330753
+      type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        damageAmount: 7
+    - rid: 792979202384330754
+      type: {class: NoTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 6143720380275097896
+      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetMode>k__BackingField:
+          rid: 792979202384330752
+        <Effect>k__BackingField:
+          rid: 792979202384330753
+    - rid: 6143720380275097899
+      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetMode>k__BackingField:
+          rid: 792979202384330754
+        <Effect>k__BackingField:
+          rid: 6143720380275097901
+    - rid: 6143720380275097901
+      type: {class: DrawCardsEffect, ns: , asm: Assembly-CSharp}
+      data:
+        drawAmount: 1
