@@ -16,14 +16,10 @@ public class RunHeroData : MonoBehaviour
     private HeroData selectedHero;
     public HeroData Data => selectedHero;
 
-
-
-
     public IReadOnlyList<CardData> Deck => deck;
 
     private void Awake()
     {
-
         var hero = CoreManager.Instance.HeroID;
         var startDeck = hero == Heros.Hero02 ? hero02Data : hero01Data;
 
@@ -35,11 +31,7 @@ public class RunHeroData : MonoBehaviour
     {
         deck = new List<CardData>(heroData.Deck);
         selectedHero = heroData;
-
-
-
     }
-
 
     public List<CardData> CreateCombatSnapshot()
     {
