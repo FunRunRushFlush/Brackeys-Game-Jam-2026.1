@@ -10,50 +10,50 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
-  m_Name: Molten Shield
+  m_Name: Cloak
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  Id: molten_shield
-  DisplayName: Molten Shield
-  <Description>k__BackingField: Gain 8 Block and Burn 3 all Enemies
-  <Mana>k__BackingField: 1
-  <Image>k__BackingField: {fileID: -1463014139, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
-  Rarity: 3
-  PreferredBiomes: 01000000
-  <Tags>k__BackingField: 01000000
+  Id: cloak
+  DisplayName: Cloak
+  <Description>k__BackingField: add 7 Block apply 2 Burn
+  <Mana>k__BackingField: 0
+  <Image>k__BackingField: {fileID: -1051010044, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  Rarity: 5
+  PreferredBiomes: 
+  <Tags>k__BackingField: 02000000
   <ManualTargetEffects>k__BackingField: []
   <OtherEffects>k__BackingField:
-  - rid: 1986237386231906403
-  - rid: 792979208258191457
+  - rid: 792979208258191535
+  - rid: 792979208258191538
   <PlayConditions>k__BackingField: []
   references:
     version: 2
     RefIds:
-    - rid: 792979208258191457
+    - rid: 792979208258191535
       type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
       data:
         <TargetMode>k__BackingField:
-          rid: 792979208258191458
+          rid: 792979208258191536
         <Effect>k__BackingField:
-          rid: 792979208258191459
-    - rid: 792979208258191458
+          rid: 792979208258191547
+    - rid: 792979208258191536
       type: {class: HeroTM, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 792979208258191459
-      type: {class: AddBlockEffect, ns: , asm: Assembly-CSharp}
-      data:
-        amount: 8
-    - rid: 1986237386231906403
+    - rid: 792979208258191538
       type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
       data:
         <TargetMode>k__BackingField:
-          rid: 1986237386231906404
+          rid: 792979208258191539
         <Effect>k__BackingField:
-          rid: 1986237386231906405
-    - rid: 1986237386231906404
+          rid: 792979208258191540
+    - rid: 792979208258191539
       type: {class: AllEnemiesTM, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 1986237386231906405
+    - rid: 792979208258191540
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
         statusEffectType: 1
-        stackCount: 3
+        stackCount: 2
+    - rid: 792979208258191547
+      type: {class: AddBlockEffect, ns: , asm: Assembly-CSharp}
+      data:
+        amount: 7

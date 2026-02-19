@@ -16,7 +16,7 @@ MonoBehaviour:
   DisplayName: 'fire power '
   <Description>k__BackingField: 'deal 8 Damage 7 Burn '
   <Mana>k__BackingField: 1
-  <Image>k__BackingField: {fileID: 0}
+  <Image>k__BackingField: {fileID: -892033124, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 2
   PreferredBiomes: 03000000
   <Tags>k__BackingField: 00000000
