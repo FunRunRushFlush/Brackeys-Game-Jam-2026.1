@@ -20,9 +20,14 @@ MonoBehaviour:
   Rarity: 2
   PreferredBiomes: 
   <Tags>k__BackingField: 
-  <ManualTargetEffects>k__BackingField: []
+  <ManualTargetEffects>k__BackingField:
+  - rid: 792979208258191553
   <OtherEffects>k__BackingField: []
   <PlayConditions>k__BackingField: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 792979208258191553
+      type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        damageAmount: 10

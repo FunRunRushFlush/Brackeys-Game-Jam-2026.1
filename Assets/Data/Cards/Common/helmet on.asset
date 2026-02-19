@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: helmet-on
   DisplayName: 'Helmet on '
-  <Description>k__BackingField: 'Gain 3 Block '
+  <Description>k__BackingField: 'Gain 4 Block '
   <Mana>k__BackingField: 0
   <Image>k__BackingField: {fileID: -170489796, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 2
@@ -33,12 +33,11 @@ MonoBehaviour:
         <TargetMode>k__BackingField:
           rid: 792979208258191521
         <Effect>k__BackingField:
-          rid: 792979208258191522
+          rid: 792979208258191554
     - rid: 792979208258191521
       type: {class: HeroTM, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 792979208258191522
-      type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
+    - rid: 792979208258191554
+      type: {class: AddBlockEffect, ns: , asm: Assembly-CSharp}
       data:
-        statusEffectType: 0
-        stackCount: 5
+        amount: 4
