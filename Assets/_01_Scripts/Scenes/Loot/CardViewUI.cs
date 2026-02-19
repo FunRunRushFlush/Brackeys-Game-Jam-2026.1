@@ -11,6 +11,7 @@ public class CardViewUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     [SerializeField] private Image artwork;
     [SerializeField] private TMP_Text mana;
     [SerializeField] private TMP_Text description;
+    [SerializeField] private TMP_Text rarity;
     [SerializeField] private TMP_Text title;
 
     [Header("Selection")]
@@ -45,6 +46,7 @@ public class CardViewUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         Card = card;
         title.text = card.Title;
+        rarity.text = card.Rarity.ToString();
         description.text = card.Description;
         mana.text = card.Mana.ToString();
         artwork.sprite = card.Image;
