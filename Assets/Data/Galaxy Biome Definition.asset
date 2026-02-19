@@ -24,7 +24,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 76b45448324344140b4b8160e7330d72, type: 2}
   - {fileID: 11400000, guid: 743514cf0893c68418cb28a3e0bc5999, type: 2}
   - {fileID: 11400000, guid: 4102c8ed1bc81a346b9cf8f2f38fc800, type: 2}
-  bossEncounter: {fileID: 11400000, guid: 28a86979079cb4d4e91f29c40c634af5, type: 2}
+  bossEncounter: {fileID: 11400000, guid: 3ab451aea38d4d54f9f2612f565e8879, type: 2}
   normalArenaScenes:
   - Arena_Galaxy_Test
   bossArenaScene: Arena_Galaxy_Test

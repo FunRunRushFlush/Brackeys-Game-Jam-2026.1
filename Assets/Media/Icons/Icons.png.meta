@@ -18511,7 +18511,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_837
+      name: Icons_Magic Missles
       rect:
         serializedVersion: 2
         x: 320
@@ -47353,7 +47353,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_2148
+      name: Icons_Schild
       rect:
         serializedVersion: 2
         x: 256
@@ -49583,7 +49583,6 @@ TextureImporter:
       Icons_2145: 1417558740
       Icons_2146: 2108930610
       Icons_2147: -330300371
-      Icons_2148: 1139184858
       Icons_2149: 1902276566
       Icons_215: -2006382442
       Icons_2151: 1863773721
@@ -50304,7 +50303,6 @@ TextureImporter:
       Icons_834: -259562188
       Icons_835: -1739457513
       Icons_836: -1151091824
-      Icons_837: 934788077
       Icons_838: -1214004279
       Icons_839: 191542960
       Icons_84: -1566724792
@@ -50490,7 +50488,9 @@ TextureImporter:
       Icons_Flames: 1418751897
       Icons_Galaxy Strike: -1508950131
       Icons_Galaxy slash: 648513060
+      Icons_Magic Missles: 934788077
       Icons_Neptun: -1178886757
+      Icons_Schild: 1139184858
       Icons_ShieldGrey01: 1219099209
       Icons_ShieldGrey02: 1201276158
       Icons_Shining in the stars: 1231357146
