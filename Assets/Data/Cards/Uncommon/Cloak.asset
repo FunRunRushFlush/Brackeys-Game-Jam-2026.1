@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: cloak
   DisplayName: Cloak
-  <Description>k__BackingField: add 7 Block apply 2 Burn
+  <Description>k__BackingField: Gain 7 Block apply 2 Burn
   <Mana>k__BackingField: 0
   <Image>k__BackingField: {fileID: -1051010044, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
-  Rarity: 5
+  Rarity: 3
   PreferredBiomes: 
   <Tags>k__BackingField: 02000000
   <ManualTargetEffects>k__BackingField: []

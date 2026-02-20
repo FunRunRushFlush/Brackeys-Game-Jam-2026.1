@@ -17,7 +17,7 @@ MonoBehaviour:
   <Description>k__BackingField: 'All enemies get Burn 3 Poisen 3 '
   <Mana>k__BackingField: 0
   <Image>k__BackingField: {fileID: -2141487142, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
-  Rarity: 2
+  Rarity: 4
   PreferredBiomes: 03000000
   <Tags>k__BackingField: 00000000
   <ManualTargetEffects>k__BackingField:
