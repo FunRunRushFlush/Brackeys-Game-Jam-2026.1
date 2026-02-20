@@ -15,7 +15,7 @@ MonoBehaviour:
   biomes:
   - biome: 0
     nodes:
-    - type: 0
+    - type: 2
       combatOverride: {fileID: 11400000, guid: 3258398f7e89f2340af111ee99916e04, type: 2}
       bossOverride: {fileID: 0}
     - type: 0

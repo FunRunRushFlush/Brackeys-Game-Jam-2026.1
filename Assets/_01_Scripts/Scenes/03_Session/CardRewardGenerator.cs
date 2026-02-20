@@ -7,7 +7,7 @@ public static class CardRewardGenerator
     public static List<CardData> GenerateChoices(
         IReadOnlyList<CardData> pool,
         IReadOnlyList<CardData> deck,
-        RewardContext ctx,
+        BiomeType biomeType,
         System.Random rng,
         IReadOnlyList<RarityWeight> rarityWeights,
         int choiceCount = 3,
@@ -41,7 +41,7 @@ public static class CardRewardGenerator
             var pick = PickWeighted(
                 drawPool,
                 alreadyChosen: choices,
-                biome: ctx.Biome,
+                biome: biomeType,
                 rng: rng,
                 biomeBoost: biomeBoost);
 

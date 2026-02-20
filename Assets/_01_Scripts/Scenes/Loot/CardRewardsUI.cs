@@ -14,19 +14,21 @@ public class CardRewardsUI : MonoBehaviour
     [SerializeField] private MultiSelectionGroup selectionGroup;
 
 
+    [SerializeField] private bool generateOnStart = true;
+
     private void Start()
     {
+        if (!generateOnStart)
+            return;
+
         var session = CoreManager.Instance?.Session;
         if (session == null || session.Run == null)
             return;
 
-
-
-        // Consumiert nur noch RewardSystem
         var choices = session.RewardSystem.GenerateCardChoices();
-
         CreateRewardViewsUI(choices);
     }
+
     public void CreateRewardViewsUI(List<CardData> cards)
     {
         if (CardViewCreator.Instance == null)

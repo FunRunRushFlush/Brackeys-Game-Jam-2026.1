@@ -21,6 +21,8 @@ public class CopyCardClaim : MonoBehaviour
     [Header("Optional: Close panel after copy")]
     [SerializeField] private GameObject panelToClose;
 
+    public event System.Action Claimed;
+
     private bool _claimed;
 
     private void Awake()
@@ -96,6 +98,8 @@ public class CopyCardClaim : MonoBehaviour
 
 
         deckViewUI?.BuildFromCurrentDeck();
+
+        ClaimEvents.RaiseAnyClaimed();
 
         if (panelToClose != null)
             panelToClose.SetActive(false);

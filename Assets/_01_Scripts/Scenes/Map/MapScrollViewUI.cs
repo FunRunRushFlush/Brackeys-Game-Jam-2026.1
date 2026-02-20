@@ -60,7 +60,6 @@ public class MapScrollViewUI : MonoBehaviour
 
                 var w = Instantiate(nodePrefab, contentRoot);
 
-                // HIER ändern:
                 w.SetNode(n + 1, biomeMap.biome, node.type);
 
                 bool isCurrent = (biomeIndex == run.BiomeIndex && n == run.NodeIndexInBiome);

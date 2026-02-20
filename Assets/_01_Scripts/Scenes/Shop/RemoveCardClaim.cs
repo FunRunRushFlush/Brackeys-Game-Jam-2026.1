@@ -1,4 +1,5 @@
 using Game.Scenes.Core;
+using System.Security.Claims;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,6 +21,9 @@ public class RemoveCardClaim : MonoBehaviour
 
     [Header("Optional: Close panel after remove")]
     [SerializeField] private GameObject panelToClose; // z.B. dein RemoveCardPanel (optional)
+
+    public event System.Action Claimed;
+
 
     private bool _claimed;
 
@@ -101,7 +105,8 @@ public class RemoveCardClaim : MonoBehaviour
         // UI refresh
         deckViewUI?.BuildFromCurrentDeck();
 
-        // optional Panel schlieﬂen
+        ClaimEvents.RaiseAnyClaimed();
+
         if (panelToClose != null)
             panelToClose.SetActive(false);
     }

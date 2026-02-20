@@ -35,6 +35,7 @@ public class RewardSystem : MonoBehaviour
 
         var run = session.Run;
         var ctx = run.CurrentRewardContext;
+        var biom = run.CurrentRewardContext.Biome;
 
         var choiceCount = cardRewardRarityConfig.ChoiceCount;
         var biomeBoost = cardRewardRarityConfig.BiomeBoost;
@@ -46,7 +47,40 @@ public class RewardSystem : MonoBehaviour
         return CardRewardGenerator.GenerateChoices(
             pool: session.CardDatabase.AllCards,
             deck: session.Hero.Deck,
-            ctx: ctx,
+            biomeType: biom,
+            rng: rng,
+            choiceCount: choiceCount,
+            biomeBoost: biomeBoost,
+            rarityWeights: weights,
+            includeAdminAndStarter: includeSpecial);
+    }
+
+
+    public List<CardData> GenerateCardChoicesForBiome(BiomeType biome, float biomeBoostFactor = 999f)
+    {
+        if (!_isValid)
+            return new List<CardData>();
+
+        var session = CoreManager.Instance?.Session;
+        if (session == null || session.Run == null || session.CardDatabase == null || session.Hero == null)
+            return new List<CardData>();
+
+        var run = session.Run;
+        var ctx = run.CurrentRewardContext;
+
+        var biom = biome;
+        var biomeBoost = biomeBoostFactor;
+
+        var choiceCount = cardRewardRarityConfig.ChoiceCount;
+        var weights = cardRewardRarityConfig.GetWeights(ctx.Tier);
+        var includeSpecial = cardRewardRarityConfig.IncludeAdminAndStarter;
+
+        var rng = run.CreateNodeRng(salt: 9001);
+
+        return CardRewardGenerator.GenerateChoices(
+            pool: session.CardDatabase.AllCards,
+            deck: session.Hero.Deck,
+            biomeType: biom,
             rng: rng,
             choiceCount: choiceCount,
             biomeBoost: biomeBoost,

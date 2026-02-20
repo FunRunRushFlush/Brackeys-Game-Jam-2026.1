@@ -139,8 +139,6 @@ namespace Game.Scenes.Core
             CacheSessionRefs();
             if (run == null ) yield break;
 
-
-            // Encounter entladen, Loot in SessionView anzeigen
             yield return SceneController.Current
                 .NewTransition()
                 .Unload(SceneDatabase.Slots.EncounterSystems)
@@ -156,7 +154,7 @@ namespace Game.Scenes.Core
 
             run.AdvanceNode();
 
-            // Encounter sicher entladen (falls noch geladen), Map in SessionView
+
             yield return SceneController.Current
                 .NewTransition()
                 .Unload(SceneDatabase.Slots.EncounterSystems)

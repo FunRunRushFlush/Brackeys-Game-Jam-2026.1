@@ -1,4 +1,5 @@
 using Game.Scenes.Core;
+using System.Security.Claims;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,6 +24,7 @@ public class DoubleOrNothingClaim : MonoBehaviour
 
     [Header("Optional: Debug / Feedback")]
     [SerializeField] private bool logResult = true;
+
 
     private bool _claimed;
 
@@ -111,7 +113,8 @@ public class DoubleOrNothingClaim : MonoBehaviour
         // Refresh deck UI
         deckViewUI?.BuildFromCurrentDeck();
 
-        // Optional close
+        ClaimEvents.RaiseAnyClaimed();
+
         if (panelToClose != null)
             panelToClose.SetActive(false);
     }
