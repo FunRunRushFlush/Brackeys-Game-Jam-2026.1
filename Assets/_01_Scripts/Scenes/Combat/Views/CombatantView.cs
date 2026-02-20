@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Game.Logging;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -42,6 +43,11 @@ public class CombatantView : MonoBehaviour
     /// </summary>
     public void Damage(int damageAmount)
     {
+        if (!this)
+        {
+            Log.Warn(LogCat.General, () => "Object does not Exist anymore");
+            return;
+        }
         if (damageAmount <= 0)
             return;
 

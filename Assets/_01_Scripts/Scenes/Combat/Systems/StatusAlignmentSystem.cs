@@ -19,34 +19,43 @@ public class StatusAlignmentSystem : MonoBehaviour
         ActionSystem.DetachPerformer<ApplyPoisonGA>();
     }
 
-    private IEnumerator ApplyBurnPerformer(ApplyBurnGA applyBurnGA)
+    private IEnumerator ApplyBurnPerformer(ApplyBurnGA ga)
     {
-        CombatantView target = applyBurnGA.Target;
+        var target = ga.Target;
+        if (!target || target.CurrentHealth <= 0) yield break;
 
-        Instantiate(burnVFX, target.transform.position, Quaternion.identity);
+        var guardCheck = target.transform;        
+        if (guardCheck) 
+        { 
+            Instantiate(burnVFX, guardCheck.position, Quaternion.identity);
+        }
 
+
+        if (!target) 
+            yield break;
 
         target.RemoveStatusEffect(StatusEffectType.BURN, 1);
 
 
-        var dmgGA = new DealDamageGA(
-            applyBurnGA.BurnDamage,
-            new List<CombatantView> { target },
-            caster: null
-        );
+        if (!target) 
+            yield break;
 
-        ActionSystem.Instance.AddReaction(dmgGA);
+        ActionSystem.Instance.AddReaction(
+            new DealDamageGA(ga.BurnDamage, new() { target }, caster: null)
+        );
 
         yield return new WaitForSeconds(1f);
     }
     private IEnumerator ApplyPoisonPerformer(ApplyPoisonGA ga)
     {
-        CombatantView target = ga.Target;
+        var target = ga.Target;
         if (!target || target.CurrentHealth <= 0) yield break;
 
-        Instantiate(poisonVFX, target.transform.position, Quaternion.identity);
+        var guardCheck = target.transform;
+        if (guardCheck) 
+            Instantiate(poisonVFX, guardCheck.position, Quaternion.identity);
 
-       
+        if (!target) yield break;
         ActionSystem.Instance.AddReaction(
             new DealDamageGA(ga.PoisonDamage, new() { target }, caster: null)
         );

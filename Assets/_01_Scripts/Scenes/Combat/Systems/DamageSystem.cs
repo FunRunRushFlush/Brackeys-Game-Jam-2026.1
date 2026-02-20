@@ -1,3 +1,4 @@
+using Game.Logging;
 using Game.Scenes.Core;
 using System.Collections;
 using UnityEngine;
@@ -35,9 +36,24 @@ public class DamageSystem : Singleton<DamageSystem>
 
         foreach (var target in dealDamageGA.Targets)
         {
+            if(!target)
+            {
+                Log.Warn(LogCat.General, () => "target Object does not Exist anymore");
+                continue;
+            }
             target.Damage(modifiedAmount);
-            Instantiate(damageVFX, target.transform.position, Quaternion.identity);
+
+            if (damageVFX && target)
+                Instantiate(damageVFX, target.transform.position, Quaternion.identity);
+
+
             yield return new WaitForSeconds(0.15f);
+
+            if (!target)
+            {
+                Log.Warn(LogCat.General, () => "target Object does not Exist anymore");
+                continue;
+            }
 
             if (target.CurrentHealth <= 0)
             {
