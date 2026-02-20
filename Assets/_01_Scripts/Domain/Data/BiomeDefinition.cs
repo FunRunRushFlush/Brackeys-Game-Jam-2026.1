@@ -5,7 +5,8 @@ public enum BiomeType
     Forest,
     Fire,
     Ice,
-    Galaxy
+    Galaxy,
+    Cave
 }
 
 
@@ -22,7 +23,7 @@ public class BiomeDefinition : ScriptableObject
     [Header("Scenes")]
     public string[] eliteArenaScenes;
 
-    // Optional für Shop/Event (wenn eure Shop/Event Szene Content daraus ziehen soll)
+
     public ShopConfig shopConfig;
     public EventTable eventTable;
 

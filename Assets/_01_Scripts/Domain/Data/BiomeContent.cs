@@ -13,8 +13,8 @@ public class BiomeContent : ScriptableObject
     public EncounterDefinition boss;
 
     [Header("Non-Combat Content")]
-    public EventTable events;       // neu
-    public ShopConfig shopConfig;   // neu
+    public EventTable events;
+    public ShopConfig shopConfig;
 
     [Header("Scenes")]
     public string[] normalArenaScenes;

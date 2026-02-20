@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69481d8ae10c22b45b2aeb6080003ec9, type: 3}
   m_Name: New Biome Database
   m_EditorClassIdentifier: Assembly-CSharp::BiomeDatabase
-  biomes: []
+  biomes:
+  - {fileID: 0}
   normalArenaScene: 
   bossArenaScene: 
