@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
-  m_Name: Block
+  m_Name: Shield Block
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  Id: block
-  DisplayName: Block
-  <Description>k__BackingField: Gain 5 Block
+  Id: shield_block
+  DisplayName: Shield Block
+  <Description>k__BackingField: Gain 8 Block
   <Mana>k__BackingField: 1
   <Image>k__BackingField: {fileID: 450145093, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 2
@@ -40,4 +40,4 @@ MonoBehaviour:
     - rid: 792979208258191543
       type: {class: AddBlockEffect, ns: , asm: Assembly-CSharp}
       data:
-        amount: 5
+        amount: 8

@@ -16091,7 +16091,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_727
+      name: Icons_FirstStrike
       rect:
         serializedVersion: 2
         x: 448
@@ -50182,7 +50182,6 @@ TextureImporter:
       Icons_723: -271416304
       Icons_725: 443630390
       Icons_726: -1576235892
-      Icons_727: 881141213
       Icons_729: 923592140
       Icons_73: -1430622403
       Icons_730: 2029304282
@@ -50479,6 +50478,7 @@ TextureImporter:
       Icons_Fireballrain: 395615244
       Icons_Firestorm: -527411974
       Icons_Firestrike: 2047651849
+      Icons_FirstStrike: 881141213
       Icons_Flames: 1418751897
       Icons_Galaxy Strike: -1508950131
       Icons_Galaxy slash: 648513060
