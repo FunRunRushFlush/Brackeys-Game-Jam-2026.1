@@ -18,7 +18,7 @@ MonoBehaviour:
   <Mana>k__BackingField: 1
   <Image>k__BackingField: {fileID: -954147345, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 4
-  PreferredBiomes: 
+  PreferredBiomes: 00000000
   <Tags>k__BackingField: 
   <ManualTargetEffects>k__BackingField:
   - rid: 792979208258191519

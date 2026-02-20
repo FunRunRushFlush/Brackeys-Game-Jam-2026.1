@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
-  m_Name: blackdust
+  m_Name: Blackdust
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: blackdust
   DisplayName: Black dust

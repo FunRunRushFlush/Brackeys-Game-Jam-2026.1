@@ -17,7 +17,7 @@ MonoBehaviour:
   <Description>k__BackingField: Deal 20 Damage apply Burn 5 to all enemies draw a
     card
   <Mana>k__BackingField: 2
-  <Image>k__BackingField: {fileID: -1153227558, guid: 9fe37fd1976076f4f8245f2e2e09a346, type: 3}
+  <Image>k__BackingField: {fileID: -193939011, guid: 3767a25ad0c03f04faf0242521ab9aef, type: 3}
   Rarity: 5
   PreferredBiomes: 01000000
   <Tags>k__BackingField: 02000000

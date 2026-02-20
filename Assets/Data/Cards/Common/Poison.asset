@@ -10,50 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
-  m_Name: PoisendShild
+  m_Name: Poison
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  Id: poisend-shild
-  DisplayName: Poisend Shild
-  <Description>k__BackingField: Block 5 apply 2 Poisen
+  Id: 'poissen '
+  DisplayName: 'Poissen '
+  <Description>k__BackingField: Apply Poison 3
   <Mana>k__BackingField: 1
-  <Image>k__BackingField: {fileID: -170378762, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  <Image>k__BackingField: {fileID: -521032350, guid: 762faa91e709b9348bf7b148318d5475, type: 3}
   Rarity: 2
   PreferredBiomes: 
   <Tags>k__BackingField: 01000000
   <ManualTargetEffects>k__BackingField: []
   <OtherEffects>k__BackingField:
-  - rid: 792979208258191526
-  - rid: 792979208258191529
+  - rid: 792979202384330883
   <PlayConditions>k__BackingField: []
   references:
     version: 2
     RefIds:
-    - rid: 792979208258191526
+    - rid: 792979202384330883
       type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
       data:
         <TargetMode>k__BackingField:
-          rid: 792979208258191527
+          rid: 792979202384330884
         <Effect>k__BackingField:
-          rid: 792979208258191544
-    - rid: 792979208258191527
-      type: {class: HeroTM, ns: , asm: Assembly-CSharp}
-      data: 
-    - rid: 792979208258191529
-      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
-      data:
-        <TargetMode>k__BackingField:
-          rid: 792979208258191530
-        <Effect>k__BackingField:
-          rid: 792979208258191531
-    - rid: 792979208258191530
+          rid: 792979202384330886
+    - rid: 792979202384330884
       type: {class: AllEnemiesTM, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 792979208258191531
+    - rid: 792979202384330886
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
         statusEffectType: 2
-        stackCount: 2
-    - rid: 792979208258191544
-      type: {class: AddBlockEffect, ns: , asm: Assembly-CSharp}
-      data:
-        amount: 5
+        stackCount: 3

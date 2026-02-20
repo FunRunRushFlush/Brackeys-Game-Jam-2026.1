@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
-  m_Name: Poissen Arrow
+  m_Name: Poison Arrow
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  Id: poissen-arrow
-  DisplayName: 'Poissen Arrow '
-  <Description>k__BackingField: 'Deal 7 Damage Poisen 4 '
+  Id: poison-arrow
+  DisplayName: 'Poison Arrow '
+  <Description>k__BackingField: Deal 7 Damage and apply 4 Poison
   <Mana>k__BackingField: 0
   <Image>k__BackingField: {fileID: 176558359, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 3
@@ -22,28 +22,18 @@ MonoBehaviour:
   <Tags>k__BackingField: 00000000
   <ManualTargetEffects>k__BackingField:
   - rid: 792979208258191460
-  <OtherEffects>k__BackingField:
-  - rid: 792979202384330888
+  - rid: 1986237431894245535
+  <OtherEffects>k__BackingField: []
   <PlayConditions>k__BackingField: []
   references:
     version: 2
     RefIds:
-    - rid: 792979202384330888
-      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
-      data:
-        <TargetMode>k__BackingField:
-          rid: 792979202384330889
-        <Effect>k__BackingField:
-          rid: 792979202384330890
-    - rid: 792979202384330889
-      type: {class: AllEnemiesTM, ns: , asm: Assembly-CSharp}
-      data: 
-    - rid: 792979202384330890
-      type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
-      data:
-        statusEffectType: 2
-        stackCount: 4
     - rid: 792979208258191460
       type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
       data:
         damageAmount: 7
+    - rid: 1986237431894245535
+      type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
+      data:
+        statusEffectType: 2
+        stackCount: 4

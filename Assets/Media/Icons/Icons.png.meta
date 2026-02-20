@@ -24957,7 +24957,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_1130
+      name: Icons_ShootingStar
       rect:
         serializedVersion: 2
         x: 640
@@ -48473,7 +48473,6 @@ TextureImporter:
       Icons_1128: -1393745525
       Icons_1129: 1357400426
       Icons_113: -549688398
-      Icons_1130: -273654349
       Icons_1131: -687685459
       Icons_1132: 1685929227
       Icons_1133: 1833364529
@@ -50490,6 +50489,7 @@ TextureImporter:
       Icons_ShieldGrey01: 1219099209
       Icons_ShieldGrey02: 1201276158
       Icons_Shining in the stars: 1231357146
+      Icons_ShootingStar: -273654349
       Icons_Shop: -1723487074
       Icons_Spark: 1493836590
       Icons_SparkingStrike: 539447770

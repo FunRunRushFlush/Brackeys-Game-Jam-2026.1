@@ -16,7 +16,7 @@ MonoBehaviour:
   DisplayName: Blackhole
   <Description>k__BackingField: Deal 3 Damage apply  Burn 4
   <Mana>k__BackingField: 0
-  <Image>k__BackingField: {fileID: 652455558, guid: 174ad815ed8dd51448fbf167b0e36e85, type: 3}
+  <Image>k__BackingField: {fileID: -295909497, guid: d1c12bbf4ecf47742b55e41b46800d98, type: 3}
   Rarity: 4
   PreferredBiomes: 03000000
   <Tags>k__BackingField: 
