@@ -2690,7 +2690,6 @@ MonoBehaviour:
   uncommonCards:
   - {fileID: 11400000, guid: 777aba2c95596da43b86caab57b764de, type: 2}
   - {fileID: 11400000, guid: 958933ece9a65b14aa1161edd9807bad, type: 2}
-  - {fileID: 11400000, guid: 34b480a06ed5b1d4db362fd91dc43cd8, type: 2}
   - {fileID: 11400000, guid: 1194a292436d5804398ed6f8727a1da2, type: 2}
   - {fileID: 11400000, guid: 3fa3de02b114885408baba155e0a7324, type: 2}
   - {fileID: 11400000, guid: e3004514b759b37469a0807a91057e92, type: 2}
@@ -2723,6 +2722,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
   - {fileID: 11400000, guid: f69380031f219e848b9c0e004e682b9b, type: 2}
   - {fileID: 11400000, guid: e9fa803c56cdcde49a17056ba8e84366, type: 2}
+  - {fileID: 11400000, guid: 34b480a06ed5b1d4db362fd91dc43cd8, type: 2}
   - {fileID: 11400000, guid: 66fd8749ee49d4b4c893c62d4df0d106, type: 2}
   starterCards:
   - {fileID: 11400000, guid: ca153b58ae684c4439cf2e0f475f6194, type: 2}
