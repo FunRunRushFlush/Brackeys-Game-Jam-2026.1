@@ -10,24 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
-  m_Name: Poissen
+  m_Name: Poisen
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: 'poissen '
   DisplayName: 'Poissen '
-  <Description>k__BackingField: Apply poisen 3
+  <Description>k__BackingField: Apply Poisen 3
   <Mana>k__BackingField: 1
   <Image>k__BackingField: {fileID: -521032350, guid: 762faa91e709b9348bf7b148318d5475, type: 3}
+  Rarity: 2
+  PreferredBiomes: 
   <Tags>k__BackingField: 01000000
-  <ManualTargetEffect>k__BackingField:
-    rid: -2
+  <ManualTargetEffects>k__BackingField: []
   <OtherEffects>k__BackingField:
   - rid: 792979202384330883
   <PlayConditions>k__BackingField: []
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
     - rid: 792979202384330883
       type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
       data:

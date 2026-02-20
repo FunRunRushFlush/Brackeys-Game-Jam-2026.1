@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: bow-shot
   DisplayName: Bow Shot
-  <Description>k__BackingField: 'deall 15 Damage '
+  <Description>k__BackingField: 'Deal 15 Damage '
   <Mana>k__BackingField: 2
   <Image>k__BackingField: {fileID: 176558359, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 3

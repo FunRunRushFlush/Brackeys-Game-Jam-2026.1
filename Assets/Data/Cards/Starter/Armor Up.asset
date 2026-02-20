@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Armor Up
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: armor_up
-  DisplayName: Armor Up
-  <Description>k__BackingField: Add 6 Armor
+  DisplayName: Block
+  <Description>k__BackingField: Gain 6 Block
   <Mana>k__BackingField: 1
-  <Image>k__BackingField: {fileID: 21300000, guid: 5659290580983f947b95ffc10ded5585, type: 3}
+  <Image>k__BackingField: {fileID: 275167302, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 1
   PreferredBiomes: 
   <Tags>k__BackingField: 01000000

@@ -14,15 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: Galaxy-Slash
   DisplayName: galaxy Slash
-  <Description>k__BackingField: 'deal 10 Damage '
+  <Description>k__BackingField: 'Deal 10 Damage '
   <Mana>k__BackingField: 1
   <Image>k__BackingField: {fileID: 648513060, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 2
   PreferredBiomes: 
   <Tags>k__BackingField: 
-  <ManualTargetEffects>k__BackingField: []
+  <ManualTargetEffects>k__BackingField:
+  - rid: 792979208258191553
   <OtherEffects>k__BackingField: []
   <PlayConditions>k__BackingField: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 792979208258191553
+      type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        damageAmount: 10

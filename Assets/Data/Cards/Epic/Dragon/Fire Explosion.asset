@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: fire-explosion
   DisplayName: Fire Explosion
-  <Description>k__BackingField: 'deal 50 damge '
+  <Description>k__BackingField: 'Deal 50 Damage '
   <Mana>k__BackingField: 3
   <Image>k__BackingField: {fileID: -1091159536, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 5

@@ -14,10 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BiomeDefinition
   Biome: 1
   nodeEncounters:
-  - {fileID: 11400000, guid: 3b1124f02c287f8448d17e790112e093, type: 2}
-  - {fileID: 11400000, guid: 827b7f0df1ed1234cbba932865b3916a, type: 2}
-  - {fileID: 11400000, guid: 2c6ce978215961f4eb5795c170303fcb, type: 2}
-  - {fileID: 11400000, guid: 1430ee6b2a876c745a3156521c74c66b, type: 2}
+  - {fileID: 11400000, guid: ba0d42c270c05bc409bf23a27b8240bf, type: 2}
+  - {fileID: 11400000, guid: bac5ba73ae0a3644498bd335998fb306, type: 2}
+  - {fileID: 11400000, guid: 1024493b8d581644682eb911f53dd045, type: 2}
+  - {fileID: 11400000, guid: 905fd9c6a4947b94fa7a68c96ce01d6c, type: 2}
+  - {fileID: 11400000, guid: 6f6f89fa9a7aed443b7a354e14414f0e, type: 2}
+  - {fileID: 11400000, guid: 47c5cb4762feaf043b3b820a8d8acc91, type: 2}
+  - {fileID: 11400000, guid: 9a0bbcc8b5a17764491ea16364430f36, type: 2}
+  - {fileID: 11400000, guid: a02ab0050b3362f4791144d87952e337, type: 2}
+  - {fileID: 11400000, guid: 1d295aae28c04b9489fb66619c6f1dbc, type: 2}
+  - {fileID: 11400000, guid: e9857e7f0cf36fe45a08766323e9b25f, type: 2}
   bossEncounter: {fileID: 11400000, guid: 3577c8e0b46e729458a7504a2837ee65, type: 2}
   normalArenaScenes:
   - Arena_Fire_01

@@ -16,7 +16,7 @@ MonoBehaviour:
   DisplayName: Strike
   <Description>k__BackingField: Deal 8 Damage
   <Mana>k__BackingField: 1
-  <Image>k__BackingField: {fileID: 21300000, guid: 9ee31c3c06737a94b97fbbb8ed3b62d6, type: 3}
+  <Image>k__BackingField: {fileID: -1113393990, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 1
   PreferredBiomes: 
   <Tags>k__BackingField: 00000000

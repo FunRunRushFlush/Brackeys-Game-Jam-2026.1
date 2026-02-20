@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: jungle_power
   DisplayName: Jungle Power
-  <Description>k__BackingField: Deal 8 Damge Poissen 4
+  <Description>k__BackingField: Deal 8 Damage apply Poisen 4
   <Mana>k__BackingField: 1
   <Image>k__BackingField: {fileID: -479035640, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 2
