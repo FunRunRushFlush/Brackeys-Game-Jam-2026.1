@@ -67,6 +67,7 @@ public class CardRewardsUI : MonoBehaviour
         }
     }
 
+
     public void ConsumeRewardsUI()
     {
         selectionGroup?.Clear();
