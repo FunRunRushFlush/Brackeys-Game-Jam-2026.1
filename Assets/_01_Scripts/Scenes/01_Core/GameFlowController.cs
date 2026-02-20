@@ -41,7 +41,7 @@ namespace Game.Scenes.Core
 
 
         public void ChooseCombat() => StartCoroutine(GoToEncounterRoutine(SceneDatabase.Scenes.Combat));
-        public void ChooseShop() => StartCoroutine(GoToSessionViewRoutine(SceneDatabase.Scenes.Shop));
+        public void ChooseShop() => StartCoroutine(GoToShopViewRoutine(SceneDatabase.Scenes.Shop));
         public void ChooseEvent() => StartCoroutine(GoToSessionViewRoutine(SceneDatabase.Scenes.Event));
 
         public void CombatWon() => StartCoroutine(GoToLootRoutine());
@@ -113,6 +113,27 @@ namespace Game.Scenes.Core
 
         }
 
+        private IEnumerator GoToShopViewRoutine(string encounterScene)
+        {
+            CacheSessionRefs();
+            if (run == null) yield break;
+
+            var systemsScene = encounterScene;
+
+            // TODO: hier später sauber über Node/Seed auswählen
+            var levelScene = GetArenaSceneForCurrentNode(run);
+            activeLevelScene = levelScene;
+
+            yield return SceneController.Current
+                .NewTransition()
+                .Unload(SceneDatabase.Slots.SessionView)
+                .Load(SceneDatabase.Slots.EncounterSystems, systemsScene, setActive: true)
+                .Load(SceneDatabase.Slots.EncounterLevel, levelScene)
+                .WithOverlay()
+                .Perform();
+
+        }
+
         private IEnumerator GoToLootRoutine()
         {
             CacheSessionRefs();
@@ -147,7 +168,7 @@ namespace Game.Scenes.Core
 
         private IEnumerator GoToGameOverRoutine()
         {
-            // Encounter entladen, GameOver in SessionView
+
             yield return SceneController.Current
                 .NewTransition()
                 .Unload(SceneDatabase.Slots.EncounterSystems)
@@ -158,7 +179,7 @@ namespace Game.Scenes.Core
 
         private IEnumerator GoToSessionViewRoutine(string scene)
         {
-            // z.B. Shop/Event in SessionView laden, Encounter sicher entladen
+
             yield return SceneController.Current
                 .NewTransition()
                 .Unload(SceneDatabase.Slots.EncounterSystems)
@@ -223,7 +244,7 @@ namespace Game.Scenes.Core
                     break;
 
                 case MapNodeType.Shop:
-                    StartCoroutine(GoToSessionViewRoutine(SceneDatabase.Scenes.Shop));
+                    StartCoroutine(GoToShopViewRoutine(SceneDatabase.Scenes.Shop));
                     break;
 
                 case MapNodeType.Event:
