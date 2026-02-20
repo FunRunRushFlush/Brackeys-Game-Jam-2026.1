@@ -882,7 +882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9568628, g: 0.6431373, b: 0.3764706, a: 1}
+  m_Color: {r: 0.9568628, g: 0.6431373, b: 0.3764706, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -951,10 +951,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 476adda3ab5ee0d4cbefcb6f2ba9356b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardRewards
-  cardLoot:
-  - Card: {fileID: 11400000, guid: e8ee693408315314d9229715e5d5a87e, type: 2}
-  - Card: {fileID: 11400000, guid: 25c908a0635198241b6213e7451c836b, type: 2}
-  - Card: {fileID: 11400000, guid: 00d9a7cd111bb284ebff89ec5aa38431, type: 2}
   rewardsContainer: {fileID: 2068061303}
   selectionGroup: {fileID: 2100717925}
 --- !u!1 &916047053

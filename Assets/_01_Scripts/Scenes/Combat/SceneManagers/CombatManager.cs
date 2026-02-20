@@ -1,8 +1,10 @@
+using Game.Logging;
 using Game.Scenes.Core;
 using UnityEngine;
 
 public class CombatManager : MonoBehaviour
 {
+    [SerializeField] private GameObject chest;
 
     private void Start()
     {
@@ -16,8 +18,9 @@ public class CombatManager : MonoBehaviour
 
     private void OnAllEnemiesDefeated()
     {
-
-        GameFlowController.Current.CombatWon();
+        Log.Debug(LogCat.General, () => "AllEnemiesDefeated!");
+        if (chest != null) 
+            chest.SetActive(true);
     }
 
 

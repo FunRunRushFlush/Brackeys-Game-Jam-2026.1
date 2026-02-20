@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class RunState : MonoBehaviour
 {
-    // --- Run Plan ---
-    public BiomeType[] BiomesInRun { get; private set; } = new BiomeType[3];
+    [Header("Run Content")]
+    [SerializeField] private RunMapDefinition mapDefinition;
+
+    public RunMapDefinition MapDefinition => mapDefinition;
+
+    // --- Progress ---
     public int BiomeIndex { get; private set; } = 0;
-
-    // --- Progress innerhalb eines Bioms ---
     public int NodeIndexInBiome { get; private set; } = 0;
-
-    public int NormalNodesPerBiome { get; private set; } = 4;
 
     // Optional: globaler NodeIndex für Stats/Seed/Anzeige
     public int GlobalNodeIndex { get; private set; } = 0;
@@ -20,24 +20,73 @@ public class RunState : MonoBehaviour
     public float RunStartTime { get; private set; }
 
     public RewardContext CurrentRewardContext { get; private set; }
+    public bool HasRewardContext { get; private set; }
 
     public event Action<int> GoldChanged;
     public event Action<int> NodeChanged;
 
-    public BiomeType CurrentBiome => BiomesInRun[Mathf.Clamp(BiomeIndex, 0, BiomesInRun.Length - 1)];
+    public int RunSeed { get; private set; }
 
-    //public bool IsBossNode => NodeIndexInBiome >= NormalNodesPerBiome;
-    public bool IsFinalBiome => BiomeIndex >= BiomesInRun.Length - 1;
+    // --- Current Node helpers ---
+    public bool HasValidMap =>
+        mapDefinition != null &&
+        mapDefinition.biomes != null &&
+        mapDefinition.biomes.Count > 0;
+
+    public BiomeMapDefinition CurrentBiomeMap
+    {
+        get
+        {
+            if (!HasValidMap) return null;
+            int i = Mathf.Clamp(BiomeIndex, 0, mapDefinition.biomes.Count - 1);
+            return mapDefinition.biomes[i];
+        }
+    }
+
+    public BiomeType CurrentBiome
+    {
+        get
+        {
+            var biomeMap = CurrentBiomeMap;
+            return biomeMap != null ? biomeMap.biome : default;
+        }
+    }
+
+    public MapNodeDefinition CurrentNode
+    {
+        get
+        {
+            var biomeMap = CurrentBiomeMap;
+            if (biomeMap == null || biomeMap.nodes == null || biomeMap.nodes.Count == 0)
+                return null;
+
+            int i = Mathf.Clamp(NodeIndexInBiome, 0, biomeMap.nodes.Count - 1);
+            return biomeMap.nodes[i];
+        }
+    }
+
+    public MapNodeType CurrentNodeType =>
+        CurrentNode != null ? CurrentNode.type : MapNodeType.Combat;
+
+    public bool IsBossNode => CurrentNodeType == MapNodeType.Boss;
+
+    public bool IsFinalBiome =>
+        HasValidMap && BiomeIndex >= mapDefinition.biomes.Count - 1;
+
     public bool IsFinalBossNode => IsFinalBiome && IsBossNode;
 
     public void StartNewRun(int startingGold = 0)
     {
+        if (!HasValidMap)
+        {
+            Debug.LogError("[RunState] Missing/invalid RunMapDefinition. Please assign one in the inspector.");
+            // trotzdem initialisieren, damit nix crasht
+        }
+
         RunSeed = UnityEngine.Random.Range(int.MinValue, int.MaxValue);
 
         Gold = startingGold;
         RunStartTime = Time.unscaledTime;
-
-        BuildRunPlan();
 
         BiomeIndex = 0;
         NodeIndexInBiome = 0;
@@ -49,15 +98,6 @@ public class RunState : MonoBehaviour
         NodeChanged?.Invoke(GlobalNodeIndex);
     }
 
-    private void BuildRunPlan()
-    {
-
-        BiomesInRun[0] = BiomeType.Forest;
-        BiomesInRun[1] = BiomeType.Fire;
-        BiomesInRun[2] = BiomeType.Galaxy;
-    }
-
-
     public void ChangeAmountOfGold(int amount)
     {
         Gold = Mathf.Max(0, Gold + amount);
@@ -67,19 +107,6 @@ public class RunState : MonoBehaviour
     public void QuitRun()
     {
         GameFlowController.Current.BackToMainMenu();
-    }
-    public int RunSeed { get; private set; }
-
-    public enum NodeType { Normal, Boss }
-
-    public NodeType CurrentNodeType =>
-        NodeIndexInBiome < NormalNodesPerBiome ? NodeType.Normal : NodeType.Boss;
-
-    public bool IsBossNode => CurrentNodeType == NodeType.Boss;
-
-    public void SetNormalNodesPerBiome(int normalNodes)
-    {
-        NormalNodesPerBiome = Mathf.Max(0, normalNodes);
     }
 
     public int GetNodeSeed(int salt = 1337)
@@ -96,26 +123,33 @@ public class RunState : MonoBehaviour
     {
         GlobalNodeIndex++;
 
-        if (CurrentNodeType == NodeType.Boss)
+        if (!HasValidMap)
+        {
+            NodeIndexInBiome++;
+            NodeChanged?.Invoke(GlobalNodeIndex);
+            return;
+        }
+
+        var biomeMap = CurrentBiomeMap;
+        int nodeCount = (biomeMap != null && biomeMap.nodes != null) ? biomeMap.nodes.Count : 0;
+
+        NodeIndexInBiome++;
+
+        // Biome fertig? -> nächstes Biome, NodeIndex reset
+        if (nodeCount > 0 && NodeIndexInBiome >= nodeCount)
         {
             NodeIndexInBiome = 0;
             BiomeIndex++;
         }
-        else
-        {
-            NodeIndexInBiome++;
-        }
 
         NodeChanged?.Invoke(GlobalNodeIndex);
     }
-
-
-    public bool HasRewardContext { get; private set; }
 
     public void SetRewardContext(RewardContext ctx)
     {
         CurrentRewardContext = ctx;
         HasRewardContext = true;
     }
+
     public float GetRunTimeSeconds() => Time.unscaledTime - RunStartTime;
 }

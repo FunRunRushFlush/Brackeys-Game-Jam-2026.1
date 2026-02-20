@@ -7,6 +7,6 @@ public class LootSceneManager : MonoBehaviour
 {
     public void LeaveLootScreen()
     {
-        GameFlowController.Current?.LootPicked(1);
+        GameFlowController.Current?.LootPicked();
     }
 }

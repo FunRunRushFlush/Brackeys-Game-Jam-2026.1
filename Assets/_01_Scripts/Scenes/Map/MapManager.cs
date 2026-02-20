@@ -16,4 +16,10 @@ public class MapManager : MonoBehaviour
     {
         GameFlowController.Current.ChooseEvent();
     }
+
+    public void Continue()
+    {
+        GameFlowController.Current.GoToCurrentNode();
+    }
+
 }

@@ -18,6 +18,8 @@ namespace Game.Scenes.Core
         private RunState run;
         //private LootService lootService;
 
+        private string activeLevelScene;
+
         private void Awake()
         {
             if (Current != null && Current != this)
@@ -48,11 +50,20 @@ namespace Game.Scenes.Core
         public void ShopLeave() => StartCoroutine(BackToMapAdvanceNodeRoutine());
         public void EventComplete() => StartCoroutine(BackToMapAdvanceNodeRoutine());
 
-        public void LootPicked(int optionIndex)
+        public void LootPicked()
         {
             if (run == null) return;
-  
+
             StartCoroutine(BackToMapAdvanceNodeRoutine());
+        }
+
+        public void LootPickedIntoNextCombat()
+        {
+            if (run == null) return;
+
+            run.AdvanceNode();
+            ChooseCombat();
+            
         }
 
         public void BossWon() => StartCoroutine(GoToGameOverRoutine());
@@ -90,12 +101,13 @@ namespace Game.Scenes.Core
 
             // TODO: hier später sauber über Node/Seed auswählen
             var levelScene = GetArenaSceneForCurrentNode(run);
+            activeLevelScene = levelScene;
 
             yield return SceneController.Current
                 .NewTransition()
                 .Unload(SceneDatabase.Slots.SessionView)
-                .Load(SceneDatabase.Slots.EncounterLevel, levelScene, setActive: true)
-                .Load(SceneDatabase.Slots.EncounterSystems, systemsScene)
+                .Load(SceneDatabase.Slots.EncounterSystems, systemsScene, setActive: true)
+                .Load(SceneDatabase.Slots.EncounterLevel, levelScene)
                 .WithOverlay()
                 .Perform();
 
@@ -111,7 +123,6 @@ namespace Game.Scenes.Core
             yield return SceneController.Current
                 .NewTransition()
                 .Unload(SceneDatabase.Slots.EncounterSystems)
-                .Unload(SceneDatabase.Slots.EncounterLevel)
                 .Load(SceneDatabase.Slots.SessionView, SceneDatabase.Scenes.Loot, setActive: true)
                 .WithOverlay()
                 .Perform();
@@ -183,46 +194,43 @@ namespace Game.Scenes.Core
         private string GetArenaSceneForCurrentNode(RunState run)
         {
             var biomeDef = biomeDb.Get(run.CurrentBiome);
-            if (biomeDef == null)
-            {
-                Debug.LogError($"No BiomeDefinition found for biome {run.CurrentBiome}. Falling back to default.");
-                return defaultEncounterLevelScene;
-            }
+            if (biomeDef == null) return defaultEncounterLevelScene;
 
-            // IMPORTANT: set normal node count BEFORE checking boss state
-            int normalCount = biomeDef.nodeEncounters != null ? biomeDef.nodeEncounters.Length : 0;
-            run.SetNormalNodesPerBiome(normalCount);
-
-            if (run.IsBossNode)
-            {
-                if (string.IsNullOrWhiteSpace(biomeDef.bossArenaScene))
-                {
-                    Debug.LogError($"Biome '{run.CurrentBiome}' is missing bossArenaScene. Falling back to default.");
-                    return defaultEncounterLevelScene;
-                }
+            if (run.CurrentNodeType == MapNodeType.Boss)
                 return biomeDef.bossArenaScene;
-            }
 
-            if (biomeDef.normalArenaScenes == null || biomeDef.normalArenaScenes.Length == 0)
-            {
-                Debug.LogError($"Biome '{run.CurrentBiome}' has no normalArenaScenes configured. Falling back to default.");
-                return defaultEncounterLevelScene;
-            }
+            var scenes = run.CurrentNodeType == MapNodeType.EliteCombat
+                ? biomeDef.eliteArenaScenes
+                : biomeDef.normalArenaScenes;
 
-            // deterministic selection per run + node
+            if (scenes == null || scenes.Length == 0) return defaultEncounterLevelScene;
+
             var rng = run.CreateNodeRng(salt: 4242);
-            int idx = rng.Next(0, biomeDef.normalArenaScenes.Length);
-
-            var scene = biomeDef.normalArenaScenes[idx];
-            if (string.IsNullOrWhiteSpace(scene))
-            {
-                Debug.LogError($"Biome '{run.CurrentBiome}' normalArenaScenes[{idx}] is empty. Falling back to default.");
-                return defaultEncounterLevelScene;
-            }
-
-            return scene;
+            return scenes[rng.Next(0, scenes.Length)];
         }
 
+        public void GoToCurrentNode()
+        {
+            CacheSessionRefs();
+            if (run == null) return;
+
+            switch (run.CurrentNodeType)
+            {
+                case MapNodeType.Combat:
+                case MapNodeType.EliteCombat:
+                case MapNodeType.Boss:
+                    StartCoroutine(GoToEncounterRoutine(SceneDatabase.Scenes.Combat));
+                    break;
+
+                case MapNodeType.Shop:
+                    StartCoroutine(GoToSessionViewRoutine(SceneDatabase.Scenes.Shop));
+                    break;
+
+                case MapNodeType.Event:
+                    StartCoroutine(GoToSessionViewRoutine(SceneDatabase.Scenes.Event));
+                    break;
+            }
+        }
 
 
     }
