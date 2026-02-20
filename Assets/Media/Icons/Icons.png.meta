@@ -2913,7 +2913,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_128
+      name: Icons_BloodCoin
       rect:
         serializedVersion: 2
         x: 0
@@ -48637,7 +48637,6 @@ TextureImporter:
       Icons_1277: -923107119
       Icons_1278: -1860080438
       Icons_1279: 726364658
-      Icons_128: -761322962
       Icons_1280: -148679915
       Icons_1281: 1334155540
       Icons_1282: -57907576
@@ -50466,6 +50465,7 @@ TextureImporter:
       Icons_Attack02: 57011731
       Icons_Blackhole Power: -2141487142
       Icons_BlackholeGravitation: -1384840098
+      Icons_BloodCoin: -761322962
       Icons_Book of Wisdom: -1678947853
       Icons_BowShot: 176558359
       Icons_Burn02: -1289553049

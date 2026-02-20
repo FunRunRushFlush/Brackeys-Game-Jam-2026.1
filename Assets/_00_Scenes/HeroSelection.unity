@@ -1389,6 +1389,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 386166460e56e8649aaa7fe2b398b203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HeroSelectionSceneManager
+  heroButtons:
+  - {fileID: 305435933}
+  - {fileID: 1994750549}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

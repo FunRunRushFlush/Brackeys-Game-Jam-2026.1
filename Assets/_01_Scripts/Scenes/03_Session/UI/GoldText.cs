@@ -8,6 +8,6 @@ public class GoldText : MonoBehaviour
 
     void Update()
     {
-        _text.text = $"G: {CoreManager.Instance.Session.Run.Gold}";
+        _text.text = $"{CoreManager.Instance.Session.Run.Gold}";
     }
 }

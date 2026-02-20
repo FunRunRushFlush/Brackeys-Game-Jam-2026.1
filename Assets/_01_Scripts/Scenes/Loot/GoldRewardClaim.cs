@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class GoldRewardClaim : MonoBehaviour
 {
     [Header("Gold Amount")]
-    [SerializeField] private int minGold = 10;
-    [SerializeField] private int maxGold = 30;
+    [SerializeField] private int minGold = 20;
+    [SerializeField] private int maxGold = 35;
 
     [Header("UI")]
     [SerializeField] private RewardPopUpCanvasUI popupUI;
@@ -24,7 +24,7 @@ public class GoldRewardClaim : MonoBehaviour
         _amount = Random.Range(minGold, maxGold + 1);
 
         if (claimButtonLabel != null)
-            claimButtonLabel.text = $"+{_amount} Gold";
+            claimButtonLabel.text = $"+{_amount}";
 
         if (claimButton != null)
             claimButton.interactable = !_claimed;

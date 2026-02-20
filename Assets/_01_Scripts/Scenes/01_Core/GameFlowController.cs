@@ -7,18 +7,15 @@ namespace Game.Scenes.Core
     {
         public static GameFlowController Current { get; private set; }
 
-        [SerializeField] private int maxNodeIndex = 4;
         [SerializeField] private int startingGold = 0;
 
         [SerializeField] private BiomeDatabase biomeDb;
-
-        // Optional: Default Arena, wenn du noch keine Node->Arena Logik hast
         [SerializeField] private string defaultEncounterLevelScene = SceneDatabase.Scenes.Arena_Forest_01;
 
         private RunState run;
-        //private LootService lootService;
-
         private string activeLevelScene;
+
+        private bool _isTransitioning;
 
         private void Awake()
         {
@@ -27,50 +24,90 @@ namespace Game.Scenes.Core
                 Destroy(gameObject);
                 return;
             }
+
             Current = this;
             DontDestroyOnLoad(gameObject);
         }
 
         // ---------- Public API (Buttons rufen diese Methoden auf) ----------
 
-        public void StartNewRun()
-        {
-            StartCoroutine(StartNewRunRoutine());
-        }
+        public void StartNewRun() => StartLocked(StartNewRunRoutine());
 
+        public void ChooseCombat() => StartLocked(GoToEncounterRoutine(SceneDatabase.Scenes.Combat));
+        public void ChooseShop() => StartLocked(GoToShopViewRoutine(SceneDatabase.Scenes.Shop));
+        public void ChooseEvent() => StartLocked(GoToSessionViewRoutine(SceneDatabase.Scenes.Event));
 
+        public void CombatWon() => StartLocked(GoToLootRoutine());
+        public void CombatLost() => StartLocked(GoToGameOverRoutine());
 
-        public void ChooseCombat() => StartCoroutine(GoToEncounterRoutine(SceneDatabase.Scenes.Combat));
-        public void ChooseShop() => StartCoroutine(GoToShopViewRoutine(SceneDatabase.Scenes.Shop));
-        public void ChooseEvent() => StartCoroutine(GoToSessionViewRoutine(SceneDatabase.Scenes.Event));
-
-        public void CombatWon() => StartCoroutine(GoToLootRoutine());
-        public void CombatLost() => StartCoroutine(GoToGameOverRoutine());
-
-        public void ShopLeave() => StartCoroutine(BackToMapAdvanceNodeRoutine());
-        public void EventComplete() => StartCoroutine(BackToMapAdvanceNodeRoutine());
+        public void ShopLeave() => StartLocked(BackToMapAdvanceNodeRoutine());
+        public void EventComplete() => StartLocked(BackToMapAdvanceNodeRoutine());
 
         public void LootPicked()
         {
             if (run == null) return;
-
-            StartCoroutine(BackToMapAdvanceNodeRoutine());
+            StartLocked(BackToMapAdvanceNodeRoutine());
         }
 
         public void LootPickedIntoNextCombat()
         {
             if (run == null) return;
 
-            run.AdvanceNode();
-            ChooseCombat();
-            
+            // Wichtig: AdvanceNode nur, wenn die Transition wirklich startet
+            StartLocked(LootPickedIntoNextCombatRoutine());
         }
 
-        public void BossWon() => StartCoroutine(GoToGameOverRoutine());
+        public void BossWon() => StartLocked(GoToGameOverRoutine());
 
-        public void BackToMainMenu()
+        public void BackToMainMenu() => StartLocked(BackToMainMenuRoutine());
+
+        public void GoToCurrentNode()
         {
-            StartCoroutine(BackToMainMenuRoutine());
+            CacheSessionRefs();
+            if (run == null) return;
+
+            // Optional: Wenn Transition läuft, ignorieren
+            if (_isTransitioning) return;
+
+            switch (run.CurrentNodeType)
+            {
+                case MapNodeType.Combat:
+                case MapNodeType.EliteCombat:
+                case MapNodeType.Boss:
+                    StartLocked(GoToEncounterRoutine(SceneDatabase.Scenes.Combat));
+                    break;
+
+                case MapNodeType.Shop:
+                    StartLocked(GoToShopViewRoutine(SceneDatabase.Scenes.Shop));
+                    break;
+
+                case MapNodeType.Event:
+                    StartLocked(GoToSessionViewRoutine(SceneDatabase.Scenes.Event));
+                    break;
+            }
+        }
+
+        // ---------- Lock-Helper ----------
+
+        private void StartLocked(IEnumerator routine)
+        {
+            if (_isTransitioning) return;
+
+            _isTransitioning = true;
+
+            StartCoroutine(LockedRoutine(routine));
+        }
+
+        private IEnumerator LockedRoutine(IEnumerator routine)
+        {
+            try
+            {
+                yield return routine;
+            }
+            finally
+            {
+                _isTransitioning = false;
+            }
         }
 
         // ---------- Routines ----------
@@ -87,9 +124,15 @@ namespace Game.Scenes.Core
                 .Perform();
 
             CacheSessionRefs();
+
+            var session = CoreManager.Instance.Session;
+            var heroData = session?.Hero?.Data;
+
+        
+            int startingGold = heroData != null ? heroData.BaseStartingGold : 0;
+
             run.StartNewRun(startingGold);
         }
-
 
         private IEnumerator GoToEncounterRoutine(string encounterScene)
         {
@@ -97,7 +140,7 @@ namespace Game.Scenes.Core
             if (run == null) yield break;
 
             // Wenn wir auf Boss-Node sind, zwingen wir Boss-Scene (Systems)
-            var systemsScene =  encounterScene;
+            var systemsScene = encounterScene;
 
             // TODO: hier später sauber über Node/Seed auswählen
             var levelScene = GetArenaSceneForCurrentNode(run);
@@ -110,7 +153,6 @@ namespace Game.Scenes.Core
                 .Load(SceneDatabase.Slots.EncounterLevel, levelScene)
                 .WithOverlay()
                 .Perform();
-
         }
 
         private IEnumerator GoToShopViewRoutine(string encounterScene)
@@ -131,13 +173,12 @@ namespace Game.Scenes.Core
                 .Load(SceneDatabase.Slots.EncounterLevel, levelScene)
                 .WithOverlay()
                 .Perform();
-
         }
 
         private IEnumerator GoToLootRoutine()
         {
             CacheSessionRefs();
-            if (run == null ) yield break;
+            if (run == null) yield break;
 
             yield return SceneController.Current
                 .NewTransition()
@@ -154,7 +195,6 @@ namespace Game.Scenes.Core
 
             run.AdvanceNode();
 
-
             yield return SceneController.Current
                 .NewTransition()
                 .Unload(SceneDatabase.Slots.EncounterSystems)
@@ -166,7 +206,6 @@ namespace Game.Scenes.Core
 
         private IEnumerator GoToGameOverRoutine()
         {
-
             yield return SceneController.Current
                 .NewTransition()
                 .Unload(SceneDatabase.Slots.EncounterSystems)
@@ -177,7 +216,6 @@ namespace Game.Scenes.Core
 
         private IEnumerator GoToSessionViewRoutine(string scene)
         {
-
             yield return SceneController.Current
                 .NewTransition()
                 .Unload(SceneDatabase.Slots.EncounterSystems)
@@ -203,11 +241,22 @@ namespace Game.Scenes.Core
             run = null;
         }
 
+        private IEnumerator LootPickedIntoNextCombatRoutine()
+        {
+            CacheSessionRefs();
+            if (run == null) yield break;
+
+            run.AdvanceNode();
+
+            yield return GoToEncounterRoutine(SceneDatabase.Scenes.Combat);
+        }
+
         private void CacheSessionRefs()
         {
-            if (run != null) return;
+            var session = CoreManager.Instance?.Session;
+            if (session == null) return;
 
-            run = FindFirstObjectByType<RunState>();
+            run = session.Run;
         }
 
         private string GetArenaSceneForCurrentNode(RunState run)
@@ -227,30 +276,5 @@ namespace Game.Scenes.Core
             var rng = run.CreateNodeRng(salt: 4242);
             return scenes[rng.Next(0, scenes.Length)];
         }
-
-        public void GoToCurrentNode()
-        {
-            CacheSessionRefs();
-            if (run == null) return;
-
-            switch (run.CurrentNodeType)
-            {
-                case MapNodeType.Combat:
-                case MapNodeType.EliteCombat:
-                case MapNodeType.Boss:
-                    StartCoroutine(GoToEncounterRoutine(SceneDatabase.Scenes.Combat));
-                    break;
-
-                case MapNodeType.Shop:
-                    StartCoroutine(GoToShopViewRoutine(SceneDatabase.Scenes.Shop));
-                    break;
-
-                case MapNodeType.Event:
-                    StartCoroutine(GoToSessionViewRoutine(SceneDatabase.Scenes.Event));
-                    break;
-            }
-        }
-
-
     }
 }

@@ -17,6 +17,7 @@ MonoBehaviour:
   <Health>k__BackingField: 99
   <HandSize>k__BackingField: 6
   <Mana>k__BackingField: 4
+  <BaseStartingGold>k__BackingField: 999
   <Deck>k__BackingField:
   - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
   - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
