@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: fire_strom
   DisplayName: Firestrom
-  <Description>k__BackingField: Deal 20 Damage to all enemies and apply Burn 5
+  <Description>k__BackingField: Deal 20 Damage to all enemies apply Burn 5
   <Mana>k__BackingField: 3
   <Image>k__BackingField: {fileID: -527411974, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 4
@@ -23,6 +23,7 @@ MonoBehaviour:
   <ManualTargetEffects>k__BackingField: []
   <OtherEffects>k__BackingField:
   - rid: 792979202384330763
+  - rid: 792979244260261986
   <PlayConditions>k__BackingField: []
   references:
     version: 2
@@ -42,3 +43,17 @@ MonoBehaviour:
       data:
         statusEffectType: 1
         stackCount: 5
+    - rid: 792979244260261986
+      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetMode>k__BackingField:
+          rid: 792979244260261987
+        <Effect>k__BackingField:
+          rid: 792979244260261988
+    - rid: 792979244260261987
+      type: {class: AllEnemiesTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 792979244260261988
+      type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        damageAmount: 20

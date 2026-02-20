@@ -8017,7 +8017,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_360
+      name: Icons_FishCoin
       rect:
         serializedVersion: 2
         x: 512
@@ -8083,7 +8083,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_363
+      name: Icons_FishCoinReal
       rect:
         serializedVersion: 2
         x: 704
@@ -49781,10 +49781,8 @@ TextureImporter:
       Icons_358: 1111688853
       Icons_359: -1440938215
       Icons_36: 1728455312
-      Icons_360: 1214900581
       Icons_361: 687632839
       Icons_362: 1709498
-      Icons_363: 334553358
       Icons_364: 1179295435
       Icons_365: 265753235
       Icons_366: -1355712699
@@ -50478,6 +50476,8 @@ TextureImporter:
       Icons_Firestorm: -527411974
       Icons_Firestrike: 2047651849
       Icons_FirstStrike: 881141213
+      Icons_FishCoin: 1214900581
+      Icons_FishCoinReal: 334553358
       Icons_Flames: 1418751897
       Icons_Galaxy Strike: -1508950131
       Icons_Galaxy slash: 648513060
