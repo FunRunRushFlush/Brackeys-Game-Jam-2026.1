@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HeroData
   <HeroID>k__BackingField: 0
   <Image>k__BackingField: {fileID: 1432368535, guid: 8c975f1074b7ddf4bae5859e4675b11e, type: 3}
-  <Health>k__BackingField: 79
+  <Health>k__BackingField: 59
   <HandSize>k__BackingField: 5
   <Mana>k__BackingField: 3
   <Deck>k__BackingField:

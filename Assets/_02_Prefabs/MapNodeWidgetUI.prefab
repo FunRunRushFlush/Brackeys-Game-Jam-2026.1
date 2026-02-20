@@ -130,11 +130,11 @@ MonoBehaviour:
   background: {fileID: 4188551215506550060}
   icon: {fileID: 2628632302829779409}
   label: {fileID: 7889721435284267085}
-  combatIcon: {fileID: -415160368, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  combatIcon: {fileID: 288337822, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   eliteIcon: {fileID: -1369460104, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
-  shopIcon: {fileID: -252327746, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  shopIcon: {fileID: -540975462, guid: 6dcba0bb69c5bfd43a62a6d9cb1f5c04, type: 3}
   eventIcon: {fileID: -996645976, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
-  bossIcon: {fileID: -1466583810, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  bossIcon: {fileID: 206191349, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   currentColor: {r: 0.9622642, g: 0, b: 0, a: 1}
   pastColor: {r: 0.53900003, g: 0.53900003, b: 0.53900003, a: 0.6}
   futureColor: {r: 1, g: 1, b: 1, a: 0.59607846}

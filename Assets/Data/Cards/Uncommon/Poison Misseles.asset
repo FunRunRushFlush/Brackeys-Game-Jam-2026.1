@@ -20,39 +20,19 @@ MonoBehaviour:
   Rarity: 3
   PreferredBiomes: 00000000
   <Tags>k__BackingField: 00000000
-  <ManualTargetEffects>k__BackingField: []
-  <OtherEffects>k__BackingField:
-  - rid: 792979208258191505
-  - rid: 792979208258191508
+  <ManualTargetEffects>k__BackingField:
+  - rid: 792979244260261981
+  - rid: 792979244260261982
+  <OtherEffects>k__BackingField: []
   <PlayConditions>k__BackingField: []
   references:
     version: 2
     RefIds:
-    - rid: 792979208258191505
-      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
-      data:
-        <TargetMode>k__BackingField:
-          rid: 792979208258191506
-        <Effect>k__BackingField:
-          rid: 792979208258191507
-    - rid: 792979208258191506
-      type: {class: AllEnemiesTM, ns: , asm: Assembly-CSharp}
-      data: 
-    - rid: 792979208258191507
+    - rid: 792979244260261981
       type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
       data:
         damageAmount: 15
-    - rid: 792979208258191508
-      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
-      data:
-        <TargetMode>k__BackingField:
-          rid: 792979208258191509
-        <Effect>k__BackingField:
-          rid: 792979208258191510
-    - rid: 792979208258191509
-      type: {class: AllEnemiesTM, ns: , asm: Assembly-CSharp}
-      data: 
-    - rid: 792979208258191510
+    - rid: 792979244260261982
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
         statusEffectType: 2

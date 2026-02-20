@@ -16,8 +16,8 @@ MonoBehaviour:
   DisplayName: Double Armor
   <Description>k__BackingField: Gain 10 Armor. Requiers min. 5 Armor
   <Mana>k__BackingField: 1
-  <Image>k__BackingField: {fileID: 21300000, guid: 5659290580983f947b95ffc10ded5585, type: 3}
-  Rarity: 3
+  <Image>k__BackingField: {fileID: 275167302, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  Rarity: 0
   PreferredBiomes: 
   <Tags>k__BackingField: 01000000
   <ManualTargetEffects>k__BackingField: []

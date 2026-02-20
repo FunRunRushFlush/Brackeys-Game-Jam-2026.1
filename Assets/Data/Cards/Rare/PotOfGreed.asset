@@ -16,7 +16,7 @@ MonoBehaviour:
   DisplayName: Pot of Greed
   <Description>k__BackingField: Draw two Cards
   <Mana>k__BackingField: 0
-  <Image>k__BackingField: {fileID: 21300000, guid: f06433f755c6ca3469dc0961394325d5, type: 3}
+  <Image>k__BackingField: {fileID: 1137041066, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 4
   PreferredBiomes: 
   <Tags>k__BackingField: 01000000

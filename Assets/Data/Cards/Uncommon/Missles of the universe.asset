@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: misseles-of-the-universe
   DisplayName: Misseles of the universe
-  <Description>k__BackingField: Deal 2 enemies 20 Damage
+  <Description>k__BackingField: 'Deal  20 Damage random enemies fets 20 damage '
   <Mana>k__BackingField: 2
   <Image>k__BackingField: {fileID: 1654361971, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 3
@@ -22,8 +22,8 @@ MonoBehaviour:
   <Tags>k__BackingField: 
   <ManualTargetEffects>k__BackingField:
   - rid: 792979208258191501
-  - rid: 792979208258191502
-  <OtherEffects>k__BackingField: []
+  <OtherEffects>k__BackingField:
+  - rid: 792979244260261969
   <PlayConditions>k__BackingField: []
   references:
     version: 2
@@ -32,7 +32,17 @@ MonoBehaviour:
       type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
       data:
         damageAmount: 20
-    - rid: 792979208258191502
+    - rid: 792979244260261969
+      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetMode>k__BackingField:
+          rid: 792979244260261970
+        <Effect>k__BackingField:
+          rid: 792979244260261971
+    - rid: 792979244260261970
+      type: {class: RandomEnemyTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 792979244260261971
       type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
       data:
         damageAmount: 20
