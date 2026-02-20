@@ -14,13 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: 'poissen-dagger '
   DisplayName: 'Poissen Dagger '
-  <Description>k__BackingField: deal 10 Poisens
+  <Description>k__BackingField: Deal 1 Damage and apply 10 Poison
   <Mana>k__BackingField: 1
   <Image>k__BackingField: {fileID: -954147345, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 4
   PreferredBiomes: 00000000
   <Tags>k__BackingField: 
   <ManualTargetEffects>k__BackingField:
+  - rid: 1986237431894245534
   - rid: 792979208258191519
   <OtherEffects>k__BackingField: []
   <PlayConditions>k__BackingField: []
@@ -32,3 +33,7 @@ MonoBehaviour:
       data:
         statusEffectType: 2
         stackCount: 10
+    - rid: 1986237431894245534
+      type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        damageAmount: 1

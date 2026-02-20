@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UfoBossAnimation-Sheet_0
+      name: UfoBoss_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 23
-        width: 33
-        height: 16
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 800bfbcad78a672428be95cf47f43d24
-      internalID: -1435717885
+      spriteID: 2ac0387f158e4744cb5b3f213f80b7da
+      internalID: -2120924860
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UfoBossAnimation-Sheet_1
+      name: UfoBoss_1
       rect:
         serializedVersion: 2
-        x: 73
-        y: 23
-        width: 33
-        height: 16
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d082f28e278f7d345916fade7fb0a102
-      internalID: 1543314933
+      spriteID: f7e31444d1f3eaa4ba787cf78584b9d8
+      internalID: 679898689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UfoBossAnimation-Sheet_2
+      name: UfoBoss_2
       rect:
         serializedVersion: 2
-        x: 137
-        y: 23
-        width: 33
-        height: 16
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77c8cbb19b4ee4e47a18de0cd6ad18e8
-      internalID: -2132767836
+      spriteID: f168d8274ef3a56438f98f41ddb8626d
+      internalID: -517930443
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UfoBossAnimation-Sheet_3
+      name: UfoBoss_3
       rect:
         serializedVersion: 2
-        x: 201
-        y: 19
-        width: 33
-        height: 20
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64def535554a4464da595c3257ae89b2
-      internalID: -863435521
+      spriteID: 29d855b255067804fa9b4032ddf4eade
+      internalID: 1696092081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UfoBossAnimation-Sheet_4
+      name: UfoBoss_4
       rect:
         serializedVersion: 2
-        x: 265
-        y: 19
-        width: 33
-        height: 20
+        x: 256
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db4be790421b791498ef88ba4ba70c95
-      internalID: -58328476
+      spriteID: d91dfa82325786940a95ae31cf31da74
+      internalID: -1490178698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UfoBossAnimation-Sheet_5
+      name: UfoBoss_5
       rect:
         serializedVersion: 2
-        x: 329
-        y: 19
-        width: 33
-        height: 20
+        x: 320
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,20 +222,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7c44fdaee8c25541a8aa732d33743e8
-      internalID: 852480991
+      spriteID: 974146e75e0f7b14fb1b406da4419163
+      internalID: -692886983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UfoBossAnimation-Sheet_6
+      name: UfoBoss_6
       rect:
         serializedVersion: 2
-        x: 393
-        y: 15
-        width: 33
-        height: 24
+        x: 384
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cf44ea8c8ab7f64493c15023f646f18
-      internalID: 189829710
+      spriteID: 83b83b69755d84f4ba8d881c41a5c0a6
+      internalID: 2020141148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UfoBossAnimation-Sheet_7
+      name: UfoBoss_7
       rect:
         serializedVersion: 2
-        x: 457
-        y: 15
-        width: 33
-        height: 24
+        x: 448
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,20 +266,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 357e696064ec7ae4284fe06c586f2e69
-      internalID: -577651402
+      spriteID: 4b4f5dbebcaeb9a4786102362acdd1ff
+      internalID: -888217482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UfoBossAnimation-Sheet_8
+      name: UfoBoss_8
       rect:
         serializedVersion: 2
-        x: 521
-        y: 15
-        width: 33
-        height: 24
+        x: 512
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -288,20 +288,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5565cbae4c6b4c84bae61437bc3b1ce1
-      internalID: 438323513
+      spriteID: ea1413250e5daef4593bdbbf2aeeb3a6
+      internalID: -1465365235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UfoBossAnimation-Sheet_9
+      name: UfoBoss_9
       rect:
         serializedVersion: 2
-        x: 585
-        y: 15
-        width: 33
-        height: 24
+        x: 576
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,20 +310,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18db90cba85d0fb4a83bbf1afe7ff776
-      internalID: -1373395470
+      spriteID: 49be1b88ab875154eac323c2e0feab2b
+      internalID: 2055413222
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UfoBossAnimation-Sheet_10
+      name: UfoBoss_10
       rect:
         serializedVersion: 2
-        x: 649
-        y: 15
-        width: 33
-        height: 24
+        x: 640
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -332,20 +332,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fada7324aea9b143992b3e9d3f4f2d4
-      internalID: 220865127
+      spriteID: 23eb17a55d28f294bbb8f2d00f2bbd5d
+      internalID: 859386936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UfoBossAnimation-Sheet_11
+      name: UfoBoss_11
       rect:
         serializedVersion: 2
-        x: 713
-        y: 11
-        width: 33
-        height: 28
+        x: 704
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -354,20 +354,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84eab2463b1860f49af27e91d5a4407d
-      internalID: 1198656163
+      spriteID: 9294d662a40c0bf419478c0c7fec0243
+      internalID: 408458669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UfoBossAnimation-Sheet_12
+      name: UfoBoss_12
       rect:
         serializedVersion: 2
-        x: 777
-        y: 11
-        width: 33
-        height: 28
+        x: 768
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -376,20 +376,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a684af58399e03489a4e9a39b7dac6a
-      internalID: 808932761
+      spriteID: 1aae840e8951d7d449ce30c4c38d84f8
+      internalID: 1683885021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UfoBossAnimation-Sheet_13
+      name: UfoBoss_13
       rect:
         serializedVersion: 2
-        x: 841
-        y: 11
-        width: 33
-        height: 28
+        x: 832
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -398,20 +398,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d81c1e524b89dd04db3d2b79ca7e6292
-      internalID: 210330328
+      spriteID: 1a23a59b10122c5418d6d237bb970b2f
+      internalID: 1932429858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UfoBossAnimation-Sheet_14
+      name: UfoBoss_14
       rect:
         serializedVersion: 2
-        x: 905
-        y: 11
-        width: 33
-        height: 28
+        x: 896
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -420,20 +420,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c4b28cfb3b4c2f4abb5fcb7f347548e
-      internalID: 395452118
+      spriteID: c818f4e58f3bea642942c25034f08e9b
+      internalID: -322164723
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UfoBossAnimation-Sheet_15
+      name: UfoBoss_15
       rect:
         serializedVersion: 2
-        x: 969
-        y: 11
-        width: 33
-        height: 28
+        x: 960
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -442,8 +442,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38496910802428f4c84903a02f0e4deb
-      internalID: 710487505
+      spriteID: 3bffe8f418e4bf6489f5a899ea176a74
+      internalID: 623936352
       vertices: []
       indices: 
       edges: []
@@ -462,24 +462,24 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      UfoBossAnimation-Sheet_0: -1435717885
-      UfoBossAnimation-Sheet_1: 1543314933
-      UfoBossAnimation-Sheet_10: 220865127
-      UfoBossAnimation-Sheet_11: 1198656163
-      UfoBossAnimation-Sheet_12: 808932761
-      UfoBossAnimation-Sheet_13: 210330328
-      UfoBossAnimation-Sheet_14: 395452118
-      UfoBossAnimation-Sheet_15: 710487505
-      UfoBossAnimation-Sheet_2: -2132767836
-      UfoBossAnimation-Sheet_3: -863435521
-      UfoBossAnimation-Sheet_4: -58328476
-      UfoBossAnimation-Sheet_5: 852480991
-      UfoBossAnimation-Sheet_6: 189829710
-      UfoBossAnimation-Sheet_7: -577651402
-      UfoBossAnimation-Sheet_8: 438323513
-      UfoBossAnimation-Sheet_9: -1373395470
+      UfoBoss_0: -2120924860
+      UfoBoss_1: 679898689
+      UfoBoss_10: 859386936
+      UfoBoss_11: 408458669
+      UfoBoss_12: 1683885021
+      UfoBoss_13: 1932429858
+      UfoBoss_14: -322164723
+      UfoBoss_15: 623936352
+      UfoBoss_2: -517930443
+      UfoBoss_3: 1696092081
+      UfoBoss_4: -1490178698
+      UfoBoss_5: -692886983
+      UfoBoss_6: 2020141148
+      UfoBoss_7: -888217482
+      UfoBoss_8: -1465365235
+      UfoBoss_9: 2055413222
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

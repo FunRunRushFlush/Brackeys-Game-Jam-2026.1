@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: flames
   DisplayName: Flames
-  <Description>k__BackingField: '12 Damge apply 2 burn '
+  <Description>k__BackingField: 'Deal 12 Damge and apply 2 Burn '
   <Mana>k__BackingField: 2
   <Image>k__BackingField: {fileID: 1418751897, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 2
