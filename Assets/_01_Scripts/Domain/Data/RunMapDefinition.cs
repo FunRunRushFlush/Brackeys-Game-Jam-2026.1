@@ -16,9 +16,9 @@ public class MapNodeDefinition
 {
     public MapNodeType type;
 
-    // Optional: Overrides (für Jam super praktisch)
-    public EncounterDefinition combatOverride; // für Combat/Elite (wenn gesetzt)
-    public EncounterDefinition bossOverride;   // für Boss (wenn gesetzt)
+ 
+    public EncounterDefinition combatOverride;
+    public EncounterDefinition bossOverride;
 }
 
 [Serializable]
