@@ -24,6 +24,7 @@ MonoBehaviour:
   <OtherEffects>k__BackingField:
   - rid: 792979202384330893
   - rid: 792979202384330896
+  - rid: 792979244260261977
   <PlayConditions>k__BackingField: []
   references:
     version: 2
@@ -57,3 +58,17 @@ MonoBehaviour:
       data:
         statusEffectType: 4
         stackCount: 1
+    - rid: 792979244260261977
+      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetMode>k__BackingField:
+          rid: 792979244260261978
+        <Effect>k__BackingField:
+          rid: 792979244260261980
+    - rid: 792979244260261978
+      type: {class: HeroTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 792979244260261980
+      type: {class: DrawCardsEffect, ns: , asm: Assembly-CSharp}
+      data:
+        drawAmount: 1

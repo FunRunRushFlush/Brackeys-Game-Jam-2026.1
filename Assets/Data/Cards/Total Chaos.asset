@@ -17,9 +17,10 @@ MonoBehaviour:
   <Description>k__BackingField: All gain 10 Weakness
   <Mana>k__BackingField: 1
   <Image>k__BackingField: {fileID: 937526823, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  Rarity: 2
+  PreferredBiomes: 
   <Tags>k__BackingField: 01000000
-  <ManualTargetEffect>k__BackingField:
-    rid: -2
+  <ManualTargetEffects>k__BackingField: []
   <OtherEffects>k__BackingField:
   - rid: 1986237386231906409
   - rid: 1986237386231906429
@@ -27,8 +28,6 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
     - rid: 1986237386231906409
       type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
       data:
@@ -42,7 +41,7 @@ MonoBehaviour:
     - rid: 1986237386231906411
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
-        statusEffectType: 3
+        statusEffectType: 4
         stackCount: 10
     - rid: 1986237386231906429
       type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
@@ -57,5 +56,5 @@ MonoBehaviour:
     - rid: 1986237386231906431
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
-        statusEffectType: 3
+        statusEffectType: 4
         stackCount: 10

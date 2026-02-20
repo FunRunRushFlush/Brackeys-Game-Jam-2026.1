@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: double_strike
   DisplayName: Double_strike
-  <Description>k__BackingField: Deal 5 Damage
+  <Description>k__BackingField: Deal 5 Damage deal 5 Damage to random enemy
   <Mana>k__BackingField: 1
   <Image>k__BackingField: {fileID: -1497143790, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 2

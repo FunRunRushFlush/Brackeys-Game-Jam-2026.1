@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf2c8992e7f55e74e93e95076ac233d2, type: 3}
   m_Name: Caves Biom
   m_EditorClassIdentifier: Assembly-CSharp::BiomeDefinition
-  Biome: 3
+  Biome: 4
   nodeEncounters:
   - {fileID: 11400000, guid: 41a47b1b678616748bbbf4532e88356a, type: 2}
+  eliteEncounters: []
   bossEncounter: {fileID: 11400000, guid: cb38ea23a6266064b8384364fdae3bd9, type: 2}
+  eliteArenaScenes: []
+  shopConfig: {fileID: 0}
+  eventTable: {fileID: 0}
   normalArenaScenes:
   - Caves
   bossArenaScene: Caves

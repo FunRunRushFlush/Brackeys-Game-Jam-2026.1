@@ -40,5 +40,5 @@ MonoBehaviour:
     - rid: 1986237386231906411
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
-        statusEffectType: 2
+        statusEffectType: 3
         stackCount: 3

@@ -559,7 +559,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_21
+      name: Icons_Jungle2
       rect:
         serializedVersion: 2
         x: 320
@@ -603,7 +603,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_23
+      name: Icons_Caves
       rect:
         serializedVersion: 2
         x: 448
@@ -3595,7 +3595,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_159
+      name: Icons_Shop
       rect:
         serializedVersion: 2
         x: 960
@@ -5531,7 +5531,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_247
+      name: Icons_Jungle
       rect:
         serializedVersion: 2
         x: 448
@@ -14881,7 +14881,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_672
+      name: Icons_boss
       rect:
         serializedVersion: 2
         x: 0
@@ -16113,7 +16113,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_728
+      name: Icons_combat
       rect:
         serializedVersion: 2
         x: 512
@@ -22009,7 +22009,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_Burn01
+      name: Icons_feuerwelt
       rect:
         serializedVersion: 2
         x: 256
@@ -48974,7 +48974,6 @@ TextureImporter:
       Icons_1586: 1644569836
       Icons_1587: -275996907
       Icons_1589: 1979811200
-      Icons_159: -1723487074
       Icons_1590: 694425249
       Icons_1591: 718912681
       Icons_1592: -1874380
@@ -49533,7 +49532,6 @@ TextureImporter:
       Icons_2097: -1670720564
       Icons_2098: -1427349740
       Icons_2099: -1308250027
-      Icons_21: 1770216600
       Icons_210: 1492578757
       Icons_2100: -1787398361
       Icons_2101: 447351013
@@ -49641,7 +49639,6 @@ TextureImporter:
       Icons_227: 1881667546
       Icons_228: -1446577684
       Icons_229: -629117181
-      Icons_23: 1207843866
       Icons_230: 1108496970
       Icons_231: 698415293
       Icons_232: 702942076
@@ -49660,7 +49657,6 @@ TextureImporter:
       Icons_244: 503971979
       Icons_245: -2101085940
       Icons_246: 704150795
-      Icons_247: 1146648117
       Icons_248: 1943503417
       Icons_249: 1776048662
       Icons_25: 1209612125
@@ -50128,7 +50124,6 @@ TextureImporter:
       Icons_67: -2065808113
       Icons_670: -800563037
       Icons_671: -384270345
-      Icons_672: 206191349
       Icons_673: -1992378711
       Icons_674: 1296774685
       Icons_675: 611434957
@@ -50188,7 +50183,6 @@ TextureImporter:
       Icons_725: 443630390
       Icons_726: -1576235892
       Icons_727: 881141213
-      Icons_728: 288337822
       Icons_729: 923592140
       Icons_73: -1430622403
       Icons_730: 2029304282
@@ -50476,9 +50470,9 @@ TextureImporter:
       Icons_BlackholeGravitation: -1384840098
       Icons_Book of Wisdom: -1678947853
       Icons_BowShot: 176558359
-      Icons_Burn01: -1211305605
       Icons_Burn02: -1289553049
       Icons_BurnAttack01: 1297590212
+      Icons_Caves: 1207843866
       Icons_Claws: -442770290
       Icons_Dobbelstrike: -1497143790
       Icons_Fire explosion: -1091159536
@@ -50488,12 +50482,15 @@ TextureImporter:
       Icons_Flames: 1418751897
       Icons_Galaxy Strike: -1508950131
       Icons_Galaxy slash: 648513060
+      Icons_Jungle: 1146648117
+      Icons_Jungle2: 1770216600
       Icons_Magic Missles: 934788077
       Icons_Neptun: -1178886757
       Icons_Schild: 1139184858
       Icons_ShieldGrey01: 1219099209
       Icons_ShieldGrey02: 1201276158
       Icons_Shining in the stars: 1231357146
+      Icons_Shop: -1723487074
       Icons_Spark: 1493836590
       Icons_SparkingStrike: 539447770
       Icons_Star: -1386699948
@@ -50507,8 +50504,11 @@ TextureImporter:
       Icons_armor shild: 273597744
       Icons_armorup: 1635029525
       Icons_arrow rain: 898509285
+      Icons_boss: 206191349
       Icons_coat: -1051010044
+      Icons_combat: 288337822
       Icons_deal with god: -1908516399
+      Icons_feuerwelt: -1211305605
       Icons_fire: -1161984547
       Icons_fire power: -892033124
       Icons_fireslash: 961534101

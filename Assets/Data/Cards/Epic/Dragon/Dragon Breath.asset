@@ -21,7 +21,8 @@ MonoBehaviour:
   Rarity: 5
   PreferredBiomes: 01000000
   <Tags>k__BackingField: 02000000
-  <ManualTargetEffects>k__BackingField: []
+  <ManualTargetEffects>k__BackingField:
+  - rid: 792979244260261976
   <OtherEffects>k__BackingField:
   - rid: 792979202384330865
   - rid: 792979202384330868
@@ -58,3 +59,7 @@ MonoBehaviour:
       type: {class: DrawCardsEffect, ns: , asm: Assembly-CSharp}
       data:
         drawAmount: 1
+    - rid: 792979244260261976
+      type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        damageAmount: 20

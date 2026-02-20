@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: blackhole
   DisplayName: Blackhole
-  <Description>k__BackingField: Deal 3Damage apply  Burn 4
+  <Description>k__BackingField: Deal 3 Damage apply  Burn 4
   <Mana>k__BackingField: 0
   <Image>k__BackingField: {fileID: 652455558, guid: 174ad815ed8dd51448fbf167b0e36e85, type: 3}
   Rarity: 4
