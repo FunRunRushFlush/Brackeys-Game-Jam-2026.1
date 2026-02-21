@@ -9,7 +9,6 @@ public abstract class EnemyMoveSO : ScriptableObject
 
     public Sprite IntentIcon => intentIcon;
 
-    // Default: Icon only, keine Zahl
     public virtual IntentData GetIntent(EnemyView enemy)
         => IntentData.IconOnly(intentIcon);
 

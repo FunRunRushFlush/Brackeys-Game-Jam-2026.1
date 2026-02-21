@@ -25,6 +25,7 @@ public class EnemySystem : Singleton<EnemySystem>
         {
             foreach (var enemy in enemyBoardView.EnemyViews)
             {
+                enemy.AIState?.AdvanceTurn();
                 enemy.ChooseNextIntent();
             }
         }, ReactionTiming.POST);

@@ -12,17 +12,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
   m_Name: Risky Strike
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  Id: 
-  DisplayName: 
-  <Description>k__BackingField: 
-  <Mana>k__BackingField: 0
-  <Image>k__BackingField: {fileID: 0}
-  Rarity: 2
+  Id: risky_strike
+  DisplayName: Risky Strike
+  <Description>k__BackingField: Deal 25 Damage. Discard 1 random Card
+  <Mana>k__BackingField: 2
+  <Image>k__BackingField: {fileID: -1513201686, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  Rarity: 3
   PreferredBiomes: 
   <Tags>k__BackingField: 
-  <ManualTargetEffects>k__BackingField: []
-  <OtherEffects>k__BackingField: []
+  <ManualTargetEffects>k__BackingField:
+  - rid: 1986237453180338275
+  <OtherEffects>k__BackingField:
+  - rid: 1986237453180338276
   <PlayConditions>k__BackingField: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 1986237453180338275
+      type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        damageAmount: 25
+    - rid: 1986237453180338276
+      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetMode>k__BackingField:
+          rid: 1986237453180338277
+        <Effect>k__BackingField:
+          rid: 1986237453180338278
+    - rid: 1986237453180338277
+      type: {class: NoTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 1986237453180338278
+      type: {class: DiscardRandomCardsEffect, ns: , asm: Assembly-CSharp}
+      data:
+        amount: 1
