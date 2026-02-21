@@ -37,6 +37,7 @@ public class EnemyView : CombatantView
     public void Setup(EnemyData enemyData)
     {
         AttackValue = enemyData.AttackValue;
+        MultiAttackValue = enemyData.MultiAttackValue;
         BlockValue = enemyData.BlockValue;
         BurnValue = enemyData.BurnValue;
         StrengthValue = enemyData.StrengthValue;

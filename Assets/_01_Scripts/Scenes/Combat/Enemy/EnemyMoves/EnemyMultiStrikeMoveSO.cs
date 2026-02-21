@@ -8,19 +8,25 @@ public class EnemyMultiStrikeMoveSO : EnemyMoveSO
 
     public override IntentData GetIntent(EnemyView enemy)
     {
-        int perHit = enemy.AttackValue;
+        int perHit = Mathf.Max(0, enemy.MultiAttackValue);
         int total = perHit * hitCount;
 
-        string text = $"{hitCount}×{perHit}";
-
-        return IntentData.IconWithValueText(IntentIcon, total, text);
+        return new IntentData
+        {
+            Icon = IntentIcon,
+            ShowValue = true,
+            Value = total,
+            ValueText = $"{hitCount}×{perHit}"
+        };
     }
 
     public override List<GameAction> BuildActions(EnemyView enemy)
     {
+        int perHit = Mathf.Max(0, enemy.MultiAttackValue);
+
         var actions = new List<GameAction>(hitCount);
         for (int i = 0; i < hitCount; i++)
-            actions.Add(new AttackHeroGA(enemy));
+            actions.Add(new AttackHeroGA(enemy, perHit));
 
         return actions;
     }
