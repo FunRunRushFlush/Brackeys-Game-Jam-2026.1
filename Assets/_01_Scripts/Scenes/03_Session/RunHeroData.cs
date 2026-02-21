@@ -9,6 +9,7 @@ public class RunHeroData : MonoBehaviour
     [Header("Hero Data")]
     [SerializeField] private HeroData hero01Data;
     [SerializeField] private HeroData hero02Data;
+    [SerializeField] private HeroData hero03Data;
 
 
     private List<CardData> deck = new();

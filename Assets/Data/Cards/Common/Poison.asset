@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: poison
   DisplayName: Poison
-  <Description>k__BackingField: Apply 3 Poison to all enemies draw a card
+  <Description>k__BackingField: Apply 3 Poison to all enemies. Draw a card
   <Mana>k__BackingField: 1
   <Image>k__BackingField: {fileID: -521032350, guid: 762faa91e709b9348bf7b148318d5475, type: 3}
   Rarity: 2

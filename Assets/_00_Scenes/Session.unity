@@ -2179,7 +2179,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RunHeroData
   hero01Data: {fileID: 11400000, guid: db6b9e8cdafb6354bb072b20d4796c13, type: 2}
-  hero02Data: {fileID: 11400000, guid: 211f8b98f558fb146aa4d8c85175f70e, type: 2}
+  hero02Data: {fileID: 11400000, guid: 1fdf54a360bcf0a438c91b8c2c6b5b47, type: 2}
+  hero03Data: {fileID: 11400000, guid: 211f8b98f558fb146aa4d8c85175f70e, type: 2}
 --- !u!1 &1394764832
 GameObject:
   m_ObjectHideFlags: 0

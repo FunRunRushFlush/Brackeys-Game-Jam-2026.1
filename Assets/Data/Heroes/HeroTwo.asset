@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908467728703f98498def92f5a79d8cb, type: 3}
   m_Name: HeroTwo
   m_EditorClassIdentifier: Assembly-CSharp::HeroData
-  <HeroID>k__BackingField: 0
+  <HeroID>k__BackingField: 1
   <Image>k__BackingField: {fileID: 1432368535, guid: 8c975f1074b7ddf4bae5859e4675b11e, type: 3}
-  <Health>k__BackingField: 99
+  <Health>k__BackingField: 98
   <HandSize>k__BackingField: 6
   <Mana>k__BackingField: 4
   <BaseStartingGold>k__BackingField: 999
   <Deck>k__BackingField:
-  - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
+  - {fileID: 11400000, guid: fd7448731a574fd459588df4b0ffb7c3, type: 2}
   - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
   - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
   - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
