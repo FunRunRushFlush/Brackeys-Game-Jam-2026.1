@@ -10,43 +10,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
-  m_Name: Axt swing
+  m_Name: Crossbow
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  Id: axt-swing
-  DisplayName: 'Axt swing '
-  <Description>k__BackingField: Deal 30 Damage you have to Discard your hand. can
-    only be played as the first attack this turn.
+  Id: crossbow
+  DisplayName: Crossbow
+  <Description>k__BackingField: Deal 20 Damage. Discard 3 random Cards
   <Mana>k__BackingField: 1
-  <Image>k__BackingField: {fileID: 216545364, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  <Image>k__BackingField: {fileID: -1976447618, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 0
   PreferredBiomes: 
   <Tags>k__BackingField: 
   <ManualTargetEffects>k__BackingField:
-  - rid: 792979244260262036
+  - rid: 792979244260262032
   <OtherEffects>k__BackingField:
-  - rid: 792979244260262037
-  <PlayConditions>k__BackingField:
-  - rid: 792979244260262040
+  - rid: 792979244260262033
+  <PlayConditions>k__BackingField: []
   references:
     version: 2
     RefIds:
-    - rid: 792979244260262036
+    - rid: 792979244260262032
       type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
       data:
-        damageAmount: 30
-    - rid: 792979244260262037
+        damageAmount: 20
+    - rid: 792979244260262033
       type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
       data:
         <TargetMode>k__BackingField:
-          rid: 792979244260262038
+          rid: 792979244260262034
         <Effect>k__BackingField:
-          rid: 792979244260262039
-    - rid: 792979244260262038
+          rid: 792979244260262035
+    - rid: 792979244260262034
       type: {class: HeroTM, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 792979244260262039
-      type: {class: DiscardHandEffect, ns: , asm: Assembly-CSharp}
-      data: 
-    - rid: 792979244260262040
-      type: {class: FirstAttackThisTurnCondition, ns: , asm: Assembly-CSharp}
-      data: 
+    - rid: 792979244260262035
+      type: {class: DiscardRandomCardsEffect, ns: , asm: Assembly-CSharp}
+      data:
+        amount: 3

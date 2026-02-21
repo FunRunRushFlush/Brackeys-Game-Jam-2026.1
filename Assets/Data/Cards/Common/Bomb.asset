@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
   m_Name: Bomb
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  Id: jungle-bomb
-  DisplayName: Jungle Bomb
-  <Description>k__BackingField: 'Deal 40 Damage apply 2 Poisen  '
+  Id: bomb
+  DisplayName: Bomb
+  <Description>k__BackingField: 'Deal 40 Damage apply 2 Burn  '
   <Mana>k__BackingField: 3
-  <Image>k__BackingField: {fileID: -223131710, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
-  Rarity: 2
+  <Image>k__BackingField: {fileID: 1473982619, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  Rarity: 0
   PreferredBiomes: 
   <Tags>k__BackingField: 
   <ManualTargetEffects>k__BackingField:
@@ -35,5 +35,5 @@ MonoBehaviour:
     - rid: 792979244260262019
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
-        statusEffectType: 2
+        statusEffectType: 1
         stackCount: 2

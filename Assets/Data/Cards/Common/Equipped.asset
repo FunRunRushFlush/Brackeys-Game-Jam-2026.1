@@ -12,17 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
   m_Name: Equipped
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  Id: 
-  DisplayName: 
-  <Description>k__BackingField: 
-  <Mana>k__BackingField: 0
-  <Image>k__BackingField: {fileID: 0}
-  Rarity: 2
+  Id: 'equipped  '
+  DisplayName: 'Equipped  '
+  <Description>k__BackingField: Gain 16 Block but only if attackt this turn
+  <Mana>k__BackingField: 1
+  <Image>k__BackingField: {fileID: -996645976, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  Rarity: 0
   PreferredBiomes: 
   <Tags>k__BackingField: 
   <ManualTargetEffects>k__BackingField: []
   <OtherEffects>k__BackingField: []
-  <PlayConditions>k__BackingField: []
+  <PlayConditions>k__BackingField:
+  - rid: 792979244260262043
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 792979244260262043
+      type: {class: FirstAttackThisTurnCondition, ns: , asm: Assembly-CSharp}
+      data: 
