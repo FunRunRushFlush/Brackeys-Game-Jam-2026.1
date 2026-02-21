@@ -110,7 +110,8 @@ public class EnemySystem : Singleton<EnemySystem>
         if (!HeroSystem.Instance || !HeroSystem.Instance.HeroView)
             yield break;
 
-        DealDamageGA dealDamageGA = new(attacker.AttackValue, new() { HeroSystem.Instance.HeroView }, attackHeroGA.Caster);
+        int damage = attackHeroGA.DamageOverride ?? attacker.AttackValue;
+        DealDamageGA dealDamageGA = new(damage, new() { HeroSystem.Instance.HeroView }, attackHeroGA.Caster);
         ActionSystem.Instance.AddReaction(dealDamageGA);
     }
 

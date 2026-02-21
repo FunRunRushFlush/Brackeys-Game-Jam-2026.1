@@ -8,6 +8,8 @@ public class EnemyData : ScriptableObject
 
     [Header("Combat Values")]
     [field: SerializeField] public int AttackValue { get; private set; } = 6;
+    [field: SerializeField] public int MultiAttackValue { get; private set; } = 3;
+
     [field: SerializeField] public int BlockValue { get; private set; } = 6;
     [field: SerializeField] public int BurnValue { get; private set; } = 2;
     [field: SerializeField] public int StrengthValue { get; private set; } = 1;
