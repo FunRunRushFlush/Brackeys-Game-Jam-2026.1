@@ -19,6 +19,8 @@ public class EnemyView : CombatantView
 
     public int BlockValue { get; private set; }
     public int BurnValue { get; private set; } = 2;
+    public int PoisonValue { get; private set; } = 2;
+
     public int StrengthValue { get; private set; } = 1;
     public int WeakValue { get; private set; } = 1;
 
@@ -40,6 +42,8 @@ public class EnemyView : CombatantView
         MultiAttackValue = enemyData.MultiAttackValue;
         BlockValue = enemyData.BlockValue;
         BurnValue = enemyData.BurnValue;
+        PoisonValue = enemyData.PoisonValue;
+
         StrengthValue = enemyData.StrengthValue;
         WeakValue = enemyData.WeakValue;
 
