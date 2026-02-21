@@ -88,7 +88,9 @@ public class EnemyView : CombatantView
             if (intent.ShowValue)
             {
                 intentValueText.gameObject.SetActive(true);
-                intentValueText.text = intent.Value.ToString();
+                intentValueText.text = !string.IsNullOrEmpty(intent.ValueText)
+                    ? intent.ValueText
+                    : intent.Value.ToString();
             }
             else
             {
