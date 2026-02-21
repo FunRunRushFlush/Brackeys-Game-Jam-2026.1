@@ -18,6 +18,7 @@ MonoBehaviour:
   <MultiAttackValue>k__BackingField: 5
   <BlockValue>k__BackingField: 6
   <BurnValue>k__BackingField: 2
+  <PoisonValue>k__BackingField: 4
   <StrengthValue>k__BackingField: 1
   <WeakValue>k__BackingField: 1
   <ViewPrefab>k__BackingField: {fileID: 7879271128835504042, guid: 2a8ec5e1765d25c4cb012991d53f7c12, type: 3}
