@@ -14815,7 +14815,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_669
+      name: Icons_Holy
       rect:
         serializedVersion: 2
         x: 832
@@ -14837,7 +14837,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_670
+      name: Icons_Attac
       rect:
         serializedVersion: 2
         x: 896
@@ -16047,7 +16047,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_725
+      name: Icons_Attack_Poison
       rect:
         serializedVersion: 2
         x: 320
@@ -16223,7 +16223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_733
+      name: Icons_Attack_Burn
       rect:
         serializedVersion: 2
         x: 832
@@ -17917,7 +17917,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_810
+      name: Icons_fire_Dagger
       rect:
         serializedVersion: 2
         x: 640
@@ -50114,9 +50114,7 @@ TextureImporter:
       Icons_666: -311637734
       Icons_667: -657976617
       Icons_668: 1867401544
-      Icons_669: -165553842
       Icons_67: -2065808113
-      Icons_670: -800563037
       Icons_671: -384270345
       Icons_673: -1992378711
       Icons_674: 1296774685
@@ -50174,13 +50172,11 @@ TextureImporter:
       Icons_721: -199860320
       Icons_722: -1572332381
       Icons_723: -271416304
-      Icons_725: 443630390
       Icons_726: -1576235892
       Icons_729: 923592140
       Icons_73: -1430622403
       Icons_730: 2029304282
       Icons_732: -134423198
-      Icons_733: -1229828771
       Icons_734: 246124881
       Icons_735: -171039423
       Icons_736: 1018153948
@@ -50263,7 +50259,6 @@ TextureImporter:
       Icons_808: -642779199
       Icons_809: -1391995218
       Icons_81: 1467733676
-      Icons_810: -2032548645
       Icons_811: 1910855626
       Icons_812: -434833512
       Icons_813: 764959971
@@ -50457,8 +50452,11 @@ TextureImporter:
       Icons_998: -1378791382
       Icons_999: -469934633
       Icons_ArmorUp: 275167302
+      Icons_Attac: -800563037
       Icons_Attack: -159943946
       Icons_Attack02: 57011731
+      Icons_Attack_Burn: -1229828771
+      Icons_Attack_Poison: 443630390
       Icons_Blackhole Power: -2141487142
       Icons_BlackholeGravitation: -1384840098
       Icons_BloodCoin: -761322962
@@ -50480,6 +50478,7 @@ TextureImporter:
       Icons_Galaxy Strike: -1508950131
       Icons_Galaxy slash: 648513060
       Icons_Heart: -1568380176
+      Icons_Holy: -165553842
       Icons_Jungle: 1146648117
       Icons_Jungle2: 1770216600
       Icons_Magic Missles: 934788077
@@ -50511,6 +50510,7 @@ TextureImporter:
       Icons_feuerwelt: -1211305605
       Icons_fire: -1161984547
       Icons_fire power: -892033124
+      Icons_fire_Dagger: -2032548645
       Icons_fireslash: 961534101
       Icons_galaxy shot: -2135486157
       Icons_helmet: -1114876990

@@ -15,6 +15,8 @@ public class EnemyView : CombatantView
     public ICombatantAnimator Anim { get; private set; }
 
     public int AttackValue { get; set; }
+    public int MultiAttackValue { get; set; }
+
     public int BlockValue { get; private set; }
     public int BurnValue { get; private set; } = 2;
     public int StrengthValue { get; private set; } = 1;
