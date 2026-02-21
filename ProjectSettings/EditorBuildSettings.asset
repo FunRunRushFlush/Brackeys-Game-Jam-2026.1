@@ -77,6 +77,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_00_Scenes/Caves/CavesFake.unity
     guid: 0399d5ddb40ca6d44a8a1deed6daac52
+  - enabled: 1
+    path: Assets/_00_Scenes/Caves/Caves.unity
+    guid: 5a4250d340a180a41996b4fbe40ea18a
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 37e6ebb870a7d9843a941b8abac99c55, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
