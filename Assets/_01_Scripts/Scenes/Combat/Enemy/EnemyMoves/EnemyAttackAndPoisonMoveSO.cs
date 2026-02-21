@@ -16,7 +16,7 @@ public class EnemyAttackAndPoisonMoveSO : EnemyMoveSO
 
         actions.Add(new AddStatusEffectGA(
             StatusEffectType.POISON,
-            enemy.BurnValue,
+            enemy.PoisonValue,
             new List<CombatantView> { HeroSystem.Instance.HeroView }
         ));
 

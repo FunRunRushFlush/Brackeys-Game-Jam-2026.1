@@ -12,6 +12,8 @@ public class EnemyData : ScriptableObject
 
     [field: SerializeField] public int BlockValue { get; private set; } = 6;
     [field: SerializeField] public int BurnValue { get; private set; } = 2;
+    [field: SerializeField] public int PoisonValue { get; private set; } = 2;
+
     [field: SerializeField] public int StrengthValue { get; private set; } = 1;
     [field: SerializeField] public int WeakValue { get; private set; } = 1;
 
