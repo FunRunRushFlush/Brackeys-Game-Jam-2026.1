@@ -14573,7 +14573,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_658
+      name: Icons_Heart
       rect:
         serializedVersion: 2
         x: 128
@@ -39499,7 +39499,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_1791
+      name: Icons_RiskyStrike
       rect:
         serializedVersion: 2
         x: 960
@@ -49194,7 +49194,6 @@ TextureImporter:
       Icons_1789: 1889936321
       Icons_179: -128985208
       Icons_1790: -1769922505
-      Icons_1791: -1513201686
       Icons_1792: 696412535
       Icons_1793: -868497452
       Icons_1794: -1738383470
@@ -50105,7 +50104,6 @@ TextureImporter:
       Icons_655: -801765891
       Icons_656: -2049132525
       Icons_657: -904344179
-      Icons_658: -1568380176
       Icons_659: -1388248431
       Icons_66: -1779481284
       Icons_660: -635947973
@@ -50481,10 +50479,12 @@ TextureImporter:
       Icons_Flames: 1418751897
       Icons_Galaxy Strike: -1508950131
       Icons_Galaxy slash: 648513060
+      Icons_Heart: -1568380176
       Icons_Jungle: 1146648117
       Icons_Jungle2: 1770216600
       Icons_Magic Missles: 934788077
       Icons_Neptun: -1178886757
+      Icons_RiskyStrike: -1513201686
       Icons_Schild: 1139184858
       Icons_ShieldGrey01: 1219099209
       Icons_ShieldGrey02: 1201276158

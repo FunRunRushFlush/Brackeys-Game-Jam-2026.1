@@ -27,16 +27,17 @@ public class CardSystem : Singleton<CardSystem>
     void OnEnable()
     {
         ActionSystem.AttachPerformer<DrawCardsGA>(DrawCardsPerformer);
+        ActionSystem.AttachPerformer<DiscardCardsGA>(DiscardCardsPerformer);
         ActionSystem.AttachPerformer<DiscardAllCardsGA>(DiscardAllCardsPerformer);
         ActionSystem.AttachPerformer<PlayCardGA>(PlayCardPerformer);
     }
     void OnDisable()
     {
         ActionSystem.DetachPerformer<DrawCardsGA>();
+        ActionSystem.DetachPerformer<DiscardCardsGA>();
         ActionSystem.DetachPerformer<DiscardAllCardsGA>();
         ActionSystem.DetachPerformer<PlayCardGA>();
     }
-
 
     private void UpdatePileCounts()
     {
@@ -80,7 +81,34 @@ public class CardSystem : Singleton<CardSystem>
 
     }
 
+    private IEnumerator DiscardCardsPerformer(DiscardCardsGA discardCardsGA)
+    {
+        if (discardCardsGA.Amount <= 0)
+            yield break;
 
+        int actualDiscardCount = Mathf.Min(discardCardsGA.Amount, hand.Count);
+
+        for (int i = 0; i < actualDiscardCount; i++)
+        {
+            int randomIndex = UnityEngine.Random.Range(0, hand.Count);
+            Card card = hand[randomIndex];
+
+            hand.RemoveAt(randomIndex);
+
+            CardView cardView = handView.RemoveCard(card);
+            if (cardView != null)
+            {
+                yield return DiscardCard(cardView);
+            }
+            else
+            {
+                //Safty?
+                UpdatePileCounts(); 
+            }
+        }
+
+        UpdatePileCounts();
+    }
 
     private void RefillDeck()
     {
