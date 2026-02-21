@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: New Enrage Scaling Enemy Behaviour SO
   m_EditorClassIdentifier: Assembly-CSharp::EnrageScalingEnemyBehaviourSO
   baseBehaviour: {fileID: 0}
-  enrageMove: {fileID: 0}
+  enrageMove: {fileID: 11400000, guid: 1875f658f7965cb4ea0aecb1d9374e4f, type: 2}
   startAtTurn: 3
-  everyNTurns: 1
+  everyNTurns: 3

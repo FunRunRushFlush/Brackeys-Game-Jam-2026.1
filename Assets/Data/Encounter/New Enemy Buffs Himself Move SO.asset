@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7e20035580573b4bac29a66027c9f43, type: 3}
   m_Name: New Enemy Buffs Himself Move SO
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBuffsHimselfMoveSO
-  intentIcon: {fileID: 0}
+  intentIcon: {fileID: -1932038779, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   BuffType: 3

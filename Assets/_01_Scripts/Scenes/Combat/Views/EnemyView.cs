@@ -45,12 +45,12 @@ public class EnemyView : CombatantView
 
 
         Behaviour = enemyData.Behaviour;
-        AIState = new EnemyAIState(GetInstanceID()); // einfache stabile Seed-Quelle
+        AIState = new EnemyAIState(GetInstanceID());
 
         SetupBase(enemyData.Health, enemyData.Image);
         Anim?.SetIdle();
 
-        ChooseNextIntent(); // wichtig: Spieler sieht sofort den nächsten Move
+        ChooseNextIntent();
     }
 
     public void ChooseNextIntent()

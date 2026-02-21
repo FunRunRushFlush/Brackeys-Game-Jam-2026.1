@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7049c09da5a2e46802517b6667c3ea, type: 3}
   m_Name: New Enemy Multi Strike Move SO
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMultiStrikeMoveSO
-  intentIcon: {fileID: 0}
+  intentIcon: {fileID: 57011731, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   hitCount: 2

@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5052d04df12d3a44f95620a0e46ccd98, type: 3}
   m_Name: New Weighted Random Enemy Behaviour SO
   m_EditorClassIdentifier: Assembly-CSharp::WeightedRandomEnemyBehaviourSO
-  entries: []
+  entries:
+  - move: {fileID: 0}
+    weight: 0
+    cooldownTurns: 0
+    forbidRepeatLastN: 0
+    maxConsecutive: 0
