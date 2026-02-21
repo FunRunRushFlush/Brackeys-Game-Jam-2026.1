@@ -20,5 +20,6 @@ public class HeroData : ScriptableObject
 public enum Heros
 {
     Hero01,
-    Hero02
+    Hero02,
+    Hero03
 }
