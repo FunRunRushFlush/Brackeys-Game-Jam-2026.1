@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: fire_strom
   DisplayName: Firestrom
-  <Description>k__BackingField: Deal 20 Damage to all enemies apply Burn 5
+  <Description>k__BackingField: 'Deal 20 Damage to all enemies apply 5 Burn '
   <Mana>k__BackingField: 3
   <Image>k__BackingField: {fileID: -527411974, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 4

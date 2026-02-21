@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: 'sparking-strike '
   DisplayName: Sparking Strike
-  <Description>k__BackingField: 'deal 10 damage apply Burn 5 '
+  <Description>k__BackingField: 'deal 10 damage apply Burn 10 '
   <Mana>k__BackingField: 2
   <Image>k__BackingField: {fileID: 539447770, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 3
@@ -36,4 +36,4 @@ MonoBehaviour:
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
         statusEffectType: 1
-        stackCount: 5
+        stackCount: 10

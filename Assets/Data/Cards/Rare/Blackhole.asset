@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: blackhole
   DisplayName: Blackhole
-  <Description>k__BackingField: Deal 3 Damage and apply Burn 4
+  <Description>k__BackingField: 'Deal 2 Damage and apply 3 Burn '
   <Mana>k__BackingField: 0
   <Image>k__BackingField: {fileID: -295909497, guid: d1c12bbf4ecf47742b55e41b46800d98, type: 3}
   Rarity: 4
@@ -31,9 +31,9 @@ MonoBehaviour:
     - rid: 792979208258191499
       type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
       data:
-        damageAmount: 3
+        damageAmount: 2
     - rid: 792979208258191500
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
         statusEffectType: 1
-        stackCount: 4
+        stackCount: 3

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908467728703f98498def92f5a79d8cb, type: 3}
   m_Name: HeroTwo
   m_EditorClassIdentifier: Assembly-CSharp::HeroData
-  <HeroID>k__BackingField: 1
+  <HeroID>k__BackingField: 0
   <Image>k__BackingField: {fileID: 1432368535, guid: 8c975f1074b7ddf4bae5859e4675b11e, type: 3}
   <Health>k__BackingField: 99
   <HandSize>k__BackingField: 6

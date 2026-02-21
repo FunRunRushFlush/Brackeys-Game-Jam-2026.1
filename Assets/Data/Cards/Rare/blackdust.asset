@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
-  m_Name: Blackdust
+  m_Name: blackdust
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: blackdust
   DisplayName: Black dust
-  <Description>k__BackingField: 'All enemies get Burn 3 Poisen 3 '
+  <Description>k__BackingField: ' enemy gain 2 Burn 2 Poisen  '
   <Mana>k__BackingField: 0
   <Image>k__BackingField: {fileID: -2141487142, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 4

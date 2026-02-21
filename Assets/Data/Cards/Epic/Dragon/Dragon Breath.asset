@@ -14,18 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: dragon-breath
   DisplayName: Dragon Breath
-  <Description>k__BackingField: Deal 20 Damage apply Burn 5 to all enemies draw a
-    card
+  <Description>k__BackingField: Deal 20 Damage to all enemies  apply Burn 5 to all
+    enemies draw a card
   <Mana>k__BackingField: 2
   <Image>k__BackingField: {fileID: -193939011, guid: 3767a25ad0c03f04faf0242521ab9aef, type: 3}
   Rarity: 5
   PreferredBiomes: 01000000
   <Tags>k__BackingField: 02000000
-  <ManualTargetEffects>k__BackingField:
-  - rid: 792979244260261976
+  <ManualTargetEffects>k__BackingField: []
   <OtherEffects>k__BackingField:
   - rid: 792979202384330865
   - rid: 792979202384330868
+  - rid: 792979244260261996
   <PlayConditions>k__BackingField: []
   references:
     version: 2
@@ -59,7 +59,17 @@ MonoBehaviour:
       type: {class: DrawCardsEffect, ns: , asm: Assembly-CSharp}
       data:
         drawAmount: 1
-    - rid: 792979244260261976
+    - rid: 792979244260261996
+      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetMode>k__BackingField:
+          rid: 792979244260261997
+        <Effect>k__BackingField:
+          rid: 792979244260261998
+    - rid: 792979244260261997
+      type: {class: AllEnemiesTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 792979244260261998
       type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
       data:
         damageAmount: 20
