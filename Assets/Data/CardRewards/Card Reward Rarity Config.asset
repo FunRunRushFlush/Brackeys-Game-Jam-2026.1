@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card Reward Rarity Config
   m_EditorClassIdentifier: Assembly-CSharp::CardRewardRarityConfig
   ChoiceCount: 3
-  BiomeBoost: 3
+  BiomeBoost: 5
   IncludeAdminAndStarter: 0
   Normal:
   - Rarity: 2
@@ -43,9 +43,9 @@ MonoBehaviour:
     Weight: 0
   Boss:
   - Rarity: 4
-    Weight: 20
+    Weight: 10
   - Rarity: 5
-    Weight: 80
+    Weight: 90
   - Rarity: 0
     Weight: 0
   - Rarity: 1
