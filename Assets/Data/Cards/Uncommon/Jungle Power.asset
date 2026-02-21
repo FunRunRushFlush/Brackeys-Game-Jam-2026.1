@@ -10,30 +10,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
-  m_Name: Fire Power
+  m_Name: Jungle Power
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  Id: fire-power
-  DisplayName: 'Fire Power '
-  <Description>k__BackingField: 'Deal 8 Damage apply 7 Burn '
+  Id: jungle_power
+  DisplayName: Jungle Power
+  <Description>k__BackingField: Deal 8 Damage apply Poisen 3
   <Mana>k__BackingField: 1
-  <Image>k__BackingField: {fileID: -892033124, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
-  Rarity: 2
-  PreferredBiomes: 01000000
+  <Image>k__BackingField: {fileID: -479035640, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  Rarity: 3
+  PreferredBiomes: 00000000
   <Tags>k__BackingField: 00000000
   <ManualTargetEffects>k__BackingField:
-  - rid: 792979208258191513
-  - rid: 792979208258191514
+  - rid: 792979208258191511
+  - rid: 792979208258191512
   <OtherEffects>k__BackingField: []
   <PlayConditions>k__BackingField: []
   references:
     version: 2
     RefIds:
-    - rid: 792979208258191513
+    - rid: 792979208258191511
       type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
       data:
         damageAmount: 8
-    - rid: 792979208258191514
+    - rid: 792979208258191512
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
-        statusEffectType: 1
-        stackCount: 7
+        statusEffectType: 2
+        stackCount: 3

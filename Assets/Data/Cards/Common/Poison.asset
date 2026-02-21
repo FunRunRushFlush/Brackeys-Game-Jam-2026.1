@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: poison
   DisplayName: Poison
-  <Description>k__BackingField: Apply Poison 3
+  <Description>k__BackingField: Apply 3 Poison to all enemies draw a card
   <Mana>k__BackingField: 1
   <Image>k__BackingField: {fileID: -521032350, guid: 762faa91e709b9348bf7b148318d5475, type: 3}
   Rarity: 2
@@ -23,6 +23,7 @@ MonoBehaviour:
   <ManualTargetEffects>k__BackingField: []
   <OtherEffects>k__BackingField:
   - rid: 792979202384330883
+  - rid: 792979244260261991
   <PlayConditions>k__BackingField: []
   references:
     version: 2
@@ -42,3 +43,17 @@ MonoBehaviour:
       data:
         statusEffectType: 2
         stackCount: 3
+    - rid: 792979244260261991
+      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetMode>k__BackingField:
+          rid: 792979244260261994
+        <Effect>k__BackingField:
+          rid: 792979244260261995
+    - rid: 792979244260261994
+      type: {class: HeroTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 792979244260261995
+      type: {class: DrawCardsEffect, ns: , asm: Assembly-CSharp}
+      data:
+        drawAmount: 1

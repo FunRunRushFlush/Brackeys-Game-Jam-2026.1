@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: fire-shild
   DisplayName: Fire Shield
-  <Description>k__BackingField: Block 5 apply 2 Burn
+  <Description>k__BackingField: 'Block 12 you get 2 Burn '
   <Mana>k__BackingField: 1
   <Image>k__BackingField: {fileID: -362590377, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 2
@@ -42,12 +42,9 @@ MonoBehaviour:
       type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
       data:
         <TargetMode>k__BackingField:
-          rid: 792979208258191530
+          rid: 792979244260261990
         <Effect>k__BackingField:
           rid: 792979208258191531
-    - rid: 792979208258191530
-      type: {class: AllEnemiesTM, ns: , asm: Assembly-CSharp}
-      data: 
     - rid: 792979208258191531
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
@@ -56,4 +53,7 @@ MonoBehaviour:
     - rid: 792979208258191545
       type: {class: AddBlockEffect, ns: , asm: Assembly-CSharp}
       data:
-        amount: 5
+        amount: 12
+    - rid: 792979244260261990
+      type: {class: HeroTM, ns: , asm: Assembly-CSharp}
+      data: 
