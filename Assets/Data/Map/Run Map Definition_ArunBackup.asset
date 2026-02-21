@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0022582cfaa62f4428ceeabecd1d9488, type: 3}
-  m_Name: New Run Map Definition
+  m_Name: Run Map Definition_ArunBackup
   m_EditorClassIdentifier: Assembly-CSharp::RunMapDefinition
   biomes:
   - biome: 0
@@ -20,6 +20,9 @@ MonoBehaviour:
       bossOverride: {fileID: 0}
     - type: 0
       combatOverride: {fileID: 11400000, guid: 0efefb58dbffad044a3f256bb8701e01, type: 2}
+      bossOverride: {fileID: 0}
+    - type: 2
+      combatOverride: {fileID: 0}
       bossOverride: {fileID: 0}
     - type: 0
       combatOverride: {fileID: 11400000, guid: 9feb75e29d4786c4ca6232bc4a876a22, type: 2}
@@ -31,10 +34,22 @@ MonoBehaviour:
       combatOverride: {fileID: 0}
       bossOverride: {fileID: 0}
     - type: 0
+      combatOverride: {fileID: 11400000, guid: 6f6f89fa9a7aed443b7a354e14414f0e, type: 2}
+      bossOverride: {fileID: 0}
+    - type: 0
       combatOverride: {fileID: 11400000, guid: 47c5cb4762feaf043b3b820a8d8acc91, type: 2}
       bossOverride: {fileID: 0}
     - type: 0
+      combatOverride: {fileID: 11400000, guid: 9a0bbcc8b5a17764491ea16364430f36, type: 2}
+      bossOverride: {fileID: 0}
+    - type: 2
+      combatOverride: {fileID: 0}
+      bossOverride: {fileID: 0}
+    - type: 0
       combatOverride: {fileID: 11400000, guid: a02ab0050b3362f4791144d87952e337, type: 2}
+      bossOverride: {fileID: 0}
+    - type: 0
+      combatOverride: {fileID: 11400000, guid: 1d295aae28c04b9489fb66619c6f1dbc, type: 2}
       bossOverride: {fileID: 0}
     - type: 0
       combatOverride: {fileID: 11400000, guid: 6dbf3b65eea39c042a2947a1c837dc93, type: 2}
@@ -53,6 +68,12 @@ MonoBehaviour:
     - type: 0
       combatOverride: {fileID: 11400000, guid: bac5ba73ae0a3644498bd335998fb306, type: 2}
       bossOverride: {fileID: 0}
+    - type: 0
+      combatOverride: {fileID: 11400000, guid: 1024493b8d581644682eb911f53dd045, type: 2}
+      bossOverride: {fileID: 0}
+    - type: 0
+      combatOverride: {fileID: 11400000, guid: 905fd9c6a4947b94fa7a68c96ce01d6c, type: 2}
+      bossOverride: {fileID: 0}
     - type: 2
       combatOverride: {fileID: 0}
       bossOverride: {fileID: 0}
@@ -62,11 +83,20 @@ MonoBehaviour:
     - type: 0
       combatOverride: {fileID: 11400000, guid: 54fbc20b34d78ab41a271bde43a9b7fb, type: 2}
       bossOverride: {fileID: 0}
+    - type: 2
+      combatOverride: {fileID: 0}
+      bossOverride: {fileID: 0}
     - type: 0
       combatOverride: {fileID: 11400000, guid: c3346385b95502b49919fc1f2f8d0fec, type: 2}
       bossOverride: {fileID: 0}
     - type: 0
       combatOverride: {fileID: 11400000, guid: 480722c874235884e9adc9e84c6de7ef, type: 2}
+      bossOverride: {fileID: 0}
+    - type: 2
+      combatOverride: {fileID: 0}
+      bossOverride: {fileID: 0}
+    - type: 0
+      combatOverride: {fileID: 11400000, guid: b233e312b985e134685d96d87b45b453, type: 2}
       bossOverride: {fileID: 0}
     - type: 0
       combatOverride: {fileID: 11400000, guid: e9857e7f0cf36fe45a08766323e9b25f, type: 2}
@@ -88,11 +118,11 @@ MonoBehaviour:
     - type: 0
       combatOverride: {fileID: 11400000, guid: b30a63180ee93f34885efa3bb0475f6e, type: 2}
       bossOverride: {fileID: 0}
-    - type: 0
-      combatOverride: {fileID: 11400000, guid: 79caa5b9cdb91bb498aa0ae8e28b10d4, type: 2}
-      bossOverride: {fileID: 0}
     - type: 2
       combatOverride: {fileID: 0}
+      bossOverride: {fileID: 0}
+    - type: 0
+      combatOverride: {fileID: 11400000, guid: 79caa5b9cdb91bb498aa0ae8e28b10d4, type: 2}
       bossOverride: {fileID: 0}
     - type: 0
       combatOverride: {fileID: 11400000, guid: a0bd47479ab224945b7a100449bafe90, type: 2}
@@ -108,7 +138,7 @@ MonoBehaviour:
       bossOverride: {fileID: 0}
     - type: 4
       combatOverride: {fileID: 11400000, guid: 3ab451aea38d4d54f9f2612f565e8879, type: 2}
-      bossOverride: {fileID: 11400000, guid: 3ab451aea38d4d54f9f2612f565e8879, type: 2}
+      bossOverride: {fileID: 0}
   - biome: 4
     nodes:
     - type: 0

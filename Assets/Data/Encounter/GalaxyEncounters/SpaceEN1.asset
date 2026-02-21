@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd6d4792b5fedad4ba54dc761a45609b, type: 3}
-  m_Name: JungleEN3
+  m_Name: SpaceEN1
   m_EditorClassIdentifier: Assembly-CSharp::EncounterDefinition
-  minEnemies: 1
+  minEnemies: 2
   maxEnemies: 3
   pool:
-  - data: {fileID: 11400000, guid: 5e9182f433ee0e34c9b9cbfd0664cd1a, type: 2}
+  - data: {fileID: 11400000, guid: ff2b434a3dfe75d4e83cb86a67f391b1, type: 2}
     weight: 1
-  - data: {fileID: 11400000, guid: 7620c10dbe596324888ac5fb18b61c5b, type: 2}
+  - data: {fileID: 11400000, guid: ff2b434a3dfe75d4e83cb86a67f391b1, type: 2}
     weight: 1
-  - data: {fileID: 11400000, guid: 5e9182f433ee0e34c9b9cbfd0664cd1a, type: 2}
+  - data: {fileID: 11400000, guid: ff2b434a3dfe75d4e83cb86a67f391b1, type: 2}
     weight: 1
