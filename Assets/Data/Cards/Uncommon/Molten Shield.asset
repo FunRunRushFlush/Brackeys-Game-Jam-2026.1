@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: molten_shield
   DisplayName: Molten Shield
-  <Description>k__BackingField: Gain 8 Block and Burn 3 to all Enemies
+  <Description>k__BackingField: Gain 8 Block. Apply 3 Burn to all enemies.
   <Mana>k__BackingField: 1
   <Image>k__BackingField: {fileID: -1463014139, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 3

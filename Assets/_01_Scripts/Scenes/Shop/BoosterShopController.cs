@@ -1,4 +1,5 @@
 using Game.Scenes.Core;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,6 +9,13 @@ public class BoosterShopController : MonoBehaviour
     [SerializeField] private Button jungleButton;
     [SerializeField] private Button fireButton;
     [SerializeField] private Button galaxyButton;
+
+
+    [Header("Booster Pack Price")]
+    [SerializeField] private int jungleBoosterPrice = 75;
+    [SerializeField] private int fireBoosterPrice = 100;
+    [SerializeField] private int galaxyBoosterPrice = 125;
+
     [Header("UI")]
     [SerializeField] private Button confirmButton;
 
@@ -18,13 +26,14 @@ public class BoosterShopController : MonoBehaviour
 
     [Header("CardRewardsUI")]
     [SerializeField] private CardRewardsUI cardRewardsUI;
+    [SerializeField] private GameObject cardRewardsUIContainer;
+
+    
 
     [SerializeField] private GameObject[] gameObjectsToDeaktivateAfterPick;
 
-
-
-
     private bool choiceMade;
+    private bool _claimed;
 
     private List<CardData> generatedCards;
 
@@ -34,26 +43,54 @@ public class BoosterShopController : MonoBehaviour
 
     private void Select(BiomeType biome, Button clicked)
     {
-        if (choiceMade) return;
+
+        if (!TryPayForBooster(biome))
+            return;
+
+        cardRewardsUIContainer.SetActive(true);
+        if (choiceMade)
+            return;
         choiceMade = true;
 
-        // andere 2 deaktivieren
-        if (jungleButton) jungleButton.interactable = (clicked == jungleButton);
-        if (fireButton) fireButton.interactable = (clicked == fireButton);
-        if (galaxyButton) galaxyButton.interactable = (clicked == galaxyButton);
+        SetButtonsAfterChoice(clicked);
 
+        var session = CoreManager.Instance?.Session;
+        if (session?.Run == null)
+            return;
 
-        if (generatedCards == null || generatedCards.Count < 1)
-        {
-
-            var session = CoreManager.Instance?.Session;
-            if (session == null || session.Run == null)
-                return;
-
-            generatedCards = session.RewardSystem.GenerateCardChoicesForBiome(biome);
-        }
+        generatedCards ??= session.RewardSystem.GenerateCardChoicesForBiome(biome);
 
         cardRewardsUI.CreateRewardViewsUI(generatedCards);
+
+    }
+
+    private void SetButtonsAfterChoice(Button clicked)
+    {
+        if (jungleButton) jungleButton.interactable = false;
+        if (fireButton) fireButton.interactable = false;
+        if (galaxyButton) galaxyButton.interactable = false;
+
+
+        if (clicked) 
+            clicked.interactable = true;
+    }
+
+    private bool TryPayForBooster(BiomeType biome)
+    {
+        var session = CoreManager.Instance?.Session;
+        var run = session?.Run;
+        if (run == null) return false;
+
+        int price = GetPrice(biome);
+
+        if (run.Gold < price)
+        {
+            // TODO: Error-Sound / UI Feedback "Nicht genug Gold"
+            return false;
+        }
+
+        run.ChangeAmountOfGold(-price);
+        return true;
     }
 
     public void ResetChoice()
@@ -65,13 +102,17 @@ public class BoosterShopController : MonoBehaviour
 
         cardRewardsUI.ConsumeRewardsUI();
     }
+    private int GetPrice(BiomeType biome)
+    {
+        return biome switch
+        {
+            BiomeType.Forest => jungleBoosterPrice,
+            BiomeType.Fire => fireBoosterPrice,
+            BiomeType.Galaxy => galaxyBoosterPrice,
+            _ => throw new ArgumentOutOfRangeException(nameof(biome), biome, null)
+        };
+    }
 
-
-
-    //[Header("Rewards")]
-    //[SerializeField] private CardRewardsUI rewardsUI;
-
-    private bool _claimed;
 
     private void Awake()
     {

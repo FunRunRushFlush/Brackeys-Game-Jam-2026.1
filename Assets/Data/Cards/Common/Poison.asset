@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
   m_Name: Poison
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  Id: 'poissen '
-  DisplayName: 'Poissen '
+  Id: poison
+  DisplayName: Poison
   <Description>k__BackingField: Apply Poison 3
   <Mana>k__BackingField: 1
   <Image>k__BackingField: {fileID: -521032350, guid: 762faa91e709b9348bf7b148318d5475, type: 3}

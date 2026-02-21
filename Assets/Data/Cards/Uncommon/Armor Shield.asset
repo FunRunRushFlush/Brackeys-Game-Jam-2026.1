@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dee9c57f373ebc4a8bb6971239e3b32, type: 3}
-  m_Name: ArmorShild
+  m_Name: Armor Shield
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  Id: Armor Shild
-  DisplayName: Armor Shild
-  <Description>k__BackingField: ' Gain 10 Block'
+  Id: armor_shield
+  DisplayName: Armor Shield
+  <Description>k__BackingField: Gain 10 Block
   <Mana>k__BackingField: 1
   <Image>k__BackingField: {fileID: 273597744, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 3
