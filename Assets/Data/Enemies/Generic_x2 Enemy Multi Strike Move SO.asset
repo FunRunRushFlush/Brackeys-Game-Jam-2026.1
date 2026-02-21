@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c87eb3833aff6f447be532c8a0d13b37, type: 3}
-  m_Name: Generic Enemy Attack Move SO
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttackMoveSO
+  m_Script: {fileID: 11500000, guid: af7049c09da5a2e46802517b6667c3ea, type: 3}
+  m_Name: Generic_x2 Enemy Multi Strike Move SO
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyMultiStrikeMoveSO
   intentIcon: {fileID: -800563037, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  hitCount: 2

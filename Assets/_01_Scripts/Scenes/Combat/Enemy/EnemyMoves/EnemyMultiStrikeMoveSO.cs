@@ -7,7 +7,14 @@ public class EnemyMultiStrikeMoveSO : EnemyMoveSO
     [Min(2)][SerializeField] private int hitCount = 2;
 
     public override IntentData GetIntent(EnemyView enemy)
-        => IntentData.IconWithValue(IntentIcon, enemy.AttackValue * hitCount);
+    {
+        int perHit = enemy.AttackValue;
+        int total = perHit * hitCount;
+
+        string text = $"{hitCount}×{perHit}";
+
+        return IntentData.IconWithValueText(IntentIcon, total, text);
+    }
 
     public override List<GameAction> BuildActions(EnemyView enemy)
     {

@@ -14837,7 +14837,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_Attac
+      name: Icons_Attack_03
       rect:
         serializedVersion: 2
         x: 896
@@ -15959,7 +15959,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_721
+      name: Icons_Attack_Poison02
       rect:
         serializedVersion: 2
         x: 64
@@ -16135,7 +16135,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_729
+      name: Icons_Attack_Fire02
       rect:
         serializedVersion: 2
         x: 576
@@ -47441,7 +47441,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_2152
+      name: Icons_ShieldAttack
       rect:
         serializedVersion: 2
         x: 512
@@ -49574,7 +49574,6 @@ TextureImporter:
       Icons_2149: 1902276566
       Icons_215: -2006382442
       Icons_2151: 1863773721
-      Icons_2152: 2029824735
       Icons_2153: -473781111
       Icons_2154: 706099430
       Icons_2155: -2050919851
@@ -50160,11 +50159,9 @@ TextureImporter:
       Icons_718: -1274565428
       Icons_719: -1098792716
       Icons_72: 1634721143
-      Icons_721: -199860320
       Icons_722: -1572332381
       Icons_723: -271416304
       Icons_726: -1576235892
-      Icons_729: 923592140
       Icons_73: -1430622403
       Icons_732: -134423198
       Icons_734: 246124881
@@ -50439,11 +50436,13 @@ TextureImporter:
       Icons_998: -1378791382
       Icons_999: -469934633
       Icons_ArmorUp: 275167302
-      Icons_Attac: -800563037
       Icons_Attack: -159943946
       Icons_Attack02: 57011731
+      Icons_Attack_03: -800563037
       Icons_Attack_Burn: -1229828771
+      Icons_Attack_Fire02: 923592140
       Icons_Attack_Poison: 443630390
+      Icons_Attack_Poison02: -199860320
       Icons_Blackhole Power: -2141487142
       Icons_BlackholeGravitation: -1384840098
       Icons_BloodCoin: -761322962
@@ -50473,6 +50472,7 @@ TextureImporter:
       Icons_Pancakes: 1843993764
       Icons_RiskyStrike: -1513201686
       Icons_Schild: 1139184858
+      Icons_ShieldAttack: 2029824735
       Icons_ShieldGrey01: 1219099209
       Icons_ShieldGrey02: 1201276158
       Icons_Shining in the stars: 1231357146
