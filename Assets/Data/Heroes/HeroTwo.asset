@@ -19,12 +19,8 @@ MonoBehaviour:
   <Mana>k__BackingField: 4
   <BaseStartingGold>k__BackingField: 999
   <Deck>k__BackingField:
-  - {fileID: 11400000, guid: fd7448731a574fd459588df4b0ffb7c3, type: 2}
   - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
-  - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
-  - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
-  - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
-  - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
-  - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
-  - {fileID: 11400000, guid: 0ecb7fe226a10d64d9652191b1956831, type: 2}
-  - {fileID: 11400000, guid: ff44270828be41243bb5da44c8e37ad3, type: 2}
+  - {fileID: 11400000, guid: e9fa803c56cdcde49a17056ba8e84366, type: 2}
+  - {fileID: 11400000, guid: f69380031f219e848b9c0e004e682b9b, type: 2}
+  - {fileID: 11400000, guid: e2abd2670bd7cff4bb8ba1f21b9a1d7b, type: 2}
+  - {fileID: 11400000, guid: f69380031f219e848b9c0e004e682b9b, type: 2}
