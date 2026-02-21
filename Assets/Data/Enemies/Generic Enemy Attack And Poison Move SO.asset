@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b141f3740b476c843b22c0945ffc4292, type: 3}
   m_Name: Generic Enemy Attack And Poison Move SO
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttackAndPoisonMoveSO
-  intentIcon: {fileID: 0}
+  intentIcon: {fileID: -199860320, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}

@@ -13,8 +13,23 @@ MonoBehaviour:
   m_Name: Fireworm Weighted Random Enemy Behaviour SO
   m_EditorClassIdentifier: Assembly-CSharp::WeightedRandomEnemyBehaviourSO
   entries:
-  - move: {fileID: 0}
-    weight: 0
+  - move: {fileID: 11400000, guid: a9ed2dceb5076d64a936e045781a31bb, type: 2}
+    weight: 3
+    cooldownTurns: 1
+    forbidRepeatLastN: 0
+    maxConsecutive: 0
+  - move: {fileID: 11400000, guid: 8180bce78b69bc943a963f211ba78e66, type: 2}
+    weight: 3
     cooldownTurns: 0
+    forbidRepeatLastN: 0
+    maxConsecutive: 0
+  - move: {fileID: 11400000, guid: 21f0355a54a387b4f894b6a4b31677ca, type: 2}
+    weight: 3
+    cooldownTurns: 2
+    forbidRepeatLastN: 0
+    maxConsecutive: 0
+  - move: {fileID: 11400000, guid: 4c07b09fd251b064280a615fa43e1da3, type: 2}
+    weight: 3
+    cooldownTurns: 2
     forbidRepeatLastN: 0
     maxConsecutive: 0

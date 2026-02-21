@@ -15,9 +15,10 @@ MonoBehaviour:
   <Image>k__BackingField: {fileID: -530627121, guid: c7c9d8633f35cb2428450c326af72ee2, type: 3}
   <Health>k__BackingField: 100
   <AttackValue>k__BackingField: 12
+  <MultiAttackValue>k__BackingField: 7
   <BlockValue>k__BackingField: 12
   <BurnValue>k__BackingField: 2
   <StrengthValue>k__BackingField: 1
   <WeakValue>k__BackingField: 1
   <ViewPrefab>k__BackingField: {fileID: 7879271128835504042, guid: e35f61375a9fe8148918504ecccf6976, type: 3}
-  <Behaviour>k__BackingField: {fileID: 11400000, guid: 68fb908cd04d9f041ba27d1720ef5225, type: 2}
+  <Behaviour>k__BackingField: {fileID: 11400000, guid: b29b2ab9692b3414d867f1dcc1c8433e, type: 2}

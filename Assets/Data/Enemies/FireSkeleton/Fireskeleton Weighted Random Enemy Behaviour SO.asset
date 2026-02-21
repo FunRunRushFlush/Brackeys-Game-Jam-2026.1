@@ -14,17 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WeightedRandomEnemyBehaviourSO
   entries:
   - move: {fileID: 11400000, guid: a9ed2dceb5076d64a936e045781a31bb, type: 2}
-    weight: 1
+    weight: 5
     cooldownTurns: 1
     forbidRepeatLastN: 0
     maxConsecutive: 0
   - move: {fileID: 11400000, guid: 8180bce78b69bc943a963f211ba78e66, type: 2}
-    weight: 1
+    weight: 5
     cooldownTurns: 0
     forbidRepeatLastN: 0
     maxConsecutive: 0
   - move: {fileID: 11400000, guid: 4c07b09fd251b064280a615fa43e1da3, type: 2}
-    weight: 1
+    weight: 5
     cooldownTurns: 0
+    forbidRepeatLastN: 0
+    maxConsecutive: 0
+  - move: {fileID: 11400000, guid: d526180cdffd059499c4ac43230a1030, type: 2}
+    weight: 3
+    cooldownTurns: 2
+    forbidRepeatLastN: 0
+    maxConsecutive: 0
+  - move: {fileID: 11400000, guid: 6d1517cddae23484eb5225da14f866e3, type: 2}
+    weight: 1
+    cooldownTurns: 3
     forbidRepeatLastN: 0
     maxConsecutive: 0

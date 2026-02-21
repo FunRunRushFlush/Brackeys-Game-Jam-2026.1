@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BetaTest_SkeletonBoss_BetaTest Enrage Scaling Enemy Behaviour SO
   m_EditorClassIdentifier: Assembly-CSharp::EnrageScalingEnemyBehaviourSO
   baseBehaviour: {fileID: 11400000, guid: 5abf9a88fb886a14ea0fb5ab50e30fd3, type: 2}
-  enrageMove: {fileID: 11400000, guid: 1875f658f7965cb4ea0aecb1d9374e4f, type: 2}
+  enrageMove: {fileID: 11400000, guid: 21f0355a54a387b4f894b6a4b31677ca, type: 2}
   startAtTurn: 3
   everyNTurns: 3
