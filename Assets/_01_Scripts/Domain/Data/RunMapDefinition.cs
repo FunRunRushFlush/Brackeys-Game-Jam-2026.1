@@ -19,6 +19,14 @@ public class MapNodeDefinition
  
     public EncounterDefinition combatOverride;
     public EncounterDefinition bossOverride;
+
+
+    [Header("Scene Overrides (optional)")]
+    [Tooltip("Override for the *systems/view* scene loaded for this node (e.g. Shop UI scene or Event scene). Leave empty to use the default from SceneDatabase.")]
+    public string sceneOverride;
+
+    [Tooltip("Override for the *level/background* scene loaded for this node (used mainly by Shop/Combat). Leave empty to use biome/default arena selection.")]
+    public string levelSceneOverride;
 }
 
 [Serializable]

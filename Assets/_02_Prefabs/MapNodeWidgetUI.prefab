@@ -133,7 +133,7 @@ MonoBehaviour:
   combatIcon: {fileID: 288337822, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   eliteIcon: {fileID: -1369460104, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   shopIcon: {fileID: -540975462, guid: 6dcba0bb69c5bfd43a62a6d9cb1f5c04, type: 3}
-  eventIcon: {fileID: -996645976, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
+  eventIcon: {fileID: -2013834531, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   bossIcon: {fileID: 206191349, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   currentColor: {r: 0.9622642, g: 0, b: 0, a: 1}
   pastColor: {r: 0.53900003, g: 0.53900003, b: 0.53900003, a: 0.6}

@@ -20,7 +20,7 @@ MonoBehaviour:
   <Image>k__BackingField: {fileID: 1843993764, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 2
   PreferredBiomes: 
-  <Tags>k__BackingField: 
+  <Tags>k__BackingField: 01000000
   <ManualTargetEffects>k__BackingField: []
   <OtherEffects>k__BackingField:
   - rid: 792979244260262005
@@ -34,12 +34,9 @@ MonoBehaviour:
       type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
       data:
         <TargetMode>k__BackingField:
-          rid: 792979244260262007
+          rid: 1986237465442910354
         <Effect>k__BackingField:
           rid: 792979244260262009
-    - rid: 792979244260262007
-      type: {class: HeroTM, ns: , asm: Assembly-CSharp}
-      data: 
     - rid: 792979244260262009
       type: {class: CleanseEffect, ns: , asm: Assembly-CSharp}
       data:
@@ -49,12 +46,9 @@ MonoBehaviour:
       type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
       data:
         <TargetMode>k__BackingField:
-          rid: 792979244260262013
+          rid: 1986237465442910353
         <Effect>k__BackingField:
           rid: 792979244260262014
-    - rid: 792979244260262013
-      type: {class: HeroTM, ns: , asm: Assembly-CSharp}
-      data: 
     - rid: 792979244260262014
       type: {class: DiscardRandomCardsEffect, ns: , asm: Assembly-CSharp}
       data:
@@ -63,13 +57,19 @@ MonoBehaviour:
       type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
       data:
         <TargetMode>k__BackingField:
-          rid: 792979244260262016
+          rid: 1986237465442910352
         <Effect>k__BackingField:
           rid: 792979244260262017
-    - rid: 792979244260262016
-      type: {class: HeroTM, ns: , asm: Assembly-CSharp}
-      data: 
     - rid: 792979244260262017
       type: {class: DrawCardsEffect, ns: , asm: Assembly-CSharp}
       data:
         drawAmount: 1
+    - rid: 1986237465442910352
+      type: {class: NoTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 1986237465442910353
+      type: {class: NoTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 1986237465442910354
+      type: {class: HeroTM, ns: , asm: Assembly-CSharp}
+      data: 

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: meteor
   DisplayName: Meteor
-  <Description>k__BackingField: Deal 12 Damage apply Burn 5
+  <Description>k__BackingField: Deal 12 Damage apply Burn 4
   <Mana>k__BackingField: 1
   <Image>k__BackingField: {fileID: 440998123, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 2
@@ -31,9 +31,9 @@ MonoBehaviour:
     - rid: 792979208258191479
       type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
       data:
-        damageAmount: 8
+        damageAmount: 12
     - rid: 792979208258191480
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
         statusEffectType: 1
-        stackCount: 2
+        stackCount: 4

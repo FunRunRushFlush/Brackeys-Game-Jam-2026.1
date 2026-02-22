@@ -93,6 +93,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -251,7 +264,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_7
+      name: Icons_EventMap
       rect:
         serializedVersion: 2
         x: 448
@@ -2407,7 +2420,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_105
+      name: Icons_Event
       rect:
         serializedVersion: 2
         x: 576
@@ -48385,7 +48398,6 @@ TextureImporter:
       Icons_1045: 28711946
       Icons_1048: -1587026662
       Icons_1049: 1391033753
-      Icons_105: 443817374
       Icons_1050: -1436204737
       Icons_1051: -1930843585
       Icons_1052: 1860175096
@@ -50135,7 +50147,6 @@ TextureImporter:
       Icons_697: 1693404203
       Icons_698: -732995886
       Icons_699: -1995414843
-      Icons_7: -1064369116
       Icons_70: 174599905
       Icons_700: -323960731
       Icons_701: 219187361
@@ -50453,6 +50464,8 @@ TextureImporter:
       Icons_Caves: 1207843866
       Icons_Claws: -442770290
       Icons_Dobbelstrike: -1497143790
+      Icons_Event: 443817374
+      Icons_EventMap: -1064369116
       Icons_Fire explosion: -1091159536
       Icons_Fireballrain: 395615244
       Icons_Firestorm: -527411974

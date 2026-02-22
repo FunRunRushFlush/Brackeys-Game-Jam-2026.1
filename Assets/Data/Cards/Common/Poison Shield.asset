@@ -56,4 +56,4 @@ MonoBehaviour:
     - rid: 792979208258191544
       type: {class: AddBlockEffect, ns: , asm: Assembly-CSharp}
       data:
-        amount: 5
+        amount: 6

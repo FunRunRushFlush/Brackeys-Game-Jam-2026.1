@@ -28,18 +28,23 @@ MonoBehaviour:
     cooldownTurns: 1
     forbidRepeatLastN: 3
     maxConsecutive: 0
-  - move: {fileID: 11400000, guid: 4c07b09fd251b064280a615fa43e1da3, type: 2}
-    weight: 1
-    cooldownTurns: 0
-    forbidRepeatLastN: 3
-    maxConsecutive: 0
   - move: {fileID: 11400000, guid: 8180bce78b69bc943a963f211ba78e66, type: 2}
     weight: 4
     cooldownTurns: 0
     forbidRepeatLastN: 0
     maxConsecutive: 2
-  - move: {fileID: 11400000, guid: 8180bce78b69bc943a963f211ba78e66, type: 2}
+  - move: {fileID: 11400000, guid: 6d1517cddae23484eb5225da14f866e3, type: 2}
     weight: 1
     cooldownTurns: 4
+    forbidRepeatLastN: 0
+    maxConsecutive: 0
+  - move: {fileID: 11400000, guid: a9ed2dceb5076d64a936e045781a31bb, type: 2}
+    weight: 1
+    cooldownTurns: 2
+    forbidRepeatLastN: 0
+    maxConsecutive: 0
+  - move: {fileID: 11400000, guid: a9ed2dceb5076d64a936e045781a31bb, type: 2}
+    weight: 1
+    cooldownTurns: 2
     forbidRepeatLastN: 0
     maxConsecutive: 0

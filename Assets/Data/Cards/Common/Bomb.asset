@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: bomb
   DisplayName: Bomb
-  <Description>k__BackingField: 'Deal 40 Damage apply 2 Burn  '
+  <Description>k__BackingField: 'Deal 15 Damage to Target. Apply 10 Burn to all Enemies '
   <Mana>k__BackingField: 3
   <Image>k__BackingField: {fileID: 1473982619, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
-  Rarity: 0
+  Rarity: 2
   PreferredBiomes: 
-  <Tags>k__BackingField: 
+  <Tags>k__BackingField: 00000000
   <ManualTargetEffects>k__BackingField:
   - rid: 792979244260262018
-  - rid: 792979244260262019
-  <OtherEffects>k__BackingField: []
+  <OtherEffects>k__BackingField:
+  - rid: 1986237465442910355
   <PlayConditions>k__BackingField: []
   references:
     version: 2
@@ -31,9 +31,19 @@ MonoBehaviour:
     - rid: 792979244260262018
       type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
       data:
-        damageAmount: 40
-    - rid: 792979244260262019
+        damageAmount: 15
+    - rid: 1986237465442910355
+      type: {class: AutoTargetEffect, ns: , asm: Assembly-CSharp}
+      data:
+        <TargetMode>k__BackingField:
+          rid: 1986237465442910356
+        <Effect>k__BackingField:
+          rid: 1986237465442910357
+    - rid: 1986237465442910356
+      type: {class: AllEnemiesTM, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 1986237465442910357
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
         statusEffectType: 1
-        stackCount: 2
+        stackCount: 10

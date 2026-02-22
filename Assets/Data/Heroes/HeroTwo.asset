@@ -15,12 +15,14 @@ MonoBehaviour:
   <HeroID>k__BackingField: 1
   <Image>k__BackingField: {fileID: 1432368535, guid: 8c975f1074b7ddf4bae5859e4675b11e, type: 3}
   <Health>k__BackingField: 98
-  <HandSize>k__BackingField: 6
-  <Mana>k__BackingField: 4
+  <HandSize>k__BackingField: 5
+  <Mana>k__BackingField: 3
   <BaseStartingGold>k__BackingField: 999
   <Deck>k__BackingField:
   - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
-  - {fileID: 11400000, guid: e9fa803c56cdcde49a17056ba8e84366, type: 2}
-  - {fileID: 11400000, guid: f69380031f219e848b9c0e004e682b9b, type: 2}
+  - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
+  - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
+  - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
   - {fileID: 11400000, guid: e2abd2670bd7cff4bb8ba1f21b9a1d7b, type: 2}
   - {fileID: 11400000, guid: f69380031f219e848b9c0e004e682b9b, type: 2}
+  - {fileID: 11400000, guid: a3168bc1b3f69b74fa3e8c71d6b27754, type: 2}

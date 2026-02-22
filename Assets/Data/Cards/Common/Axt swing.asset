@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Axt swing
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: axt-swing
-  DisplayName: 'Axt swing '
-  <Description>k__BackingField: Deal 30 Damage you have to Discard your hand. can
-    only be played as the first attack this turn.
+  DisplayName: 'Axt Swing '
+  <Description>k__BackingField: Can only be played as the first Attack this turn.
+    Discard your hand. Deal 30 Damage.
   <Mana>k__BackingField: 1
   <Image>k__BackingField: {fileID: 216545364, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
-  Rarity: 0
+  Rarity: 2
   PreferredBiomes: 
-  <Tags>k__BackingField: 
+  <Tags>k__BackingField: 00000000
   <ManualTargetEffects>k__BackingField:
   - rid: 792979244260262036
   <OtherEffects>k__BackingField:

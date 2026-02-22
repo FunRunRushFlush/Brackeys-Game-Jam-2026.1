@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: dragon-breath
   DisplayName: Dragon Breath
-  <Description>k__BackingField: Deal 20 Damage to all enemies  apply Burn 5 to all
-    enemies draw a card
+  <Description>k__BackingField: Deal 20 Damage and apply Burn 5 to all enemies. Draw
+    a card
   <Mana>k__BackingField: 2
   <Image>k__BackingField: {fileID: -193939011, guid: 3767a25ad0c03f04faf0242521ab9aef, type: 3}
   Rarity: 5

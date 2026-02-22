@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardData
   Id: arrow_rain
   DisplayName: Arrow Rain
-  <Description>k__BackingField: 'Deal 7 Damage to all enemies  '
+  <Description>k__BackingField: 'Deal 9 Damage to all enemies  '
   <Mana>k__BackingField: 2
   <Image>k__BackingField: {fileID: 898509285, guid: b34af61e931135d48b73788ef9e08f8e, type: 3}
   Rarity: 2
@@ -40,4 +40,4 @@ MonoBehaviour:
     - rid: 792979202384330878
       type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
       data:
-        damageAmount: 7
+        damageAmount: 9

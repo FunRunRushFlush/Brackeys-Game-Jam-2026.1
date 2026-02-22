@@ -6,7 +6,10 @@ public enum BiomeType
     Fire,
     Ice,
     Galaxy,
-    Cave
+    Cave,
+    Intro,
+    Chase,
+    Outro
 }
 
 

@@ -178,8 +178,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quit Run
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e23fed76442606f4baf1bcde7d8be37b, type: 2}
-  m_sharedMaterial: {fileID: -868457351720071558, guid: e23fed76442606f4baf1bcde7d8be37b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 28a1f3d4cf858f84b9a0f5add62c8a9f, type: 2}
+  m_sharedMaterial: {fileID: 1354256988682041696, guid: 28a1f3d4cf858f84b9a0f5add62c8a9f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &55266863
@@ -2054,7 +2054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 381667ec1d312fb4690950332c1ee9db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RunState
-  mapDefinition: {fileID: 11400000, guid: b6a970edd77f3814e90b2a9ddbecc643, type: 2}
+  mapDefinition: {fileID: 11400000, guid: 189f3df8f0c1f804e976c31f23926e9f, type: 2}
 --- !u!1 &1313937827
 GameObject:
   m_ObjectHideFlags: 0
@@ -2658,7 +2658,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 34b480a06ed5b1d4db362fd91dc43cd8, type: 2}
   - {fileID: 11400000, guid: be83a96c79527e14c9365180b016a315, type: 2}
   - {fileID: 11400000, guid: 647b6ab704dfd0447b57599ff6fa9a1b, type: 2}
-  - {fileID: 11400000, guid: c7dd3d6f421f62b4a85cdd5f4b8e7f5c, type: 2}
   - {fileID: 11400000, guid: 0b6dd0855ab3369458f1fc921fef6e98, type: 2}
   - {fileID: 11400000, guid: 6ade599ca7666664fba1b549f937426c, type: 2}
   - {fileID: 11400000, guid: f01d489047cc96047bfe6061775c0e73, type: 2}
@@ -2683,6 +2682,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ab835d40a79f9eb4b8769ff754f0dd1c, type: 2}
   - {fileID: 11400000, guid: 2d5a7ead6f94ad5469f63597138e5dd9, type: 2}
   - {fileID: 11400000, guid: fd7448731a574fd459588df4b0ffb7c3, type: 2}
+  - {fileID: 11400000, guid: c7dd3d6f421f62b4a85cdd5f4b8e7f5c, type: 2}
   - {fileID: 11400000, guid: a3a9a56501c270d47a05f379c50b987a, type: 2}
   - {fileID: 11400000, guid: 9ad413f0c8300ee41b1b88e680ea0007, type: 2}
   - {fileID: 11400000, guid: 66fd8749ee49d4b4c893c62d4df0d106, type: 2}
@@ -2707,7 +2707,10 @@ MonoBehaviour:
   commonCards:
   - {fileID: 11400000, guid: da5450fb7f6b92640876cc37de9eee35, type: 2}
   - {fileID: 11400000, guid: 87f00793cba045d4cb80979e2eb4f46e, type: 2}
+  - {fileID: 11400000, guid: 3fda7f9cfd3930e4cb1846a88d68e661, type: 2}
+  - {fileID: 11400000, guid: a3168bc1b3f69b74fa3e8c71d6b27754, type: 2}
   - {fileID: 11400000, guid: bfa979a3aa540b94f950a618fde900c6, type: 2}
+  - {fileID: 11400000, guid: e2abd2670bd7cff4bb8ba1f21b9a1d7b, type: 2}
   - {fileID: 11400000, guid: be83a96c79527e14c9365180b016a315, type: 2}
   - {fileID: 11400000, guid: f01d489047cc96047bfe6061775c0e73, type: 2}
   - {fileID: 11400000, guid: 1194a292436d5804398ed6f8727a1da2, type: 2}
@@ -2716,9 +2719,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 47217fc110712954186f84b95624dc3d, type: 2}
   - {fileID: 11400000, guid: 080f2106614a21341afa5ff2fa2720a3, type: 2}
   - {fileID: 11400000, guid: 31f85c20b4c74014898ac8a077988f8a, type: 2}
+  - {fileID: 11400000, guid: 0d658a7c08e9fe9438a4947f44b580e6, type: 2}
   - {fileID: 11400000, guid: 15e85c03ff6b6f641879a0cec94b1ac3, type: 2}
   - {fileID: 11400000, guid: 6651cbde39854184f8d71e5f7d861f14, type: 2}
   - {fileID: 11400000, guid: fd7448731a574fd459588df4b0ffb7c3, type: 2}
+  - {fileID: 11400000, guid: c7dd3d6f421f62b4a85cdd5f4b8e7f5c, type: 2}
   - {fileID: 11400000, guid: a3a9a56501c270d47a05f379c50b987a, type: 2}
   - {fileID: 11400000, guid: ba1e7f0ee708ce944ad3b8d5e513a571, type: 2}
   - {fileID: 11400000, guid: d6e522af37c91e641b92ac2e36d5b112, type: 2}
@@ -2737,6 +2742,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ee8447bdb14fdd0469ec644f318a9554, type: 2}
   - {fileID: 11400000, guid: b5886420a7c66054e92df3561b8c47ba, type: 2}
   - {fileID: 11400000, guid: ab835d40a79f9eb4b8769ff754f0dd1c, type: 2}
+  - {fileID: 11400000, guid: 2d5a7ead6f94ad5469f63597138e5dd9, type: 2}
   - {fileID: 11400000, guid: 9ad413f0c8300ee41b1b88e680ea0007, type: 2}
   - {fileID: 11400000, guid: 63c6debee45dc3940b8eb9e5b4e43df1, type: 2}
   - {fileID: 11400000, guid: 1448383a8b6bb4745b6f442b82ad7f96, type: 2}
@@ -2767,14 +2773,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 05411ddc212355e4d87d3debf490073d, type: 2}
   - {fileID: 11400000, guid: f69380031f219e848b9c0e004e682b9b, type: 2}
   - {fileID: 11400000, guid: e9fa803c56cdcde49a17056ba8e84366, type: 2}
-  - {fileID: 11400000, guid: 3fda7f9cfd3930e4cb1846a88d68e661, type: 2}
-  - {fileID: 11400000, guid: a3168bc1b3f69b74fa3e8c71d6b27754, type: 2}
-  - {fileID: 11400000, guid: e2abd2670bd7cff4bb8ba1f21b9a1d7b, type: 2}
   - {fileID: 11400000, guid: 34b480a06ed5b1d4db362fd91dc43cd8, type: 2}
-  - {fileID: 11400000, guid: c7dd3d6f421f62b4a85cdd5f4b8e7f5c, type: 2}
-  - {fileID: 11400000, guid: 0d658a7c08e9fe9438a4947f44b580e6, type: 2}
   - {fileID: 11400000, guid: 053a28897e65ae34a93e854eae3d538e, type: 2}
-  - {fileID: 11400000, guid: 2d5a7ead6f94ad5469f63597138e5dd9, type: 2}
   - {fileID: 11400000, guid: 66fd8749ee49d4b4c893c62d4df0d106, type: 2}
   starterCards:
   - {fileID: 11400000, guid: ca153b58ae684c4439cf2e0f475f6194, type: 2}
@@ -3296,8 +3296,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e23fed76442606f4baf1bcde7d8be37b, type: 2}
-  m_sharedMaterial: {fileID: -868457351720071558, guid: e23fed76442606f4baf1bcde7d8be37b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 28a1f3d4cf858f84b9a0f5add62c8a9f, type: 2}
+  m_sharedMaterial: {fileID: 1354256988682041696, guid: 28a1f3d4cf858f84b9a0f5add62c8a9f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3363,7 +3363,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2007008870

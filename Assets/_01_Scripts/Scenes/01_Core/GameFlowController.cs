@@ -64,10 +64,12 @@ namespace Game.Scenes.Core
         public void GoToCurrentNode()
         {
             CacheSessionRefs();
-            if (run == null) return;
+            if (run == null) 
+                return;
+            if (_isTransitioning) 
+                return;
 
-            // Optional: Wenn Transition läuft, ignorieren
-            if (_isTransitioning) return;
+            var node = run.CurrentNode;
 
             switch (run.CurrentNodeType)
             {
@@ -78,12 +80,24 @@ namespace Game.Scenes.Core
                     break;
 
                 case MapNodeType.Shop:
-                    StartLocked(GoToShopViewRoutine(SceneDatabase.Scenes.Shop));
-                    break;
+                    {
+                        var shopScene = (node != null && !string.IsNullOrWhiteSpace(node.sceneOverride))
+                            ? node.sceneOverride
+                            : SceneDatabase.Scenes.Shop;
+
+                        StartLocked(GoToShopViewRoutine(shopScene));
+                        break;
+                    }
 
                 case MapNodeType.Event:
-                    StartLocked(GoToSessionViewRoutine(SceneDatabase.Scenes.Event));
-                    break;
+                    {
+                        var eventScene = (node != null && !string.IsNullOrWhiteSpace(node.sceneOverride))
+                            ? node.sceneOverride
+                            : SceneDatabase.Scenes.Event;
+
+                        StartLocked(GoToSessionViewRoutine(eventScene));
+                        break;
+                    }
             }
         }
 
@@ -261,6 +275,10 @@ namespace Game.Scenes.Core
 
         private string GetArenaSceneForCurrentNode(RunState run)
         {
+            var node = run.CurrentNode;
+            if (node != null && !string.IsNullOrWhiteSpace(node.levelSceneOverride))
+                return node.levelSceneOverride;
+
             var biomeDef = biomeDb.Get(run.CurrentBiome);
             if (biomeDef == null) return defaultEncounterLevelScene;
 

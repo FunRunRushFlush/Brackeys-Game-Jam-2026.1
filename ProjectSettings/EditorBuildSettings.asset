@@ -80,6 +80,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_00_Scenes/Caves/Caves.unity
     guid: 5a4250d340a180a41996b4fbe40ea18a
+  - enabled: 1
+    path: Assets/_00_Scenes/Events/StoryEnd.unity
+    guid: 79122d2ed6189c84da5e69e9aab8aaea
+  - enabled: 1
+    path: Assets/_00_Scenes/Events/StoryIntro.unity
+    guid: 5b029471002e11d49918ed198915d59a
+  - enabled: 1
+    path: Assets/_00_Scenes/Events/StoryChase_Galaxy.unity
+    guid: d5ad4ee01ca6a514cb1b0505e8cb7609
+  - enabled: 1
+    path: Assets/_00_Scenes/Events/StoryChase_Jungle.unity
+    guid: 50023c7978212ba4790dc62a2e0b20c5
+  - enabled: 1
+    path: Assets/_00_Scenes/Events/StoryChase_Lava.unity
+    guid: 84ec0d45820d04e4bbb9b28ffd07d9d5
+  - enabled: 1
+    path: Assets/_00_Scenes/Events/StoryChase_FoundDog.unity
+    guid: ce6fa3648a2778042997885510a5119b
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 37e6ebb870a7d9843a941b8abac99c55, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
